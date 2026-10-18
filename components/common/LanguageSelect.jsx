@@ -3,8 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 const languageOptions = [
   { id: "en", label: "English" },
   { id: "ar", label: "العربية" },
-  { id: "zh", label: "简体中文" },
-  { id: "ur", label: "اردو" },
 ];
 
 export default function LanguageSelect({
@@ -16,6 +14,11 @@ export default function LanguageSelect({
   const languageSelect = useRef();
 
   useEffect(() => {
+    const direction = JSON.parse(
+      window.localStorage.getItem("direction") || "null"
+    )?.dir;
+    setSelected(direction === "rtl" ? languageOptions[1] : languageOptions[0]);
+
     const handleClickOutside = (event) => {
       if (
         languageSelect.current &&
@@ -32,10 +35,22 @@ export default function LanguageSelect({
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
+
+  const selectLanguage = (option) => {
+    setSelected(option);
+    setIsDDOpen(false);
+    window.localStorage.setItem(
+      "direction",
+      JSON.stringify({ dir: option.id === "ar" ? "rtl" : "ltr" })
+    );
+    window.location.reload();
+  };
   return (
     <>
       <div
-        className={`dropdown bootstrap-select ${parentClassName}  dropup `}
+        className={`dropdown bootstrap-select ${parentClassName} ${
+          topStart ? "" : "dropup"
+        }`}
         onClick={() => setIsDDOpen((pre) => !pre)}
         ref={languageSelect}
       >
@@ -65,22 +80,17 @@ export default function LanguageSelect({
         <div
           className={`dropdown-menu ${isDDOpen ? "show" : ""} `}
           style={{
-            maxHeight: "899.688px",
-            overflow: "hidden",
-            minHeight: 142,
             position: "absolute",
-            inset: "auto auto 0px 0px",
+            inset: topStart ? "100% auto auto 0px" : "auto auto 100% 0px",
             margin: 0,
-            transform: `translate(0px, ${topStart ? 22 : -20}px)`,
+            transform: `translate(0px, ${topStart ? 8 : -8}px)`,
           }}
           data-popper-placement={`${!topStart ? "top" : "bottom"}-start`}
         >
           <div
             className="inner show"
             style={{
-              maxHeight: "869.688px",
-              overflowY: "auto",
-              minHeight: 112,
+              overflowY: "visible",
             }}
           >
             <ul
@@ -91,7 +101,7 @@ export default function LanguageSelect({
               {languageOptions.map((elm, i) => (
                 <li
                   key={i}
-                  onClick={() => setSelected(elm)}
+                  onClick={() => selectLanguage(elm)}
                   className={`selected ${selected == elm ? "active" : ""}`}
                 >
                   <a

@@ -22,7 +22,7 @@ export default function Store() {
               className="heading fw-6 font-sora wow fadeInUp"
               data-wow-delay="0s"
             >
-              Ecomus Store
+              Ecoshopify Store
             </h3>
             <p className="subtext wow fadeInUp" data-wow-delay="0s">
               301 Front St W Toronto, Canada

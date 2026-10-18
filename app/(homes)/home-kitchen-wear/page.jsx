@@ -14,8 +14,8 @@ import Testimonials from "@/components/homes/home-kitchen-wear/Testimonials";
 import React from "react";
 
 export const metadata = {
-  title: "Home Kitchen Wear || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Kitchen Wear || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

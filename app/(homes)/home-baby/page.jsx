@@ -12,8 +12,8 @@ import Products2 from "@/components/homes/home-baby/Products2";
 
 import React from "react";
 export const metadata = {
-  title: "Home Baby || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Baby || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

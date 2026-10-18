@@ -7,8 +7,8 @@ import Link from "next/link";
 import React from "react";
 
 export const metadata = {
-  title: "Blog Details || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Blog Details || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default async function page({ params }) {
   const { id } = await params

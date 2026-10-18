@@ -4,8 +4,8 @@ import Register from "@/components/othersPages/Register";
 import React from "react";
 
 export const metadata = {
-  title: "Register || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Register || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

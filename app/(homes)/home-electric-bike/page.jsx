@@ -14,8 +14,8 @@ import Marquee from "@/components/homes/home-electric-bike/Marquee";
 import Products from "@/components/homes/home-electric-bike/Products";
 import Store from "@/components/homes/home-electric-bike/Store";
 export const metadata = {
-  title: "Home Electric Bike || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Electric Bike || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

@@ -325,12 +325,94 @@ export const allHomepages = [
   },
 ];
 
+
+export const ecoshopdemoItems = []
+
+export const ecoshopShopMenu = [
+  {
+    id: "browse-products",
+    heading: "تصفح المنتجات",
+    headingEn: "Browse products",
+    links: [
+      {
+        href: "/shop-default",
+        text: "جميع المنتجات",
+        textEn: "All products",
+      },
+      {
+        href: "/shop-collection-list",
+        text: "الأقسام والتصنيفات",
+        textEn: "Categories",
+      },
+    ],
+  },
+  {
+    id: "discover-products",
+    heading: "اكتشف المنتجات",
+    headingEn: "Discover products",
+    links: [
+      {
+        href: "/shop-default",
+        text: "المنتجات الجديدة",
+        textEn: "New arrivals",
+      },
+      {
+        href: "/shop-default",
+        text: "الأكثر مبيعًا",
+        textEn: "Best sellers",
+      },
+      {
+        href: "/shop-default",
+        text: "العروض والخصومات",
+        textEn: "Offers and discounts",
+      },
+    ],
+  },
+  {
+    id: "shop-by-standards",
+    heading: "تسوق حسب المعايير",
+    headingEn: "Shop by values",
+    links: [
+      {
+        href: "/shop-default",
+        text: "المنتجات العضوية المعتمدة",
+        textEn: "Certified organic",
+      },
+      {
+        href: "/shop-default",
+        text: "المنتجات الطبيعية",
+        textEn: "Natural products",
+      },
+      {
+        href: "/shop-default",
+        text: "المنتجات الصديقة للبيئة",
+        textEn: "Eco-friendly products",
+      },
+    ],
+  },
+];
+
+export const ecoshopNavigationLinks = [
+  {
+    href: "/brands",
+    text: "العلامات التجارية",
+    textEn: "Brands",
+  },
+  { href: "/about-us", text: "من نحن", textEn: "About us" },
+  {
+    href: "/contact-1",
+    text: "انضم كمورد",
+    textEn: "Become a supplier",
+  },
+  { href: "/contact-1", text: "اتصل بنا", textEn: "Contact us" },
+];
+
 export const demoItems = [
   {
     href: "/",
     src: "/images/demo/home-01.jpg",
     alt: "home-01",
-    name: "Home Fashion 01",
+    name: "Home Fashion 0100000000000",
     labels: [{ className: "demo-new", text: "New" }, { text: "Trend" }],
   },
   {

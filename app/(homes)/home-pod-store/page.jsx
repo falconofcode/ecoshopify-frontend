@@ -14,8 +14,8 @@ import React from "react";
 import Footer1 from "@/components/footers/Footer1";
 
 export const metadata = {
-  title: "Home Pod Store || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Pod Store || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

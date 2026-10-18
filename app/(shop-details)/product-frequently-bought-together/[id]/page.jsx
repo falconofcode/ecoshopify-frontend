@@ -9,8 +9,8 @@ import React from "react";
 import Link from "next/link";
 export const metadata = {
   title:
-    "Shop Frequently Bought || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+    "Shop Frequently Bought || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 import { allProducts } from "@/data/products";
 import ProductSinglePrevNext from "@/components/common/ProductSinglePrevNext";

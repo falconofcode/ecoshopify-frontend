@@ -5,8 +5,8 @@ import ShopLoadmore from "@/components/shop/ShopLoadmore";
 import React from "react";
 
 export const metadata = {
-  title: "Shop Loadmore || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Shop Loadmore || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

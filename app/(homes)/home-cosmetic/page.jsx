@@ -13,8 +13,8 @@ import SkinChange from "@/components/homes/home-cosmetic/SkinChange";
 import Testimonials from "@/components/homes/home-cosmetic/Testimonials";
 import React from "react";
 export const metadata = {
-  title: "Home Cosmetic || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Cosmetic || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

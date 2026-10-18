@@ -5,8 +5,8 @@ import ProductStyle7 from "@/components/shop/ProductStyle7";
 import React from "react";
 
 export const metadata = {
-  title: "Product Style 7 || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Product Style 7 || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

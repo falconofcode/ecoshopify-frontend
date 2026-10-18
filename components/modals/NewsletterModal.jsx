@@ -4,6 +4,12 @@ import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { usePathname } from "next/navigation";
 export default function NewsletterModal() {
+  const DISABLE_DEMO_POPUP = true;
+
+  if (DISABLE_DEMO_POPUP) {
+    return null;
+  }
+
   const pathname = usePathname();
   const formRef = useRef();
   const [success, setSuccess] = useState(true);

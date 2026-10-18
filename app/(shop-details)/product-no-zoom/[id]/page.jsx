@@ -8,8 +8,8 @@ import React from "react";
 import Link from "next/link";
 import DefaultShopDetailsNoZoom from "@/components/shopDetails/DefaultShopDetailsNoZoom";
 export const metadata = {
-  title: "Product No Zoom || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Product No Zoom || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 import { allProducts } from "@/data/products";
 import ProductSinglePrevNext from "@/components/common/ProductSinglePrevNext";

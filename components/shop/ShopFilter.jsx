@@ -25,7 +25,7 @@ const filterColors = [
   { name: "Grey", colorClass: "bg_grey" },
   { name: "Light Pink", colorClass: "bg_light-pink" },
 ];
-const brands = ["Ecomus", "M&H"];
+const brands = ["Ecoshopify", "M&H"];
 const availabilities = [
   { id: 1, isAvailable: true, text: "Available", count: 14 },
   { id: 2, isAvailable: false, text: "Out of Stock", count: 2 },

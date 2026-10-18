@@ -13,8 +13,8 @@ import Announcment from "@/components/homes/multi-brand/Announcment";
 import React from "react";
 
 export const metadata = {
-  title: "Home Kids || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Kids || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

@@ -30,6 +30,7 @@ import NewsletterModal from "@/components/modals/NewsletterModal";
 import ShareModal from "@/components/modals/ShareModal";
 import ScrollTop from "@/components/common/ScrollTop";
 import RtlToggle from "@/components/common/RtlToggle";
+import HeaderStorefront from "@/components/headers/HeaderStorefront";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
@@ -162,7 +163,10 @@ export default function RootLayout({ children }) {
           </div>
         </div>{" "}
         <Context>
-          <div id="wrapper">{children}</div>
+          <div id="wrapper">
+            <HeaderStorefront isGlobal />
+            {children}
+          </div>
           <RtlToggle />
           <HomesModal /> <QuickView />
           <QuickAdd />

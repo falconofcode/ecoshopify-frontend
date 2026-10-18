@@ -11,8 +11,8 @@ import Store from "@/components/homes/home-2/Store";
 import React from "react";
 
 export const metadata = {
-  title: "Home 2 || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home 2 || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

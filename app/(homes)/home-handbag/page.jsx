@@ -12,8 +12,8 @@ import Testimonials from "@/components/homes/home-handbag/Testimonials";
 import React from "react";
 
 export const metadata = {
-  title: "Home Handbag || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Handbag || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

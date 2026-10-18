@@ -5,8 +5,8 @@ import DashboardNav from "@/components/othersPages/dashboard/DashboardNav";
 import React from "react";
 
 export const metadata = {
-  title: "My Account Edit || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate React Nextjs Ecommerce Template",
+  title: "My Account Edit || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate React Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

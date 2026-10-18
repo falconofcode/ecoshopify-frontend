@@ -12,8 +12,8 @@ import ShopGram from "@/components/homes/home-plant/ShopGram";
 import Testimonials from "@/components/homes/home-plant/Testimonials";
 import React from "react";
 export const metadata = {
-  title: "Home Plant || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Plant || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

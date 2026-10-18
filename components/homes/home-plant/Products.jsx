@@ -5,13 +5,13 @@ import { products56 } from "@/data/products";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-export default function Products() {
+export default function Products({ title = "Featured Products" }) {
   return (
     <section className="flat-spacing-5 bg_green-10">
       <div className="container">
         <div className="flat-title flex-row justify-content-between px-0">
           <span className="title wow fadeInUp text_green-1" data-wow-delay="0s">
-            Featured Products
+            {title}
           </span>
           <div className="box-sw-navigation">
             <div className="nav-sw round nav-next-product nav-next-slider snbp327">

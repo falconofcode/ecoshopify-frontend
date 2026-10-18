@@ -6,8 +6,8 @@ import Compare from "@/components/othersPages/Compare";
 import React from "react";
 
 export const metadata = {
-  title: "Compare || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Compare || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

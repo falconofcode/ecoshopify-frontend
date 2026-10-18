@@ -10,7 +10,7 @@ export default function Products() {
     <section className="flat-spacing-15 pb_0">
       <div className="container">
         <div className="flat-title wow fadeInUp" data-wow-delay="0s">
-          <span className="title">Ecomus’s Favorites</span>
+          <span className="title">Ecoshopify’s Favorites</span>
           <p className="sub-title">
             Beautifully Functional. Purposefully Designed. Consciously Crafted.
           </p>

@@ -10,8 +10,8 @@ import SliderWithGalleryPopup from "@/components/shopDetails/sliders/SliderWithG
 import DetailsPopup from "@/components/shopDetails/DetailsPopup";
 export const metadata = {
   title:
-    "Product Photoswipe Popup || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+    "Product Photoswipe Popup || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 import { allProducts } from "@/data/products";
 import ProductSinglePrevNext from "@/components/common/ProductSinglePrevNext";

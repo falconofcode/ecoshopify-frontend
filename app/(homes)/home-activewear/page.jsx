@@ -15,8 +15,8 @@ import Testimonials from "@/components/homes/home-activewear/Testimonials";
 import React from "react";
 
 export const metadata = {
-  title: "Home Activewear || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Activewear || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

@@ -18,7 +18,7 @@ export default function Card() {
             <div className="text-md-start text-center">
               <h4 className="text-white fw-6">Professional gift solutions</h4>
               <p className="text-white">
-                Send 1-1,000+ customised eGift cards instantly with Ecomus
+                Send 1-1,000+ customised eGift cards instantly with Ecoshopify
                 Business!
               </p>
             </div>

@@ -20,7 +20,7 @@ export default function About() {
               <div>
                 <div className="heading">Established - 1995</div>
                 <div className="text">
-                  Ecomus was founded in 1995 by Jane Smith, a fashion lover with
+                  Ecoshopify was founded in 1995 by Jane Smith, a fashion lover with
                   a <br className="d-xl-block d-none" />
                   passion for timeless style. Jane had always been drawn to
                   classic <br className="d-xl-block d-none" />

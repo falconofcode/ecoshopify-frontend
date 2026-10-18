@@ -11,8 +11,8 @@ import Products from "@/components/homes/home-food/Products";
 import Testimonials from "@/components/homes/home-food/Testimonials";
 import React from "react";
 export const metadata = {
-  title: "Home Food || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Food || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

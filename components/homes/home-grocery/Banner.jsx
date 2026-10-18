@@ -55,7 +55,7 @@ export default function Banner() {
               PERFECT GIFT FOR YOU
             </p>
             <h2 className="heading fade-item fade-item-1 fw-6">
-              Ecomus Subscription
+              Ecoshopify Subscription
             </h2>
             <p className="desc fade-item fade-item-2">
               Delivered every month! Perfect for your favorite vegan or anyone

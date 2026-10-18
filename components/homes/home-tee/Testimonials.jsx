@@ -31,7 +31,7 @@ export default function Testimonials() {
                 <i className="text-14 icon-start" />
                 <i className="text-14 icon-start" />
               </div>
-              <p className="text_white">More than 1368 review on Ecomus</p>
+              <p className="text_white">More than 1368 review on Ecoshopify</p>
             </div>
           </div>
           <div className="col-xl-8">

@@ -12,8 +12,8 @@ import Products2 from "@/components/homes/home-camp-and-hike/Products2";
 import StoreLocations from "@/components/homes/home-camp-and-hike/StoreLocations";
 import React from "react";
 export const metadata = {
-  title: "Home Camp And Hike || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Camp And Hike || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

@@ -106,7 +106,7 @@ export default function Compare() {
                   className="tf-compare-col tf-compare-value text-center"
                   style={{ flex: 1 }}
                 >
-                  Ecomus
+                  Ecoshopify
                 </div>
               ))}
             </div>

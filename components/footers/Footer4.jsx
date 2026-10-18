@@ -279,7 +279,7 @@ export default function Footer4({ bgColor = "" }) {
               <div className="col-12">
                 <div className="footer-bottom-wrap d-flex gap-20 flex-wrap justify-content-between align-items-center">
                   <div className="footer-menu_item">
-                    © {new Date().getFullYear()} Ecomus Store. All Rights
+                    © {new Date().getFullYear()} Ecoshopify Store. All Rights
                     Reserved
                   </div>
                   <div className="tf-payment">

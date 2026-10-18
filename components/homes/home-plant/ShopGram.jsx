@@ -13,7 +13,7 @@ export default function ShopGram() {
     <section className="flat-spacing-1">
       <div className="container">
         <div className="flat-title wow fadeInUp" data-wow-delay="0s">
-          <h5 className="text_green-1">Show us how you #Ecomusyourspace!</h5>
+          <h5 className="text_green-1">Show us how you #Ecoshopifyyourspace!</h5>
         </div>
         <div className="wrap-carousel wrap-shop-gram">
           <Swiper

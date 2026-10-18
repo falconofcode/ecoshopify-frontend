@@ -18,13 +18,13 @@ export default function Collection() {
                   Card
                 </div>
                 <p className="description wow fadeInUp" data-wow-delay="0s">
-                  Ecomus makes personalised eGifting easier than ever before!
+                  Ecoshopify makes personalised eGifting easier than ever before!
                   <br />
-                  Send any Ecomus eGift Card with a personal video or voice
+                  Send any Ecoshopify eGift Card with a personal video or voice
                   <br />
                   message and a greeting card, and you can even customise our
                   <br />
-                  Ecomus Smart eGift Card with your own photo!
+                  Ecoshopify Smart eGift Card with your own photo!
                 </p>
                 <Link
                   href={`/shop-collection-list`}

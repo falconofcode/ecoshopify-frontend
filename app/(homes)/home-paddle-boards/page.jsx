@@ -15,8 +15,8 @@ import React from "react";
 import Footer2 from "@/components/footers/Footer2";
 
 export const metadata = {
-  title: "Home Paddle Boards || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Paddle Boards || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

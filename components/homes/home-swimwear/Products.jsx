@@ -11,10 +11,10 @@ export default function Products() {
       <div className="container">
         <div className="flat-title wow fadeInUp" data-wow-delay="0s">
           <span className="title font-libre-baskerville">
-            Ecomus Collective
+            Ecoshopify Collective
           </span>
           <p className="sub-title text_black-2">
-            Shop new additions to our staple Ecomus Collective range, available
+            Shop new additions to our staple Ecoshopify Collective range, available
             in the colour of the season, Azure Blue.
           </p>
         </div>

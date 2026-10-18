@@ -13,8 +13,8 @@ import Products2 from "@/components/homes/home-book-store/Products2";
 import Testimonials from "@/components/homes/home-book-store/Testimonials";
 import React from "react";
 export const metadata = {
-  title: "Home Bookstore || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Bookstore || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

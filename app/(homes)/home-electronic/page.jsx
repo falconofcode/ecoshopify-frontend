@@ -15,8 +15,8 @@ import Topbar from "@/components/homes/home-headphone/Topbar";
 import React from "react";
 
 export const metadata = {
-  title: "Home Electronics  || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Electronics  || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

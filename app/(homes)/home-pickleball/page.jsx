@@ -15,8 +15,8 @@ import Testimonials from "@/components/homes/home-pickleball/Testimonials";
 
 import React from "react";
 export const metadata = {
-  title: "Home Pickleball || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Pickleball || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

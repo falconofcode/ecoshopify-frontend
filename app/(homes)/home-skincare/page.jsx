@@ -16,8 +16,8 @@ import Features from "@/components/homes/home-6/Features";
 import Footer1 from "@/components/footers/Footer1";
 
 export const metadata = {
-  title: "Home Skincare || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Skincare || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

@@ -14,7 +14,7 @@ export default function Collections() {
             Find your fit
           </span>
           <p className="sub-title wow fadeInUp" data-wow-delay="0s">
-            See a few in their favorite frames from Ecomuse
+            See a few in their favorite frames from Ecoshopifye
           </p>
         </div>
         <div className="wrap-carousel">

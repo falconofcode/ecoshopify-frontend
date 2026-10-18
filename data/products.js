@@ -24,7 +24,7 @@ export const products1 = [
     ],
     sizes: ["S", "M", "L", "XL"],
     filterCategories: ["Best seller", "On Sale"],
-    brand: "Ecomus",
+    brand: "Ecoshopify",
     isAvailable: true,
   },
   {
@@ -115,7 +115,7 @@ export const products1 = [
     ],
     sizes: ["S", "M", "L", "XL"],
     filterCategories: ["Best seller", "New arrivals"],
-    brand: "Ecomus",
+    brand: "Ecoshopify",
     isAvailable: true,
   },
   {
@@ -157,7 +157,7 @@ export const products1 = [
       },
     ],
     filterCategories: ["Best seller", "New arrivals"],
-    brand: "Ecomus",
+    brand: "Ecoshopify",
     isAvailable: true,
   },
   {
@@ -195,7 +195,7 @@ export const products1 = [
     ],
     sizes: ["S", "M", "L"],
     filterCategories: ["Best seller", "New arrivals", "On Sale"],
-    brand: "Ecomus",
+    brand: "Ecoshopify",
     isAvailable: false,
   },
   {
@@ -207,7 +207,7 @@ export const products1 = [
 
     sizes: ["S", "M", "L", "XL"],
     filterCategories: ["Best seller", "New arrivals", "On Sale"],
-    brand: "Ecomus",
+    brand: "Ecoshopify",
     isAvailable: false,
   },
   {
@@ -232,7 +232,7 @@ export const products1 = [
 
     title: "Patterned scarf",
     filterCategories: ["Best seller", "New arrivals", "On Sale"],
-    brand: "Ecomus",
+    brand: "Ecoshopify",
     isAvailable: true,
   },
   {
@@ -257,7 +257,7 @@ export const products1 = [
 
     title: "Slim Fit Fine-knit Turtleneck Sweater",
     filterCategories: ["Best seller", "New arrivals", "On Sale"],
-    brand: "Ecomus",
+    brand: "Ecoshopify",
     isAvailable: true,
   },
   {
@@ -287,7 +287,7 @@ export const products1 = [
 
     title: "Slim Fit Fine-knit Turtleneck Sweater",
     filterCategories: ["Best seller", "New arrivals"],
-    brand: "Ecomus",
+    brand: "Ecoshopify",
     isAvailable: true,
   },
   {
@@ -300,7 +300,7 @@ export const products1 = [
 
     title: "Slim Fit Fine-knit Turtleneck Sweater",
     filterCategories: ["Best seller", "On Sale"],
-    brand: "Ecomus",
+    brand: "Ecoshopify",
     isAvailable: true,
   },
 ];
@@ -2378,7 +2378,7 @@ export const products21 = [
     id: 141,
     imgSrc: "/images/products/paddle-boards-7.jpg",
     imgHoverSrc: "/images/products/paddle-boards-1-small.jpg",
-    vendor: "Ecomus X- Class",
+    vendor: "Ecoshopify X- Class",
     title: "CRUISER SERIES - X",
     colors: [
       {
@@ -2417,7 +2417,7 @@ export const products21 = [
     id: 142,
     imgSrc: "/images/products/paddle-boards-6.jpg",
     imgHoverSrc: "/images/products/paddle-boards-1-small.jpg",
-    vendor: "Ecomus X- Class",
+    vendor: "Ecoshopify X- Class",
     title: "PRO SERIES - X",
     colors: [
       {
@@ -2456,7 +2456,7 @@ export const products21 = [
     id: 143,
     imgSrc: "/images/products/paddle-boards-5.jpg",
     imgHoverSrc: "/images/products/paddle-boards-1-small.jpg",
-    vendor: "Ecomus X- Class",
+    vendor: "Ecoshopify X- Class",
     title: "TOURER SERIES - X",
     colors: [
       {

@@ -14,8 +14,8 @@ import ShopGram from "@/components/homes/home-personalized-pod/ShopGram";
 import Testimonials from "@/components/homes/home-personalized-pod/Testimonials";
 import React from "react";
 export const metadata = {
-  title: "Home Personalized Pod || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Personalized Pod || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

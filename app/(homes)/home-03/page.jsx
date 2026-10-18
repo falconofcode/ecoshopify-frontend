@@ -12,8 +12,8 @@ import VideoBanner from "@/components/homes/home-3/VideoBanner";
 import React from "react";
 
 export const metadata = {
-  title: "Home 3 || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home 3 || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

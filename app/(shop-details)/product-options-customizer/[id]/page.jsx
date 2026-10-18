@@ -10,8 +10,8 @@ import Link from "next/link";
 import DetailsOuterZoom from "@/components/shopDetails/DetailsOuterZoom";
 export const metadata = {
   title:
-    "Product Option Customizer || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+    "Product Option Customizer || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 import { allProducts } from "@/data/products";
 import ProductSinglePrevNext from "@/components/common/ProductSinglePrevNext";

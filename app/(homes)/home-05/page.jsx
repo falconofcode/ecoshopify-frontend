@@ -11,8 +11,8 @@ import ShopGram from "@/components/homes/home-5/ShopGram";
 import React from "react";
 
 export const metadata = {
-  title: "Home 5 || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home 5 || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

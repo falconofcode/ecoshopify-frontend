@@ -70,7 +70,7 @@ export default function Banner() {
           <div className="tf-grid-layout lg-col-2 tf-img-with-text-2 style-2 bg_green-8">
             <div className="tf-content-wrap wow fadeInUp" data-wow-delay=".1s">
               <h4 className="text-center text-md-start">
-                The Ecomus difference
+                The Ecoshopify difference
               </h4>
               <div className="item-list-box">
                 <div className="img-box">

@@ -12,8 +12,8 @@ import TestimonialSection from "@/components/homes/home-decor/Testimonials";
 import React from "react";
 
 export const metadata = {
-  title: "Home Decor || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Decor || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

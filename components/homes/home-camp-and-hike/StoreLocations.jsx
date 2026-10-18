@@ -35,7 +35,7 @@ export default function StoreLocations() {
                     <p>
                       301 Front St WToronto,
                       <br />
-                      Ecomus@support.com
+                      Ecoshopify@support.com
                       <br />
                       (08) 8942 1299
                     </p>
@@ -67,7 +67,7 @@ export default function StoreLocations() {
                     <p>
                       301 Front St WToronto,
                       <br />
-                      Ecomus@support.com
+                      Ecoshopify@support.com
                       <br />
                       (08) 8942 1299
                     </p>
@@ -99,7 +99,7 @@ export default function StoreLocations() {
                     <p>
                       301 Front St WToronto,
                       <br />
-                      Ecomus@support.com
+                      Ecoshopify@support.com
                       <br />
                       (08) 8942 1299
                     </p>

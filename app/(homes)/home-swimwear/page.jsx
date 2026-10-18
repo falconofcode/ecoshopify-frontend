@@ -11,8 +11,8 @@ import Shopgram from "@/components/homes/home-swimwear/Shopgram";
 import Testimonials from "@/components/homes/home-swimwear/Testimonials";
 import React from "react";
 export const metadata = {
-  title: "Home Swimmwear || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Swimmwear || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

@@ -15,8 +15,8 @@ import Testimonials from "@/components/homes/home-gaming-accessories/Testimonial
 import React from "react";
 export const metadata = {
   title:
-    "Home Gamming Accessories || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+    "Home Gamming Accessories || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

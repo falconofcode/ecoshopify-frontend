@@ -18,7 +18,7 @@ export default function OurStore() {
               />
             </div>
             <div className="tf-ourstore-content">
-              <h5 className="mb_24">Ecomus Paris</h5>
+              <h5 className="mb_24">Ecoshopify Paris</h5>
               <div className="mb_20">
                 <p className="mb_15">
                   <strong>Address</strong>
@@ -105,7 +105,7 @@ export default function OurStore() {
         <div className="container">
           <div className="tf-grid-layout md-col-2">
             <div className="tf-ourstore-content pl-124">
-              <h5 className="mb_24">Ecomus London</h5>
+              <h5 className="mb_24">Ecoshopify London</h5>
               <div className="mb_20">
                 <p className="mb_15">
                   <strong>Address</strong>
@@ -212,7 +212,7 @@ export default function OurStore() {
               />
             </div>
             <div className="tf-ourstore-content">
-              <h5 className="mb_24">Ecomus Dubai</h5>
+              <h5 className="mb_24">Ecoshopify Dubai</h5>
               <div className="mb_20">
                 <p className="mb_15">
                   <strong>Address</strong>

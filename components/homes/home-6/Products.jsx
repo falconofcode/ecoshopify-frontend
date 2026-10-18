@@ -4,7 +4,7 @@ import { ProductCard } from "@/components/shopCards/ProductCard";
 import { products1 } from "@/data/products";
 import React, { useEffect, useState } from "react";
 
-export default function Products() {
+export default function Products({ tabLabels = {} }) {
   const [loading, setLoading] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [allproducts, setAllproducts] = useState([...products1]);
@@ -18,8 +18,12 @@ export default function Products() {
       setLoaded(true);
     }, 1000);
   };
-  const tabs = ["Best seller", "New arrivals", "On Sale"];
-  const [activeTab, setActiveTab] = useState(tabs[0]);
+  const tabs = [
+    { key: "Best seller", label: tabLabels.bestSeller || "Best seller" },
+    { key: "New arrivals", label: tabLabels.newArrivals || "New arrivals" },
+    { key: "On Sale", label: tabLabels.onSale || "On Sale" },
+  ];
+  const [activeTab, setActiveTab] = useState(tabs[0].key);
   const [filtered, setFiltered] = useState(allproducts);
   useEffect(() => {
     setFiltered(
@@ -34,12 +38,14 @@ export default function Products() {
           <ul className="widget-tab-3 d-flex justify-content-center wow fadeInUp">
             {tabs.map((tab, index) => (
               <li
-                onClick={() => setActiveTab(tab)}
+                onClick={() => setActiveTab(tab.key)}
                 className="nav-tab-item"
                 role="presentation"
-                key={index}
+                key={tab.key}
               >
-                <a className={activeTab === tab ? "active" : ""}>{tab}</a>
+                <a className={activeTab === tab.key ? "active" : ""}>
+                  {tab.label}
+                </a>
               </li>
             ))}
           </ul>

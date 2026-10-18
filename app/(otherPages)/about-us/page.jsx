@@ -9,8 +9,8 @@ import Testimonials from "@/components/othersPages/about/Testimonials";
 import React from "react";
 
 export const metadata = {
-  title: "About Us || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "About Us || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (

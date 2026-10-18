@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-export default function Hero() {
+export default function Hero({ slideTitles, buttonText = "Shop collection" }) {
   return (
     <section className="tf-slideshow slider-effect-fade slider-home-5 position-relative">
       <Swiper
@@ -43,13 +43,13 @@ export default function Hero() {
               <div className="box-content text-center">
                 <div className="container">
                   <h1 className="fade-item fade-item-1 text-white heading">
-                    {slide.title}
+                    {slideTitles?.[index] || slide.title}
                   </h1>
                   <Link
                     href={`/shop-collection-list`}
                     className="fade-item fade-item-3 tf-btn btn-light-icon animate-hover-btn btn-xl radius-60 text_green-1"
                   >
-                    <span>Shop collection</span>
+                    <span>{buttonText}</span>
                     <i className="icon icon-arrow-right" />
                   </Link>
                 </div>

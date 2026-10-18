@@ -11,8 +11,8 @@ import Testimonials from "@/components/homes/home-tee/Testimonials";
 import React from "react";
 
 export const metadata = {
-  title: "Home Tee || Ecomus - Ultimate Nextjs Ecommerce Template",
-  description: "Ecomus - Ultimate Nextjs Ecommerce Template",
+  title: "Home Tee || Ecoshopify - Ultimate Nextjs Ecommerce Template",
+  description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 export default function page() {
   return (
