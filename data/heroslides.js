@@ -1,3 +1,5 @@
+import { groceryDemoImage } from "@/data/groceryDemoAssets";
+
 export const slides = [
   {
     imgSrc: "/images/slider/fashion-slideshow-01.jpg",
@@ -755,7 +757,7 @@ export const sliderData4 = [
 
 export const slides19 = [
   {
-    imgSrc: "/images/slider/slide-gocery1.jpg",
+    imgSrc: groceryDemoImage("/images/slider/slide-gocery1.jpg"),
     imgAlt: "hp-slideshow-01",
     imgWidth: 1600,
     imgHeight: 762,
@@ -764,7 +766,7 @@ export const slides19 = [
     linkText: "Shop collection",
   },
   {
-    imgSrc: "/images/slider/slide-gocery2.jpg",
+    imgSrc: groceryDemoImage("/images/slider/slide-gocery2.jpg"),
     imgAlt: "hp-slideshow-02",
     imgWidth: 1440,
     imgHeight: 686,
@@ -773,7 +775,7 @@ export const slides19 = [
     linkText: "Shop collection",
   },
   {
-    imgSrc: "/images/slider/slide-gocery3.jpg",
+    imgSrc: groceryDemoImage("/images/slider/slide-gocery3.jpg"),
     imgAlt: "hp-slideshow-03",
     imgWidth: 1400,
     imgHeight: 667,

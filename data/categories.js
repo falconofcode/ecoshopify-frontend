@@ -1,3 +1,5 @@
+import { groceryDemoImage } from "@/data/groceryDemoAssets";
+
 export const collections = [
   {
     imgSrc: "/images/collections/collection-17.jpg",
@@ -2064,37 +2066,37 @@ export const collectionsV4 = [
 
 export const slides12 = [
   {
-    imgSrc: "/images/collections/vegetable.png",
+    imgSrc: groceryDemoImage("/images/collections/vegetable.png"),
     imgAlt: "collection-img",
     title: "Vegetables",
   },
   {
-    imgSrc: "/images/collections/dairy.png",
+    imgSrc: groceryDemoImage("/images/collections/dairy.png"),
     imgAlt: "collection-img",
     title: "Best Deals",
   },
   {
-    imgSrc: "/images/collections/package-foods.png",
+    imgSrc: groceryDemoImage("/images/collections/package-foods.png"),
     imgAlt: "collection-img",
     title: "Package Foods",
   },
   {
-    imgSrc: "/images/collections/beverage.png",
+    imgSrc: groceryDemoImage("/images/collections/beverage.png"),
     imgAlt: "collection-img",
     title: "Beverages",
   },
   {
-    imgSrc: "/images/collections/meat.png",
+    imgSrc: groceryDemoImage("/images/collections/meat.png"),
     imgAlt: "collection-img",
     title: "Meat",
   },
   {
-    imgSrc: "/images/collections/fruit.png",
+    imgSrc: groceryDemoImage("/images/collections/fruit.png"),
     imgAlt: "collection-img",
     title: "Fruit",
   },
   {
-    imgSrc: "/images/collections/package-foods.png",
+    imgSrc: groceryDemoImage("/images/collections/package-foods.png"),
     imgAlt: "collection-img",
     title: "Mixed food",
   },
@@ -2102,7 +2104,7 @@ export const slides12 = [
 
 export const slides13 = [
   {
-    imgSrc: "/images/collections/banner-collection-grocery.jpg",
+    imgSrc: groceryDemoImage("/images/collections/banner-collection-grocery.jpg"),
     imgAlt: "collection-img",
     subheading: "FREE DELIVERY",
     heading: "Organic Ingredients\n Made Easy",
@@ -2110,14 +2112,14 @@ export const slides13 = [
     color: "text-white",
   },
   {
-    imgSrc: "/images/collections/banner-collection-grocery2.jpg",
+    imgSrc: groceryDemoImage("/images/collections/banner-collection-grocery2.jpg"),
     imgAlt: "collection-img",
     subheading: "SALE UP TO 30% OFF",
     heading: "For Juice Lovers\n Everywhere",
     buttonClass: "btn-color-6",
   },
   {
-    imgSrc: "/images/collections/banner-collection-grocery.jpg",
+    imgSrc: groceryDemoImage("/images/collections/banner-collection-grocery.jpg"),
     imgAlt: "collection-img",
     subheading: "FREE DELIVERY",
     heading: "Organic Ingredients\n Made Easy",
@@ -2125,7 +2127,7 @@ export const slides13 = [
     color: "text-white",
   },
   {
-    imgSrc: "/images/collections/banner-collection-grocery2.jpg",
+    imgSrc: groceryDemoImage("/images/collections/banner-collection-grocery2.jpg"),
     imgAlt: "collection-img",
     subheading: "SALE UP TO 30% OFF",
     heading: "For Juice Lovers\n Everywhere",

@@ -1,8 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { groceryDemoImage } from "@/data/groceryDemoAssets";
 
 export default function Banner() {
+  const bannerImages = [
+    groceryDemoImage("/images/collections/img-w-text-grocery1.jpg"),
+    groceryDemoImage("/images/collections/img-w-text-grocery2.jpg"),
+    groceryDemoImage("/images/collections/img-w-text-grocery3.jpg"),
+  ];
+
   return (
     <section className="flat-spacing-12">
       <div className="container">
@@ -13,9 +20,9 @@ export default function Banner() {
                 <div className="img-style">
                   <Image
                     className="lazyload"
-                    data-src="/images/collections/img-w-text-grocery1.jpg"
+                    data-src={bannerImages[0]}
                     alt="img-slider"
-                    src="/images/collections/img-w-text-grocery1.jpg"
+                    src={bannerImages[0]}
                     width={470}
                     height={420}
                   />
@@ -25,9 +32,9 @@ export default function Banner() {
                 <div className="img-style">
                   <Image
                     className="lazyload"
-                    data-src="/images/collections/img-w-text-grocery2.jpg"
+                    data-src={bannerImages[1]}
                     alt="img-slider"
-                    src="/images/collections/img-w-text-grocery2.jpg"
+                    src={bannerImages[1]}
                     width={600}
                     height={713}
                   />
@@ -37,9 +44,9 @@ export default function Banner() {
                 <div className="img-style">
                   <Image
                     className="lazyload"
-                    data-src="/images/collections/img-w-text-grocery3.jpg"
+                    data-src={bannerImages[2]}
                     alt="img-slider"
-                    src="/images/collections/img-w-text-grocery3.jpg"
+                    src={bannerImages[2]}
                     width={706}
                     height={628}
                   />
