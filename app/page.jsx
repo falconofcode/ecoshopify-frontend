@@ -1,5 +1,4 @@
 import Footer1 from "@/components/footers/Footer1";
-import LocalizedProductSections from "@/components/homes/ecoshop/LocalizedProductSections";
 import Hero from "@/components/homes/home-grocery/Hero";
 import CategoriesHomeGro from "@/components/homes/home-grocery/Categories";
 import CollectionsHomeGro from "@/components/homes/home-grocery/Collections";
@@ -8,11 +7,11 @@ import FeaturesHomeGro from "@/components/homes/home-grocery/Features";
 import BannerHomeGro from "@/components/homes/home-grocery/Banner";
 import HeroHomeElec from "@/components/homes/home-electronic/Hero";
 import BannerCollections from "@/components/homes/home-baby/BannerCollections";
+import BrandsHome02 from "@/components/homes/home-2/Brands";
 
 import {
   MarketplaceBenefits,
   OffersAndDiscounts,
-  ParticipatingBrands,
   PlatformOverviewAndSearch,
   ProductQualities,
   SupplierInvitation,
@@ -36,7 +35,6 @@ export default function page() {
       </div>
       <ProductQualities />
       <OffersAndDiscounts />
-      <LocalizedProductSections />
       <div className="color-primary-8 color-main-text-2">
         <CollectionsHomeGro />
         <ProductsHomeGro />
@@ -44,9 +42,9 @@ export default function page() {
         <BannerHomeGro />
       </div>
       <BannerCollections />
-      <ParticipatingBrands />
       <MarketplaceBenefits />
       <SupplierInvitation />
+      <BrandsHome02 />
       <Footer1 bgColor="background-gray" />
     </>
   );

@@ -1,5 +1,6 @@
 "use client";
 import { brandData } from "@/data/brands";
+import { templateDemoImage } from "@/data/demoAssets";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
@@ -38,10 +39,9 @@ export default function Brands() {
                 <div className="brand-item-v2 hover-opacity">
                   <Image
                     className="lazyload"
-                    style={{ opacity: "0.2" }}
-                    data-src={brand.src}
+                    data-src={templateDemoImage(brand.src)}
                     alt={brand.alt}
-                    src={brand.src}
+                    src={templateDemoImage(brand.src)}
                     width={brand.width}
                     height={brand.height}
                   />

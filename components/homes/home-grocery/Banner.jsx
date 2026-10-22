@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { groceryDemoImage } from "@/data/groceryDemoAssets";
+import { groceryDemoImage } from "@/data/demoAssets";
 
 export default function Banner() {
   const bannerImages = [

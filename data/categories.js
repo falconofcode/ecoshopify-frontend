@@ -1,4 +1,4 @@
-import { groceryDemoImage } from "@/data/groceryDemoAssets";
+import { groceryDemoImage } from "@/data/demoAssets";
 
 export const collections = [
   {
