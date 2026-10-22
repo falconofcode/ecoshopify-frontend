@@ -14,7 +14,7 @@ export default function Products2() {
     addToCompareItem,
     isAddedtoCompareItem,
   } = useContextElement();
-  const tabs = ["Meat", "Oils", "Tomatoes", , "Soup"];
+  const tabs = ["Meat", "Oils", "Tomatoes", "Soup"];
   const [activeTab, setActiveTab] = useState(tabs[0]);
   const [filtered, setFiltered] = useState(products48);
   useEffect(() => {
