@@ -1,11 +1,9 @@
 import Footer1 from "@/components/footers/Footer1";
-import LocalizedPlantHero from "@/components/homes/ecoshop/LocalizedPlantHero";
 import LocalizedProductSections from "@/components/homes/ecoshop/LocalizedProductSections";
 import Hero from "@/components/homes/home-grocery/Hero";
 import CategoriesHomeGro from "@/components/homes/home-grocery/Categories";
 import CollectionsHomeGro from "@/components/homes/home-grocery/Collections";
 import ProductsHomeGro from "@/components/homes/home-grocery/Products";
-import Products2HomeGro from "@/components/homes/home-grocery/Products2";
 import FeaturesHomeGro from "@/components/homes/home-grocery/Features";
 import BannerHomeGro from "@/components/homes/home-grocery/Banner";
 import HeroHomeElec from "@/components/homes/home-electronic/Hero";
@@ -13,7 +11,6 @@ import BannerCollections from "@/components/homes/home-baby/BannerCollections";
 
 import {
   MarketplaceBenefits,
-  MarketplaceCategories,
   OffersAndDiscounts,
   ParticipatingBrands,
   PlatformOverviewAndSearch,
@@ -32,21 +29,21 @@ export default function page() {
   return (
     <>
       <HeroHomeElec />
-      <BannerCollections />
       <PlatformOverviewAndSearch />
-      <ProductQualities />
-      <OffersAndDiscounts />
-      <MarketplaceCategories />
-      <LocalizedProductSections />
       <div className="color-primary-8 color-main-text-2">
         <Hero />
         <CategoriesHomeGro />
+      </div>
+      <ProductQualities />
+      <OffersAndDiscounts />
+      <LocalizedProductSections />
+      <div className="color-primary-8 color-main-text-2">
         <CollectionsHomeGro />
         <ProductsHomeGro />
-        <Products2HomeGro />
         <FeaturesHomeGro />
         <BannerHomeGro />
       </div>
+      <BannerCollections />
       <ParticipatingBrands />
       <MarketplaceBenefits />
       <SupplierInvitation />

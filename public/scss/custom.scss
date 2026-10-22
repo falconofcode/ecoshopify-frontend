@@ -348,6 +348,20 @@ html[dir="rtl"] {
   }
 }
 
-#header.storefront-global-header .header-bottom {
-  background-color: #f05127e3; // #sandybrown
+#header.storefront-global-header {
+  --main: #214332;
+  --primary: #214332;
+
+  .header-bottom {
+    background-color: #214332;
+
+    .box-nav-ul .item-link {
+      color: var(--white);
+
+      &::before {
+        background-color: var(--white);
+      }
+    }
+  }
+
 }
