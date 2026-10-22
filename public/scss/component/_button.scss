@@ -16,6 +16,7 @@
     border: 1px solid transparent;
     background-color: transparent;
     cursor: pointer;
+
     &.hover-icon {
         .icon {
             @include mixin.transition3;
@@ -25,6 +26,7 @@
             display: inline-block;
             font-size: 9px;
         }
+
         &:hover {
             .icon {
                 transform: scale(1);
@@ -34,53 +36,65 @@
             }
         }
     }
+
     span {
         z-index: 1;
         color: inherit;
     }
+
     &.btn-primary {
         background-color: var(--primary);
         color: var(--white);
     }
+
     &.btn-primary-main {
         background-color: var(--primary);
         color: var(--main);
     }
+
     &.style-2 {
         padding: 0 24px;
         line-height: 42px;
     }
+
     &.style-3 {
         padding: 0 24px;
         line-height: 40px;
     }
+
     &.btn-color-1 {
         background-color: #fcf151;
         border-color: var(--main);
     }
+
     &.btn-color-2 {
         background-color: #c7fcff;
         border-color: var(--main);
     }
+
     &.btn-color-3 {
         background-color: #ffb1d2;
         border-color: var(--main);
     }
+
     &.btn-color-4 {
         background-color: #c1fb9b;
         border-color: var(--main);
     }
-    &.btn-color-5{
+
+    &.btn-color-5 {
         background-color: #e09314;
         color: var(--white);
     }
-    &.btn-color-6{
+
+    &.btn-color-6 {
         background-color: #b46161;
         color: var(--white);
 
     }
 
 }
+
 .btn-icon {
     .icon {
         margin-inline-start: 8px;
@@ -88,65 +102,78 @@
         font-size: 9px;
     }
 }
+
 .btn-xl {
     padding: 0px 30px;
     font-size: 18px;
     line-height: 50px;
+
     .icon {
         font-weight: 600;
         margin-inline-start: 12px;
         font-size: 12px;
     }
 }
+
 .btn-md {
     padding: 0 30px;
     min-height: 46.8px;
 }
+
 .btn-sm {
     padding-left: 18px;
     padding-right: 18px;
 }
 
 .btn-fill {
-    background-color: var(--main);
+    background-color: lightsalmon;
     border: 1px solid var(--main);
     color: var(--white);
 }
+
 .btn-outline {
     background-color: var(--white);
     border: 1px solid var(--main);
 }
+
 .btn-outline-2 {
     background-color: var(--white);
     border: 1px solid #ebebeb;
 }
+
 .btn-outline-dark {
     background-color: transparent;
     border: 1px solid var(--main);
     color: var(--main);
     font-weight: 400;
     gap: 12px;
+
     i {
         font-size: 10px;
     }
+
     &:hover {
         color: var(--primary);
         border-color: var(--primary);
     }
 }
+
 .btn-outline-light {
     background-color: transparent;
     border: 1px solid var(--white);
     color: var(--white);
+
     &:hover {
         color: var(--primary);
         border-color: var(--primary);
     }
 }
+
 .fill-outline-light {
     background-color: transparent;
     border: 1px solid var(--white);
     color: var(--white);
+
     &:hover {
         color: var(--main);
         border-color: var(--white);
@@ -159,11 +186,13 @@
     padding-bottom: 7px;
     color: var(--main);
     position: relative;
+
     .icon {
         margin-inline-start: 8px;
         display: inline-block;
         font-size: 8px;
     }
+
     &::after {
         position: absolute;
         content: "";
@@ -174,18 +203,23 @@
         background-color: var(--main);
         @include mixin.transition3;
     }
+
     &:hover {
         color: var(--primary);
+
         &::after {
             background-color: var(--primary);
         }
     }
+
     &.collection-other-link {
         padding-bottom: 4px;
     }
 }
+
 .btn-line-light {
     color: var(--white);
+
     &::after {
         background-color: var(--white);
     }
@@ -193,19 +227,24 @@
 
 .btn-light {
     background-color: var(--white);
+
     .icon {
         color: var(--white);
     }
+
     &:hover {
         background-color: var(--main);
         color: var(--white);
     }
 }
+
 .btn-light-icon {
     background-color: var(--white);
 }
+
 .btn-fill-line {
     border: 1px solid var(--main) !important;
+
     &:hover {
         border-color: transparent !important;
     }
@@ -215,6 +254,7 @@
     position: relative;
     overflow: hidden;
 }
+
 .animate-hover-btn:after {
     background-image: linear-gradient(90deg, transparent, rgb(0 0 0 /0.25), transparent);
     content: "";
@@ -225,21 +265,25 @@
     transform: skew(-20deg);
     width: 200%;
 }
+
 .animate-hover-btn.btn-color-6:after,
 .animate-hover-btn.btn-color-5:after,
 .animate-hover-btn.btn-primary:after,
 .animate-hover-btn.btn-fill::after {
     background-image: linear-gradient(90deg, transparent, rgb(255 255 255 /0.25), transparent);
 }
+
 @keyframes shine {
     100% {
         left: -200%;
     }
 }
-.effect-flash{
+
+.effect-flash {
     position: relative;
     overflow: hidden;
-    &::after{
+
+    &::after {
         background-image: linear-gradient(90deg, transparent, var(--white), transparent);
         content: "";
         left: 150%;
@@ -248,12 +292,15 @@
         bottom: 0;
         transform: skew(-20deg);
         width: 200%;
-        animation: 5s cubic-bezier(.01,.56,1,1) infinite erFlashEffect;
+        animation: 5s cubic-bezier(.01, .56, 1, 1) infinite erFlashEffect;
         opacity: .7;
     }
 }
+
 @keyframes erFlashEffect {
-    100%,20% {
+
+    100%,
+    20% {
         left: -200%
     }
 }
@@ -265,19 +312,23 @@
 .tf-btn-loading {
     position: relative;
     @include mixin.transition3;
+
     &.loading {
         background-color: var(--main);
+
         .icon,
         i {
             // color: var(--white);
             display: none;
         }
+
         &::before {
             border: solid 2px var(--white);
             opacity: 1;
             animation-play-state: running;
         }
     }
+
     &::before {
         width: 18px;
         height: 18px;
@@ -296,6 +347,7 @@
         opacity: 0;
     }
 }
+
 .tf-loading-default {
     width: auto;
     height: 42px;
@@ -306,35 +358,44 @@
 
     &.loading {
         background-color: var(--white);
+
         &::before {
             border-color: var(--main);
         }
+
         .text {
             display: none;
         }
     }
+
     .text {
         font-size: 14px;
         color: var(--main);
         font-weight: 400;
         @include mixin.transition3;
     }
+
     &.style-2 {
         height: 38px;
         border-color: var(--main);
+
         .text {
             font-weight: 600;
         }
+
         &.loading {
             border-color: var(--primary);
+
             &::before {
                 @include mixin.transition3;
 
                 border-color: var(--primary);
             }
         }
+
         &:hover {
             border-color: var(--primary);
+
             .text {
                 color: var(--primary);
             }
@@ -346,6 +407,7 @@
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }

@@ -161,13 +161,13 @@ export default function RootLayout({ children }) {
           <div className="preload-logo">
             <div className="spinner"></div>
           </div>
-        </div>{" "}
+        </div>{ " " }
         <Context>
           <div id="wrapper">
             <HeaderStorefront isGlobal />
-            {children}
+            { children }
           </div>
-          <RtlToggle />
+
           <HomesModal /> <QuickView />
           <QuickAdd />
           <ProductSidebar />
@@ -186,7 +186,7 @@ export default function RootLayout({ children }) {
           <ToolbarBottom />
           <ToolbarShop />
           <NewsletterModal />
-          <ShareModal />{" "}
+          <ShareModal />{ " " }
         </Context>
         <ScrollTop />
       </body>

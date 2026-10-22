@@ -17,9 +17,9 @@ export default function Banner() {
             >
               <Image
                 className="lazyload"
-                data-src="/images/collections/collection-plant-1.jpg"
+                data-src="/images/collections/Banner5.png"
                 alt="collection-img"
-                src="/images/collections/collection-plant-1.jpg"
+                src="/images/collections/Banner5.png"
                 width={1410}
                 height={1096}
               />

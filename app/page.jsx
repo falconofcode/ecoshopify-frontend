@@ -3,6 +3,7 @@ import LocalizedPlantHero from "@/components/homes/ecoshop/LocalizedPlantHero";
 import LocalizedProductSections from "@/components/homes/ecoshop/LocalizedProductSections";
 import Hero from "@/components/homes/home-grocery/Hero";
 import HeroHomeElec from "@/components/homes/home-electronic/Hero";
+import BannerCollections from "@/components/homes/home-baby/BannerCollections";
 
 import {
   MarketplaceBenefits,
@@ -25,13 +26,14 @@ export default function page() {
   return (
     <>
       <HeroHomeElec />
+      <BannerCollections />
       <PlatformOverviewAndSearch />
-      <MarketplaceCategories />
-      <LocalizedProductSections />
+      <ProductQualities />
       <OffersAndDiscounts />
+            <MarketplaceCategories />
+      <LocalizedProductSections />
       <Hero />
       <ParticipatingBrands />
-      <ProductQualities />
       <MarketplaceBenefits />
       <SupplierInvitation />
       <Footer1 bgColor="background-gray" />

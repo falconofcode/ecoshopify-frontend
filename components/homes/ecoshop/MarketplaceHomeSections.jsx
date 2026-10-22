@@ -128,7 +128,7 @@ export function OffersAndDiscounts() {
           </div>
           <div className="tf-image-wrap">
             <Image
-              src="/images/collections/banner-cls-food2.png"
+              src="/images/collections/Banner5.png"
               alt="Fresh, plant-based products"
               width={800}
               height={798}

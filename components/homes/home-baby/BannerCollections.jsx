@@ -1,7 +1,8 @@
 "use client";
 
-import { collections9 } from "@/data/categories";
+import { collectionsRagada } from "@/data/categories";
 import Image from "next/image";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function BannerCollections() {
@@ -30,10 +31,10 @@ export default function BannerCollections() {
           loop={false} // Equivalent to data-loop
           autoplay={false} // Equivalent to data-auto-play
         >
-          {collections9.map((item, i) => (
-            <SwiperSlide className="swiper-slide" key={i}>
-              <div className="collection-item-v6 hover-img radius-10 o-hidden">
-                <a className="collection-inner">
+          {collectionsRagada.map((item) => (
+            <SwiperSlide className="swiper-slide" key={item.id}>
+              <div className="collection-item-v5 hover-img radius-10 o-hidden">
+                <Link className="collection-inner" href={item.href}>
                   <div className="collection-image img-style">
                     <Image
                       className="lazyload"
@@ -45,20 +46,24 @@ export default function BannerCollections() {
                     />
                   </div>
                   <div className="collection-content text-center">
+                    <p
+                      className="subheading text-dark wow fadeInUp"
+                      data-wow-delay="0s"
+                    >
+                      {item.eyebrow}
+                    </p>
                     <h5
-                      className="heading text-white fw-6 wow fadeInUp"
+                      className="heading text-dark fw-6 wow fadeInUp"
                       data-wow-delay="0s"
                     >
                       {item.title}
                     </h5>
-                    <p
-                      className="subheading text-white wow fadeInUp"
-                      data-wow-delay="0s"
-                    >
-                      {item.description}
-                    </p>
+                    <span className="tf-btn btn-line collection-other-link">
+                      {item.linkText}
+                      <i className="icon icon-arrow1-top-left" />
+                    </span>
                   </div>
-                </a>
+                </Link>
               </div>
             </SwiperSlide>
           ))}

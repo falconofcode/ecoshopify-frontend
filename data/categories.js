@@ -2572,3 +2572,51 @@ export const slides22 = [
       "Following a plant-based diet is linked to reduced risks of heart disease, obesity, type 2 diabetes, and certain cancers.",
   },
 ];
+
+
+
+
+
+
+
+// extra should be shiped with admin edit and back-end later on
+
+
+export const collectionsRagada = [
+  {
+    id: 1,
+    imageSrc: "/images/collections/Home05-1.jpg",
+    altText: "Fresh vegetables",
+    eyebrow: "100% NATURE",
+    title: "Vegetables",
+    linkText: "SHOP NOW",
+    href: "",
+  },
+  {
+    id: 2,
+    imageSrc: "/images/collections/Home05-2.jpg",
+    altText: "Organic fruit",
+    eyebrow: "100% NATURE",
+    title: "Organic Fruit",
+    linkText: "SHOP NOW",
+    href: "",
+  },
+  {
+    id: 3,
+    imageSrc: "/images/collections/Home05-3.jpg",
+    altText: "Fresh seafood",
+    eyebrow: "100% NATURE",
+    title: "Sea Food",
+    linkText: "SHOP NOW",
+    href: "",
+  },
+  {
+    id: 4,
+    imageSrc: "/images/collections/Home05-4.jpg",
+    altText: "Fresh herbs",
+    eyebrow: "100% NATURE",
+    title: "Herbs",
+    linkText: "SHOP NOW",
+    href: "",
+  }
+];
