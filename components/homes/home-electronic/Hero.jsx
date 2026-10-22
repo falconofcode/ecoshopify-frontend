@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { slides9 } from "@/data/heroslides";
+import { slidesRagada } from "@/data/heroslides";
 import React from "react";
 import Link from "next/link";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -24,7 +24,7 @@ export default function Hero() {
         pagination={{ clickable: true, el: ".spd160" }}
         className="tf-sw-slideshow"
       >
-        {slides9.map((slide, index) => (
+        {slidesRagada.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="wrap-slider">
               <Image

@@ -36,7 +36,7 @@ export default function Header20() {
                 <Image
                   alt="logo"
                   className="logo"
-                  src="/images/logo/logo.svg"
+                  src="/images/logo/logo.webp"
                   width={136}
                   height={21}
                 />

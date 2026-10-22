@@ -1,6 +1,9 @@
 import Footer1 from "@/components/footers/Footer1";
 import LocalizedPlantHero from "@/components/homes/ecoshop/LocalizedPlantHero";
 import LocalizedProductSections from "@/components/homes/ecoshop/LocalizedProductSections";
+import Hero from "@/components/homes/home-grocery/Hero";
+import HeroHomeElec from "@/components/homes/home-electronic/Hero";
+
 import {
   MarketplaceBenefits,
   MarketplaceCategories,
@@ -10,6 +13,7 @@ import {
   ProductQualities,
   SupplierInvitation,
 } from "@/components/homes/ecoshop/MarketplaceHomeSections";
+
 import React from "react";
 
 export const metadata = {
@@ -20,11 +24,12 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      <LocalizedPlantHero />
+      <HeroHomeElec />
       <PlatformOverviewAndSearch />
       <MarketplaceCategories />
       <LocalizedProductSections />
       <OffersAndDiscounts />
+      <Hero />
       <ParticipatingBrands />
       <ProductQualities />
       <MarketplaceBenefits />

@@ -1013,3 +1013,33 @@ export const sliderData7 = [
     subtext: "Every piece is made to last beyond the season",
   },
 ];
+
+
+// extra should be shiped with admin edit and back-end later on
+
+export const slidesRagada = [
+  {
+    imgSrc: "/images/slider/Slider1.jpg",
+    imgAlt: "fashion-slideshow-01",
+    imgWidth: 2000,
+    imgHeight: 837,
+    text: "The Swag Keeps Fruit & Veggies Fresh for Two Weeks!",
+    heading: "Organic Fruits\n and vegetables.",
+  },
+  {
+    imgSrc: "/images/slider/Slider2.jpg",
+    imgAlt: "fashion-slideshow-01",
+    imgWidth: 1800,
+    imgHeight: 753,
+    text: "The Swag Keeps Fruit & Veggies Fresh for Two Weeks!",
+    heading: "Organic Fruits\n and vegetables.",
+  },
+  {
+    imgSrc: "/images/slider/Slider3.jpg",
+    imgAlt: "fashion-slideshow-01",
+    imgWidth: 2000,
+    imgHeight: 836,
+    text: "The Swag Keeps Fruit & Veggies Fresh for Two Weeks!",
+    heading: "Organic Fruits\n and vegetables.",
+  },
+];

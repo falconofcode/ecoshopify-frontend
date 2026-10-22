@@ -80,7 +80,7 @@ export default function Footer1({ bgColor = "" }) {
                     <Link href={`/`}>
                       <Image
                         alt="image"
-                        src="/images/logo/logo.svg"
+                        src="/images/logo/logo.webp"
                         width="136"
                         height="21"
                       />

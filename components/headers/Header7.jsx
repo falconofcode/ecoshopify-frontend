@@ -59,7 +59,7 @@ export default function Header7() {
                 <Image
                   alt="logo"
                   className="logo"
-                  src="/images/logo/women-logo.svg"
+                  src="/images/logo/women-logo.webp"
                   width={143}
                   height={21}
                 />
