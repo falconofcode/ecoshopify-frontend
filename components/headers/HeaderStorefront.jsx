@@ -56,7 +56,7 @@ export default function HeaderStorefront({
               </a>
             </div>
 
-            <div className="col-md-4 col-6">
+            <div className="col-md-2 col-6">
               <Link href="/" className="logo-header">
                 <Image
                   alt="EcoShopify"
@@ -69,7 +69,7 @@ export default function HeaderStorefront({
               </Link>
             </div>
 
-            <div className="col-md-4 col-6 tf-md-hidden">
+            <div className="col-md-7 col-6 tf-md-hidden">
               <form
                 action="/home-search"
                 method="get"
@@ -93,7 +93,7 @@ export default function HeaderStorefront({
               </form>
             </div>
 
-            <div className="col-md-4 col-3">
+            <div className="col-md-3 col-3">
               <ul className="nav-icon d-flex justify-content-end align-items-center gap-20">
                 <li className="nav-language d-none d-xl-block">
                   <LanguageSelect topStart />
@@ -156,7 +156,7 @@ export default function HeaderStorefront({
 
       <div className="header-bottom line tf-md-hidden">
         <div className="container">
-          <div className="wrapper-header d-flex justify-content-center align-items-center">
+          <div className="wrapper-header d-flex justify-content-startr align-items-center storefront-header-main-row">
             <nav className="box-navigation text-center" aria-label="Main menu">
               <ul className="box-nav-ul d-flex align-items-center justify-content-center gap-30">
                 <Nav

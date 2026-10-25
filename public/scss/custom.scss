@@ -393,6 +393,7 @@ html[dir="rtl"] {
     }
 
     .btn-open-sub {
+
       &::before,
       &::after {
         background-color: var(--white);
@@ -444,4 +445,9 @@ html[dir="rtl"] {
       background-color: var(--main);
     }
   }
+}
+
+.storefront-header-main-row {
+  max-height: 40px !important;
+  min-height: 30px !important;
 }
