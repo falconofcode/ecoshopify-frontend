@@ -1,0 +1,262 @@
+[
+    {
+        "_id": "category_beauty",
+        "name": {
+            "en": "Beauty",
+            "ar": "الجمال"
+        },
+        "parent": null,
+        "path": "",
+        "level": 0,
+        "order": 0,
+        "isActive": true,
+        "description": "",
+        "createdAt": "2026-10-27T00:00:00.000Z",
+        "updatedAt": "2026-10-27T00:00:00.000Z",
+        "slug": "beauty",
+        "__v": 0,
+        "icon": "",
+        "image": "https://ik.imagekit.io/bf62vomqy/sellzy/categories/skincare/category__skincare_JU91zeVgI6.jpg",
+        "productBases": []
+    },
+    {
+        "_id": "category_home_living",
+        "name": {
+            "en": "Home & Living",
+            "ar": "المنزل والمعيشة"
+        },
+        "parent": null,
+        "path": "",
+        "level": 0,
+        "order": 1,
+        "isActive": true,
+        "description": "",
+        "createdAt": "2026-10-27T00:00:00.000Z",
+        "updatedAt": "2026-10-27T00:00:00.000Z",
+        "slug": "home-living",
+        "__v": 0,
+        "icon": "",
+        "image": "https://ik.imagekit.io/bf62vomqy/sellzy/categories/air-freshners/category_air_freshners_uksf4bjiS.jpg",
+        "productBases": []
+    },
+    {
+        "_id": "category_supplements",
+        "name": {
+            "en": "Supplements",
+            "ar": "المكملات الغذائية"
+        },
+        "parent": null,
+        "path": "",
+        "level": 0,
+        "order": 2,
+        "isActive": true,
+        "description": "",
+        "createdAt": "2026-10-27T00:00:00.000Z",
+        "updatedAt": "2026-10-27T00:00:00.000Z",
+        "slug": "supplements",
+        "__v": 0,
+        "icon": "",
+        "image": "https://ik.imagekit.io/bf62vomqy/sellzy/categories/supplements/category_supplements__2q0SO2GFN.jpg",
+        "productBases": []
+    },
+    {
+        "_id": "category_grocery",
+        "name": {
+            "en": "Grocery",
+            "ar": "البقالة العضوية"
+        },
+        "parent": null,
+        "path": "",
+        "level": 0,
+        "order": 3,
+        "isActive": true,
+        "description": "",
+        "createdAt": "2026-10-27T00:00:00.000Z",
+        "updatedAt": "2026-10-27T00:00:00.000Z",
+        "slug": "grocery",
+        "__v": 0,
+        "icon": "",
+        "image": "https://ik.imagekit.io/bf62vomqy/sellzy/categories/seasonal-harvest/category_seasonal_harvest_Lla-xNvAl.jpg",
+        "productBases": []
+    },
+    {
+        "_id": "category_personal_care",
+        "name": {
+            "en": "Personal Care",
+            "ar": "العناية الشخصية"
+        },
+        "parent": null,
+        "path": "",
+        "level": 0,
+        "order": 4,
+        "isActive": true,
+        "description": "",
+        "createdAt": "2026-10-27T00:00:00.000Z",
+        "updatedAt": "2026-10-27T00:00:00.000Z",
+        "slug": "personal-care",
+        "__v": 0,
+        "icon": "",
+        "image": "https://res.cloudinary.com/dxkhdqifr/image/upload/v1772403180/sellzy/categories/kvwtn0bi3jrip2qe0g9c.jpg",
+        "productBases": []
+    },
+    {
+        "_id": "category_baby_kids",
+        "name": {
+            "en": "Baby & Kids",
+            "ar": "الأم والطفل"
+        },
+        "parent": null,
+        "path": "",
+        "level": 0,
+        "order": 5,
+        "isActive": true,
+        "description": "",
+        "createdAt": "2026-10-27T00:00:00.000Z",
+        "updatedAt": "2026-10-27T00:00:00.000Z",
+        "slug": "baby-kids",
+        "__v": 0,
+        "icon": "",
+        "image": "https://ik.imagekit.io/bf62vomqy/sellzy/categories/natural-care/category_natural_care_pZGmlMDAA.jpg",
+        "productBases": []
+    },
+    {
+        "_id": "category_pets",
+        "name": {
+            "en": "Pets",
+            "ar": "الحيوانات الأليفة"
+        },
+        "parent": null,
+        "path": "",
+        "level": 0,
+        "order": 6,
+        "isActive": true,
+        "description": "",
+        "createdAt": "2026-10-27T00:00:00.000Z",
+        "updatedAt": "2026-10-27T00:00:00.000Z",
+        "slug": "pets",
+        "__v": 0,
+        "icon": "",
+        "image": "https://ik.imagekit.io/bf62vomqy/sellzy/categories/wellness/category_wellness_g3IEaLnSt.jpg",
+        "productBases": []
+    },
+    {
+        "_id": "category_sustainable_fashion",
+        "name": {
+            "en": "Sustainable Fashion",
+            "ar": "الأزياء المستدامة"
+        },
+        "parent": null,
+        "path": "",
+        "level": 0,
+        "order": 7,
+        "isActive": true,
+        "description": "",
+        "createdAt": "2026-10-27T00:00:00.000Z",
+        "updatedAt": "2026-10-27T00:00:00.000Z",
+        "slug": "sustainable-fashion",
+        "__v": 0,
+        "icon": "",
+        "image": "https://ik.imagekit.io/bf62vomqy/sellzy/categories/natural-care/category_natural_care_pZGmlMDAA.jpg",
+        "productBases": []
+    },
+    {
+        "_id": "category_gifts_bundles",
+        "name": {
+            "en": "Gifts & Bundles",
+            "ar": "الهدايا والباقات"
+        },
+        "parent": null,
+        "path": "",
+        "level": 0,
+        "order": 8,
+        "isActive": true,
+        "description": "",
+        "createdAt": "2026-10-27T00:00:00.000Z",
+        "updatedAt": "2026-10-27T00:00:00.000Z",
+        "slug": "gifts-bundles",
+        "__v": 0,
+        "icon": "",
+        "image": "https://ik.imagekit.io/bf62vomqy/sellzy/categories/health-immunity-box/category_health___immunity_box_RIF1M89n9.jpg",
+        "productBases": []
+    },
+    {
+        "_id": "category_kitchen_dining",
+        "name": {
+            "en": "Kitchen & Dining",
+            "ar": "المطبخ وأدوات الطعام"
+        },
+        "parent": null,
+        "path": "",
+        "level": 0,
+        "order": 9,
+        "isActive": true,
+        "description": "",
+        "createdAt": "2026-10-27T00:00:00.000Z",
+        "updatedAt": "2026-10-27T00:00:00.000Z",
+        "slug": "kitchen-dining",
+        "__v": 0,
+        "icon": "",
+        "image": "https://ik.imagekit.io/bf62vomqy/sellzy/categories/breakfast/category_breakfast_2QzpyBmPp.jpg",
+        "productBases": []
+    },
+    {
+        "_id": "category_garden_plants",
+        "name": {
+            "en": "Garden & Plants",
+            "ar": "الزراعة والنباتات"
+        },
+        "parent": null,
+        "path": "",
+        "level": 0,
+        "order": 10,
+        "isActive": true,
+        "description": "",
+        "createdAt": "2026-10-27T00:00:00.000Z",
+        "updatedAt": "2026-10-27T00:00:00.000Z",
+        "slug": "garden-plants",
+        "__v": 0,
+        "icon": "",
+        "image": "https://ik.imagekit.io/bf62vomqy/sellzy/categories/seasonal-harvest/category_seasonal_harvest_Lla-xNvAl.jpg",
+        "productBases": []
+    },
+    {
+        "_id": "category_wellness_relaxation",
+        "name": {
+            "en": "Wellness & Relaxation",
+            "ar": "الصحة والاسترخاء"
+        },
+        "parent": null,
+        "path": "",
+        "level": 0,
+        "order": 11,
+        "isActive": true,
+        "description": "",
+        "createdAt": "2026-10-27T00:00:00.000Z",
+        "updatedAt": "2026-10-27T00:00:00.000Z",
+        "slug": "wellness-relaxation",
+        "__v": 0,
+        "icon": "",
+        "image": "https://ik.imagekit.io/bf62vomqy/sellzy/categories/wellness/category_wellness_g3IEaLnSt.jpg",
+        "productBases": []
+    },
+    {
+        "_id": "category_eco_office_stationery",
+        "name": {
+            "en": "Eco Office & Stationery",
+            "ar": "المكتب والقرطاسية"
+        },
+        "parent": null,
+        "path": "",
+        "level": 0,
+        "order": 12,
+        "isActive": true,
+        "description": "",
+        "createdAt": "2026-10-27T00:00:00.000Z",
+        "updatedAt": "2026-10-27T00:00:00.000Z",
+        "slug": "eco-office-stationery",
+        "__v": 0,
+        "icon": "",
+        "image": "https://ik.imagekit.io/bf62vomqy/sellzy/categories/temperature-gun/category_temperature_gun_UwxM-QgOr.jpg",
+        "productBases": []
+    }
+]

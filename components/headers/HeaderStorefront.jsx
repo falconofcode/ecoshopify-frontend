@@ -7,6 +7,7 @@ import WishlistLength from "../common/WishlistLength";
 import LanguageSelect from "../common/LanguageSelect";
 import Nav from "./Nav";
 import { useStorefrontLanguage } from "@/components/homes/ecoshop/useStorefrontLanguage";
+import storefrontCategories from "@/data/storefront-menu.json";
 
 export default function HeaderStorefront({
   isGlobal = false,
@@ -16,10 +17,16 @@ export default function HeaderStorefront({
   isArrow = true,
   Linkfs = "",
 }) {
+
   const isArabic = useStorefrontLanguage() === "ar";
+
   const searchLabel = isArabic
     ? "ابحث عن المنتجات والعلامات التجارية"
     : "Search products and brands";
+
+  const categories = storefrontCategories
+    .filter((category) => category.isActive)
+    .sort((a, b) => a.order - b.order);
 
   return (
     <header
@@ -175,352 +182,38 @@ export default function HeaderStorefront({
                   Browse All Departments
                 </a>
                 <div className="list-categories-inner toolbar-shop-mobile">
+                
+                
+                
                   <ul className="nav-ul-mb" id="wrapper-menu-navigation">
-                    <li className="nav-mb-item">
+                    {categories.map((category) => {
+                      
+                    const label = category.name[isArabic ? "ar" : "en"];
+
+                    return(
+                    <li key={category._id} className="nav-mb-item">
                       <Link
                         href={`/shop-default`}
                         className="tf-category-link mb-menu-link"
                       >
                         <div className="image">
                           <Image
-                            alt="image"
-                            src="/images/shop/cate/cate1.jpg"
+                            alt={label}
+                            src={category.image}
                             width={40}
                             height={48}
                           />
                         </div>
-                        <span className="link">Accessories</span>
+                        <span className="link">{label}</span>
                       </Link>
-                    </li>
-                    <li className="nav-mb-item">
-                      <Link
-                        href={`/shop-default`}
-                        className="tf-category-link mb-menu-link"
-                      >
-                        <div className="image">
-                          <Image
-                            alt="image"
-                            src="/images/shop/cate/cate2.jpg"
-                            width={40}
-                            height={48}
-                          />
-                        </div>
-                        <span className="link">Dog</span>
-                      </Link>
-                    </li>
-                    <li className="nav-mb-item">
-                      <Link
-                        href={`/shop-default`}
-                        className="tf-category-link mb-menu-link"
-                      >
-                        <div className="image">
-                          <Image
-                            alt="image"
-                            src="/images/shop/cate/cate3.jpg"
-                            width={40}
-                            height={43}
-                          />
-                        </div>
-                        <span className="link">Grocery</span>
-                      </Link>
-                    </li>
-                    <li className="nav-mb-item">
-                      <Link
-                        href={`/shop-default`}
-                        className="tf-category-link mb-menu-link"
-                      >
-                        <div className="image">
-                          <Image
-                            alt="image"
-                            src="/images/shop/cate/cate4.png"
-                            width={40}
-                            height={48}
-                          />
-                        </div>
-                        <span className="link">Handbag</span>
-                      </Link>
-                    </li>
-                    <li className="nav-mb-item">
-                      <a
-                        href="#cate-menu-one"
-                        className="tf-category-link has-children collapsed mb-menu-link"
-                        data-bs-toggle="collapse"
-                        aria-expanded="true"
-                        aria-controls="cate-menu-one"
-                      >
-                        <div className="image">
-                          <Image
-                            alt="image"
-                            src="/images/shop/cate/cate5.jpg"
-                            width={40}
-                            height={48}
-                          />
-                        </div>
-                        <span className="link">Fashion</span>
-                        <span className="btn-open-sub" />
-                      </a>
-                      <div id="cate-menu-one" className="collapse list-cate">
-                        <ul className="sub-nav-menu" id="cate-menu-navigation">
-                          <li>
-                            <a
-                              href="#cate-shop-one"
-                              className="tf-category-link has-children sub-nav-link collapsed"
-                              data-bs-toggle="collapse"
-                              aria-expanded="true"
-                              aria-controls="cate-shop-one"
-                            >
-                              <div className="image">
-                                <Image
-                                  alt="image"
-                                  src="/images/shop/cate/cate6.jpg"
-                                  width={40}
-                                  height={49}
-                                />
-                              </div>
-                              <span>Mens</span>
-                              <span className="btn-open-sub" />
-                            </a>
-                            <div id="cate-shop-one" className="collapse">
-                              <ul className="sub-nav-menu sub-menu-level-2">
-                                <li>
-                                  <Link
-                                    href={`/shop-default`}
-                                    className="tf-category-link sub-nav-link"
-                                  >
-                                    <div className="image">
-                                      <Image
-                                        alt="image"
-                                        src="/images/shop/cate/cate1.jpg"
-                                        width={40}
-                                        height={48}
-                                      />
-                                    </div>
-                                    <span>Accessories</span>
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    href={`/shop-default`}
-                                    className="tf-category-link sub-nav-link"
-                                  >
-                                    <div className="image">
-                                      <Image
-                                        alt="image"
-                                        src="/images/shop/cate/cate8.jpg"
-                                        width={40}
-                                        height={48}
-                                      />
-                                    </div>
-                                    <span>Shoes</span>
-                                  </Link>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a
-                              href="#cate-shop-two"
-                              className="tf-category-link has-children sub-nav-link collapsed"
-                              data-bs-toggle="collapse"
-                              aria-expanded="true"
-                              aria-controls="cate-shop-two"
-                            >
-                              <div className="image">
-                                <Image
-                                  alt="image"
-                                  src="/images/shop/cate/cate9.jpg"
-                                  width={40}
-                                  height={49}
-                                />
-                              </div>
-                              <span>Womens</span>
-                              <span className="btn-open-sub" />
-                            </a>
-                            <div id="cate-shop-two" className="collapse">
-                              <ul className="sub-nav-menu sub-menu-level-2">
-                                <li>
-                                  <Link
-                                    href={`/shop-default`}
-                                    className="tf-category-link sub-nav-link"
-                                  >
-                                    <div className="image">
-                                      <Image
-                                        alt="image"
-                                        src="/images/shop/cate/cate4.png"
-                                        width={40}
-                                        height={48}
-                                      />
-                                    </div>
-                                    <span>Handbag</span>
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    href={`/shop-default`}
-                                    className="tf-category-link sub-nav-link"
-                                  >
-                                    <div className="image">
-                                      <Image
-                                        alt="image"
-                                        src="/images/shop/cate/cate7.jpg"
-                                        width={40}
-                                        height={41}
-                                      />
-                                    </div>
-                                    <span>Tee</span>
-                                  </Link>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li className="nav-mb-item">
-                      <a
-                        href="#cate-menu-two"
-                        className="tf-category-link has-children collapsed mb-menu-link"
-                        data-bs-toggle="collapse"
-                        aria-expanded="true"
-                        aria-controls="cate-menu-two"
-                      >
-                        <div className="image">
-                          <Image
-                            alt="image"
-                            src="/images/shop/cate/cate6.jpg"
-                            width={40}
-                            height={49}
-                          />
-                        </div>
-                        <span className="link">Men</span>
-                        <span className="btn-open-sub" />
-                      </a>
-                      <div id="cate-menu-two" className="collapse list-cate">
-                        <ul className="sub-nav-menu" id="cate-menu-navigation1">
-                          <li>
-                            <Link
-                              href={`/shop-default`}
-                              className="tf-category-link sub-nav-link"
-                            >
-                              <div className="image">
-                                <Image
-                                  alt="image"
-                                  src="/images/shop/cate/cate1.jpg"
-                                  width={40}
-                                  height={48}
-                                />
-                              </div>
-                              <span>Accessories</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href={`/shop-default`}
-                              className="tf-category-link sub-nav-link"
-                            >
-                              <div className="image">
-                                <Image
-                                  alt="image"
-                                  src="/images/shop/cate/cate8.jpg"
-                                  width={40}
-                                  height={48}
-                                />
-                              </div>
-                              <span>Shoes</span>
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li className="nav-mb-item">
-                      <Link
-                        href={`/shop-default`}
-                        className="tf-category-link mb-menu-link"
-                      >
-                        <div className="image">
-                          <Image
-                            alt="image"
-                            src="/images/shop/cate/cate7.jpg"
-                            width={40}
-                            height={41}
-                          />
-                        </div>
-                        <span className="link">Tee</span>
-                      </Link>
-                    </li>
-                    <li className="nav-mb-item">
-                      <Link
-                        href={`/shop-default`}
-                        className="tf-category-link mb-menu-link"
-                      >
-                        <div className="image">
-                          <Image
-                            alt="image"
-                            src="/images/shop/cate/cate8.jpg"
-                            width={40}
-                            height={48}
-                          />
-                        </div>
-                        <span className="link">Shoes</span>
-                      </Link>
-                    </li>
-                    <li className="nav-mb-item">
-                      <a
-                        href="#cate-menu-three"
-                        className="tf-category-link has-children collapsed mb-menu-link"
-                        data-bs-toggle="collapse"
-                        aria-expanded="true"
-                        aria-controls="cate-menu-three"
-                      >
-                        <div className="image">
-                          <Image
-                            alt="image"
-                            src="/images/shop/cate/cate9.jpg"
-                            width={40}
-                            height={49}
-                          />
-                        </div>
-                        <span className="link">Women</span>
-                        <span className="btn-open-sub" />
-                      </a>
-                      <div id="cate-menu-three" className="collapse list-cate">
-                        <ul className="sub-nav-menu" id="cate-menu-navigation2">
-                          <li>
-                            <Link
-                              href={`/shop-default`}
-                              className="tf-category-link sub-nav-link"
-                            >
-                              <div className="image">
-                                <Image
-                                  alt="image"
-                                  src="/images/shop/cate/cate4.png"
-                                  width={40}
-                                  height={48}
-                                />
-                              </div>
-                              <span>Handbag</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href={`/shop-default`}
-                              className="tf-category-link sub-nav-link"
-                            >
-                              <div className="image">
-                                <Image
-                                  alt="image"
-                                  src="/images/shop/cate/cate7.jpg"
-                                  width={40}
-                                  height={41}
-                                />
-                              </div>
-                              <span>Tee</span>
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
+                    </li>);
+                  })}
+
                   </ul>
+
+
+
+
                   <div className="categories-bottom">
                     <Link
                       href={`/shop-collection-sub`}
