@@ -34,8 +34,15 @@ const sizes = ["S", "M", "L", "XL"];
 import Slider from "rc-slider";
 import { products1 } from "@/data/products";
 import Link from "next/link";
-export default function ShopFilter({ setProducts, products = products1 }) {
-  const [price, setPrice] = useState([10, 20]);
+export default function ShopFilter({
+  setProducts,
+  products = products1,
+  showLegacyFacets = true,
+}) {
+  const prices = products.map((product) => product.price);
+  const minPrice = prices.length ? Math.min(...prices) : 0;
+  const maxPrice = prices.length ? Math.max(...prices) : minPrice;
+  const [price, setPrice] = useState([minPrice, maxPrice]);
   const handlePrice = (value) => {
     setPrice(value);
   };
@@ -150,7 +157,7 @@ export default function ShopFilter({ setProducts, products = products1 }) {
     setSelectedBrands([]);
     setSelectedAvailabilities([]);
     setSelectedSizes([]);
-    setPrice([10, 20]);
+    setPrice([minPrice, maxPrice]);
   };
   return (
     <div className="offcanvas offcanvas-start canvas-filter" id="filterShop">
@@ -167,35 +174,37 @@ export default function ShopFilter({ setProducts, products = products1 }) {
           />
         </header>
         <div className="canvas-body">
-          <div className="widget-facet wd-categories">
-            <div
-              className="facet-title"
-              data-bs-target="#categories"
-              data-bs-toggle="collapse"
-              aria-expanded="true"
-              aria-controls="categories"
-            >
-              <span>Product categories</span>
-              <span className="icon icon-arrow-up" />
+          {showLegacyFacets && (
+            <div className="widget-facet wd-categories">
+              <div
+                className="facet-title"
+                data-bs-target="#categories"
+                data-bs-toggle="collapse"
+                aria-expanded="true"
+                aria-controls="categories"
+              >
+                <span>Product categories</span>
+                <span className="icon icon-arrow-up" />
+              </div>
+              <div id="categories" className="collapse show">
+                <ul className="list-categoris current-scrollbar mb_36">
+                  {categories.map((category) => (
+                    <li key={category.id} className="cate-item">
+                      {category.link ? (
+                        <Link href={category.link}>
+                          <span>{category.name}</span>
+                        </Link>
+                      ) : (
+                        <a href="#">
+                          <span>{category.name}</span>
+                        </a>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div id="categories" className="collapse show">
-              <ul className="list-categoris current-scrollbar mb_36">
-                {categories.map((category) => (
-                  <li key={category.id} className={`cate-item`}>
-                    {category.link ? (
-                      <Link href={category.link}>
-                        <span>{category.name}</span>
-                      </Link>
-                    ) : (
-                      <a href="#">
-                        <span>{category.name}</span>
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          )}
           <form
             onSubmit={(e) => e.preventDefault()}
             action="#"
@@ -261,8 +270,8 @@ export default function ShopFilter({ setProducts, products = products1 }) {
                   <Slider
                     formatLabel={() => ``}
                     range
-                    max={22}
-                    min={5}
+                    max={maxPrice}
+                    min={minPrice}
                     defaultValue={price}
                     onChange={(value) => handlePrice(value)}
                     id="slider"
@@ -284,7 +293,7 @@ export default function ShopFilter({ setProducts, products = products1 }) {
                 </div>
               </div>
             </div>
-            <div className="widget-facet">
+            {showLegacyFacets && <div className="widget-facet">
               <div
                 className="facet-title"
                 data-bs-target="#brand"
@@ -320,8 +329,8 @@ export default function ShopFilter({ setProducts, products = products1 }) {
                   ))}
                 </ul>
               </div>
-            </div>
-            <div className="widget-facet">
+            </div>}
+            {showLegacyFacets && <div className="widget-facet">
               <div
                 className="facet-title"
                 data-bs-target="#color"
@@ -365,48 +374,50 @@ export default function ShopFilter({ setProducts, products = products1 }) {
                   ))}
                 </ul>
               </div>
-            </div>
-            <div className="widget-facet">
-              <div
-                className="facet-title"
-                data-bs-target="#size"
-                data-bs-toggle="collapse"
-                aria-expanded="true"
-                aria-controls="size"
-              >
-                <span>Size</span>
-                <span className="icon icon-arrow-up" />
+            </div>}
+            {showLegacyFacets && (
+              <div className="widget-facet">
+                <div
+                  className="facet-title"
+                  data-bs-target="#size"
+                  data-bs-toggle="collapse"
+                  aria-expanded="true"
+                  aria-controls="size"
+                >
+                  <span>Size</span>
+                  <span className="icon icon-arrow-up" />
+                </div>
+                <div id="size" className="collapse show">
+                  <ul className="tf-filter-group current-scrollbar">
+                    {sizes.map((elm, i) => (
+                      <li
+                        key={i}
+                        onClick={() => handleSelectSizes(elm)}
+                        className="list-item d-flex gap-12 align-items-center"
+                      >
+                        <input
+                          type="radio"
+                          className="tf-check tf-check-size"
+                          readOnly
+                          checked={selectedSizes.includes(elm)}
+                        />
+                        <label className="label">
+                          <span>{elm}</span>&nbsp;
+                          <span>
+                            (
+                            {
+                              products.filter((el) => el.sizes?.includes(elm))
+                                .length
+                            }
+                            )
+                          </span>
+                        </label>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <div id="size" className="collapse show">
-                <ul className="tf-filter-group current-scrollbar">
-                  {sizes.map((elm, i) => (
-                    <li
-                      key={i}
-                      onClick={() => handleSelectSizes(elm)}
-                      className="list-item d-flex gap-12 align-items-center"
-                    >
-                      <input
-                        type="radio"
-                        className="tf-check tf-check-size"
-                        readOnly
-                        checked={selectedSizes.includes(elm)}
-                      />
-                      <label className="label">
-                        <span>{elm}</span>&nbsp;
-                        <span>
-                          (
-                          {
-                            products.filter((el) => el.sizes?.includes(elm))
-                              .length
-                          }
-                          )
-                        </span>
-                      </label>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            )}
           </form>
           <div className="mt-5"></div>
           <a

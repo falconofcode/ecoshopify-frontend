@@ -1,4 +1,7 @@
 "use client";
+
+import sellzyProducts from "@/data/substitute-products.json";
+
 import { layouts } from "@/data/shop";
 import ProductGrid from "./ProductGrid";
 import { useState } from "react";
@@ -6,10 +9,20 @@ import Pagination from "../common/Pagination";
 import ShopFilter from "./ShopFilter";
 import Sorting from "./Sorting";
 
+const shopProducts = sellzyProducts.map((product) => ({
+  id: product._id,
+  title: product.name,
+  price: product.price,
+  imgSrc: product.image,
+  imgHoverSrc: product.images?.[1] ?? product.image,
+  isAvailable: product.stock > 0,
+  soldOut: product.stock <= 0,
+}));
+
 export default function ShopDefault() {
+  const [products, setProducts] = useState(shopProducts);
+  const [finalSorted, setFinalSorted] = useState(shopProducts);
   const [gridItems, setGridItems] = useState(4);
-  const [products, setProducts] = useState([]);
-  const [finalSorted, setFinalSorted] = useState([]);
   return (
     <>
       <section className="flat-spacing-2">
@@ -61,7 +74,11 @@ export default function ShopDefault() {
           </div>
         </div>
       </section>
-      <ShopFilter setProducts={setProducts} />
+      <ShopFilter
+        products={shopProducts}
+        setProducts={setProducts}
+        showLegacyFacets={false}
+      />
     </>
   );
 }

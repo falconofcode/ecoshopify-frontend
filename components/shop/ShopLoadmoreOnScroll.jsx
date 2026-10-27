@@ -5,14 +5,17 @@ import { useEffect, useRef, useState } from "react";
 import { products1 } from "@/data/products";
 import ShopFilter from "./ShopFilter";
 import Sorting from "./Sorting";
+import { shopProducts } from "@/data/substitute-products.json";
 
 export default function ShopLoadmoreOnScroll() {
   const [gridItems, setGridItems] = useState(4);
   const [loading, setLoading] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [allproducts, setAllproducts] = useState([...products1]);
-  const [products, setProducts] = useState([]);
-  const [finalSorted, setFinalSorted] = useState([]);
+
+  const [products, setProducts] = useState(shopProducts);
+  const [finalSorted, setFinalSorted] = useState(shopProducts);
+  
   const handleLoad = () => {
     setLoading(true);
     setTimeout(() => {
@@ -76,7 +79,7 @@ export default function ShopLoadmoreOnScroll() {
             </ul>
             <div className="tf-control-sorting d-flex justify-content-end">
               <div className="tf-dropdown-sort" data-bs-toggle="dropdown">
-                <Sorting setFinalSorted={setFinalSorted} products={products} />
+                <Sorting setFinalSorted={setFinalSorted} products={finalSorted} />
               </div>
             </div>
           </div>
@@ -101,6 +104,7 @@ export default function ShopLoadmoreOnScroll() {
         </div>
       </section>
       <ShopFilter products={allproducts} setProducts={setProducts} />{" "}
+      <ShopFilter products={shopProducts} setProducts={setProducts} />
     </>
   );
 }

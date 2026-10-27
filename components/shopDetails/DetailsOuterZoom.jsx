@@ -16,7 +16,10 @@ import { allProducts } from "@/data/products";
 import { useContextElement } from "@/context/Context";
 import { openCartModal } from "@/utlis/openCartModal";
 
-export default function DetailsOuterZoom({ product = allProducts[0] }) {
+export default function DetailsOuterZoom({
+  product = allProducts[0],
+  isSellzyProduct = false,
+}) {
   const [currentColor, setCurrentColor] = useState(colors[0]);
   const [currentSize, setCurrentSize] = useState(sizeOptions[1]);
   const [quantity, setQuantity] = useState(1);
@@ -56,6 +59,7 @@ export default function DetailsOuterZoom({ product = allProducts[0] }) {
                     handleColor={handleColor}
                     currentColor={currentColor.value}
                     firstImage={product.imgSrc}
+                    imageUrls={isSellzyProduct ? product.images : undefined}
                   />
                 </div>
               </div>
@@ -69,122 +73,149 @@ export default function DetailsOuterZoom({ product = allProducts[0] }) {
                       {product.title ? product.title : "Cotton jersey top"}
                     </h5>
                   </div>
-                  <div className="tf-product-info-badges">
-                    <div className="badges">Best seller</div>
-                    <div className="product-status-content">
-                      <i className="icon-lightning" />
-                      <p className="fw-6">
-                        Selling fast! 56 people have this in their carts.
-                      </p>
+                  {!isSellzyProduct && (
+                    <div className="tf-product-info-badges">
+                      <div className="badges">Best seller</div>
+                      <div className="product-status-content">
+                        <i className="icon-lightning" />
+                        <p className="fw-6">
+                          Selling fast! 56 people have this in their carts.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  )}
                   <div className="tf-product-info-price">
                     <div className="price-on-sale">
                       ${product.price.toFixed(2)}
                     </div>
 
-                    <div className="compare-at-price">
-                      ${currentColor.oldPrice.toFixed(2)}
-                    </div>
-
-                    <div className="badges-on-sale">
-                      <span>20</span>% OFF
-                    </div>
+                    {!isSellzyProduct && (
+                      <>
+                        <div className="compare-at-price">
+                          ${currentColor.oldPrice.toFixed(2)}
+                        </div>
+                        <div className="badges-on-sale">
+                          <span>20</span>% OFF
+                        </div>
+                      </>
+                    )}
                   </div>
-                  <div className="tf-product-info-liveview">
-                    <div className="liveview-count">20</div>
-                    <p className="fw-6">People are viewing this right now</p>
-                  </div>
-                  <div className="tf-product-info-countdown">
-                    <div className="countdown-wrap">
-                      <div className="countdown-title">
-                        <i className="icon-time tf-ani-tada" />
-                        <p>HURRY UP! SALE ENDS IN:</p>
+                  {isSellzyProduct ? (
+                    <div className="product-status-content">
+                      <p className="fw-6">
+                        {product.stock > 0
+                          ? `${product.stock} in stock`
+                          : "Out of stock"}
+                      </p>
+                      {product.categoryName && (
+                        <p className="mt_10">Category: {product.categoryName}</p>
+                      )}
+                    </div>
+                  ) : (
+                    <>
+                      <div className="tf-product-info-liveview">
+                        <div className="liveview-count">20</div>
+                        <p className="fw-6">
+                          People are viewing this right now
+                        </p>
                       </div>
-                      <div className="tf-countdown style-1">
-                        <div className="js-countdown">
-                          <CountdownComponent labels="Days :,Hours :,Mins :,Secs" />
+                      <div className="tf-product-info-countdown">
+                        <div className="countdown-wrap">
+                          <div className="countdown-title">
+                            <i className="icon-time tf-ani-tada" />
+                            <p>HURRY UP! SALE ENDS IN:</p>
+                          </div>
+                          <div className="tf-countdown style-1">
+                            <div className="js-countdown">
+                              <CountdownComponent labels="Days :,Hours :,Mins :,Secs" />
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="tf-product-info-variant-picker">
-                    <div className="variant-picker-item">
-                      <div className="variant-picker-label">
-                        Color:
-                        <span className="fw-6 variant-picker-label-value">
-                          {currentColor.value}
-                        </span>
-                      </div>
-                      <form className="variant-picker-values">
-                        {colors.map((color) => (
-                          <React.Fragment key={color.id}>
-                            <input
-                              id={color.id}
-                              type="radio"
-                              name="color1"
-                              readOnly
-                              checked={currentColor == color}
-                            />
-                            <label
-                              onClick={() => setCurrentColor(color)}
-                              className="hover-tooltip radius-60"
-                              htmlFor={color.id}
-                              data-value={color.value}
-                            >
-                              <span
-                                className={`btn-checkbox ${color.className}`}
-                              />
-                              <span className="tooltip">{color.value}</span>
-                            </label>
-                          </React.Fragment>
-                        ))}
-                      </form>
-                    </div>
-                    <div className="variant-picker-item">
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="variant-picker-label">
-                          Size:
-                          <span className="fw-6 variant-picker-label-value">
-                            {currentSize.value}
-                          </span>
+                    </>
+                  )}
+                  {!isSellzyProduct && (
+                    <>
+                      <div className="tf-product-info-variant-picker">
+                        <div className="variant-picker-item">
+                          <div className="variant-picker-label">
+                            Color:
+                            <span className="fw-6 variant-picker-label-value">
+                              {currentColor.value}
+                            </span>
+                          </div>
+                          <form className="variant-picker-values">
+                            {colors.map((color) => (
+                              <React.Fragment key={color.id}>
+                                <input
+                                  id={color.id}
+                                  type="radio"
+                                  name="color1"
+                                  readOnly
+                                  checked={currentColor == color}
+                                />
+                                <label
+                                  onClick={() => setCurrentColor(color)}
+                                  className="hover-tooltip radius-60"
+                                  htmlFor={color.id}
+                                  data-value={color.value}
+                                >
+                                  <span
+                                    className={`btn-checkbox ${color.className}`}
+                                  />
+                                  <span className="tooltip">{color.value}</span>
+                                </label>
+                              </React.Fragment>
+                            ))}
+                          </form>
                         </div>
-                        <a
-                          href="#find_size"
-                          data-bs-toggle="modal"
-                          className="find-size fw-6"
-                        >
-                          Find your size
-                        </a>
-                      </div>
-                      <form className="variant-picker-values">
-                        {sizeOptions.map((size) => (
-                          <React.Fragment key={size.id}>
-                            <input
-                              type="radio"
-                              name="size1"
-                              id={size.id}
-                              readOnly
-                              checked={currentSize == size}
-                            />
-                            <label
-                              onClick={() => setCurrentSize(size)}
-                              className="style-text"
-                              htmlFor={size.id}
-                              data-value={size.value}
+                        <div className="variant-picker-item">
+                          <div className="d-flex justify-content-between align-items-center">
+                            <div className="variant-picker-label">
+                              Size:
+                              <span className="fw-6 variant-picker-label-value">
+                                {currentSize.value}
+                              </span>
+                            </div>
+                            <a
+                              href="#find_size"
+                              data-bs-toggle="modal"
+                              className="find-size fw-6"
                             >
-                              <p>{size.value}</p>
-                            </label>
-                          </React.Fragment>
-                        ))}
-                      </form>
-                    </div>
-                  </div>
-                  <div className="tf-product-info-quantity">
-                    <div className="quantity-title fw-6">Quantity</div>
-                    <Quantity setQuantity={setQuantity} />
-                  </div>
-                  <div className="tf-product-info-buy-button">
+                              Find your size
+                            </a>
+                          </div>
+                          <form className="variant-picker-values">
+                            {sizeOptions.map((size) => (
+                              <React.Fragment key={size.id}>
+                                <input
+                                  type="radio"
+                                  name="size1"
+                                  id={size.id}
+                                  readOnly
+                                  checked={currentSize == size}
+                                />
+                                <label
+                                  onClick={() => setCurrentSize(size)}
+                                  className="style-text"
+                                  htmlFor={size.id}
+                                  data-value={size.value}
+                                >
+                                  <p>{size.value}</p>
+                                </label>
+                              </React.Fragment>
+                            ))}
+                          </form>
+                        </div>
+                      </div>
+                      <div className="tf-product-info-quantity">
+                        <div className="quantity-title fw-6">Quantity</div>
+                        <Quantity setQuantity={setQuantity} />
+                      </div>
+                    </>
+                  )}
+                  {!isSellzyProduct && (
+                    <div className="tf-product-info-buy-button">
                     <form onSubmit={(e) => e.preventDefault()} className="">
                       <a
                         onClick={() => {
@@ -254,7 +285,10 @@ export default function DetailsOuterZoom({ product = allProducts[0] }) {
                         </a>
                       </div>
                     </form>
-                  </div>
+                    </div>
+                  )}
+                  {!isSellzyProduct && (
+                    <>
                   <div className="tf-product-info-extra-link">
                     <a
                       href="#compare_color"
@@ -360,13 +394,15 @@ export default function DetailsOuterZoom({ product = allProducts[0] }) {
                       ))}
                     </div>
                   </div>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>{" "}
-      <StickyItem />
+      {!isSellzyProduct && <StickyItem />}
     </section>
   );
 }

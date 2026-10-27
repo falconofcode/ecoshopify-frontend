@@ -155,13 +155,20 @@ export default function Slider1ZoomOuter({
   currentColor = "Beige",
   handleColor = () => {},
   firstImage,
+  imageUrls,
   images = imagesDefault,
 }) {
-  const [updatedImages, setfirst] = useState(
-    firstImage
+  const updatedImages = imageUrls?.length
+    ? imageUrls.map((src, index) => ({
+        id: index + 1,
+        src,
+        alt: "",
+        width: 770,
+        height: 1075,
+      }))
+    : firstImage
       ? [{ ...images[0], src: firstImage }, ...images.slice(1)]
-      : images
-  );
+      : images;
 
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const swiperRef = useRef(null);
@@ -170,7 +177,9 @@ export default function Slider1ZoomOuter({
       updatedImages.filter(
         (elm) => elm.dataValue?.toLowerCase() == currentColor.toLowerCase()
       )[0]?.id - 1;
-    swiperRef.current.slideTo(slideIndex);
+    if (Number.isInteger(slideIndex) && slideIndex >= 0) {
+      swiperRef.current?.slideTo(slideIndex);
+    }
   }, [currentColor]);
   useEffect(() => {
     // Function to initialize Drift

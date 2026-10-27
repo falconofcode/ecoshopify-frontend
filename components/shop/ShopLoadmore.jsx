@@ -6,13 +6,29 @@ import { products1 } from "@/data/products";
 import ShopFilter from "./ShopFilter";
 import Sorting from "./Sorting";
 
+import sellzyProducts from "@/data/substitute-products.json";
+
+
 export default function ShopLoadmore() {
+  
+  const shopProducts = sellzyProducts.map((product) => ({
+      id: product._id,
+      title: product.name,
+      price: product.price,
+      imgSrc: product.image,
+      imgHoverSrc: product.images?.[1] ?? product.image,
+      isAvailable: product.stock > 0,
+      soldOut: product.stock <= 0,
+    }));
+
   const [gridItems, setGridItems] = useState(4);
   const [loading, setLoading] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [allproducts, setAllproducts] = useState([...products1]);
-  const [products, setProducts] = useState([]);
-  const [finalSorted, setFinalSorted] = useState([]);
+
+  const [products, setProducts] = useState(shopProducts);
+  const [finalSorted, setFinalSorted] = useState(shopProducts);
+
   const handleLoad = () => {
     setLoading(true);
     setTimeout(() => {
@@ -77,7 +93,8 @@ export default function ShopLoadmore() {
           </div>
         </div>
       </section>
-      <ShopFilter products={allproducts} setProducts={setProducts} />
+
+      <ShopFilter products={shopProducts} setProducts={setProducts} />
     </>
   );
 }

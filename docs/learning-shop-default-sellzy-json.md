@@ -90,7 +90,7 @@ Add this import to `components/shop/ShopDefault.jsx`:
 import sellzyProducts from "@/data/substitute-products.json";
 ```
 
-Above the component, create the UI-shaped array:
+Outside the component, create the UI-shaped array once:
 
 ```jsx
 const shopProducts = sellzyProducts.map((product) => ({
@@ -121,13 +121,17 @@ The first array is the filter result. The second is the array that sorting prepa
 
 ## Step 5: Pass one product source to the filter
 
-`ShopFilter` already accepts a `products` prop, but `ShopDefault` currently omits it, so the filter falls back to the demo products. Change the rendered filter to receive the adapted sample:
+`ShopFilter` accepts a `products` prop. Pass it the same adapted sample, and keep `shopProducts` outside the component so the array identity stays stable between renders:
 
 ```jsx
-<ShopFilter products={shopProducts} setProducts={setProducts} />
+<ShopFilter
+  products={shopProducts}
+  setProducts={setProducts}
+  showLegacyFacets={false}
+/>
 ```
 
-Now the filter and product grid are working with the same product records.
+Now the filter and product grid use the same product records. The price range is calculated from those products, and `showLegacyFacets={false}` hides the demo-only category, brand, color, and size controls. Availability and price filtering remain active.
 
 ### Important: adapt or temporarily simplify the old filters
 
@@ -138,7 +142,7 @@ The filter UI was made for the fashion demo, not this Sellzy sample:
 - The color and size filter choices are demo values, while Sellzy's arrays contain IDs.
 - The category filter list is demo Fashion data.
 
-For the first test, either hide/remove the brand, color, size, and category filter controls until their data is adapted, or update each one to use actual display data. Make the price slider's minimum and maximum derive from the `products` prop instead of hardcoding `5` and `22`; initialize its selected range to the sample's actual minimum and maximum prices. Availability can use `stock > 0`.
+If you later want those extra facets, update them to use actual category, brand, color, and size data before enabling them. Availability uses `stock > 0`.
 
 Do not leave a filter visible if selecting it silently returns no relevant products. A filter must use values that exist on the new product objects.
 
@@ -157,9 +161,9 @@ The card then uses `imgSrc`, `imgHoverSrc`, `title`, `price`, and `id`. The orig
 
 ## Step 7: Check card interactions separately
 
-This first exercise is about listing cards. The card's product links point to `/product-detail/{id}`, but `app/(shop-details)/product-detail/[id]/page.jsx` currently looks up products in the demo `allProducts` array from `data/products.js`. A Sellzy `_id` will not be found there; the current page can fall back to a demo product.
+The product-detail route now looks up the sample by its Sellzy `_id` and adapts its title, price, images, stock, and category name for the detail view. Unknown IDs show a 404 instead of silently displaying an unrelated demo product. Existing Ecomus demo product IDs still use the original detail page.
 
-Quick view, quick add, compare, and wishlist also use existing demo context logic. After confirming the listing, a separate follow-up task is needed to make product-detail and card actions find the Sellzy records. Until then, do not treat those interactions as integrated.
+Try clicking a sample product's image or title. Confirm that the URL contains its `_id`, and that the detail page shows the matching title, price, sample images, stock count, and category. The sample detail page intentionally hides demo-only variants, purchase actions, policies, and recommendations; cart, Quick View, Quick Add, compare, and wishlist are not integrated with Sellzy records yet.
 
 ## Step 8: Check the result locally
 
