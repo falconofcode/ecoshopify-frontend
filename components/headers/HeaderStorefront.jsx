@@ -193,7 +193,9 @@ export default function HeaderStorefront({
                     return(
                     <li key={category._id} className="nav-mb-item">
                       <Link
-                        href={`/shop-default`}
+                        href={`/shop-default?category=${encodeURIComponent(
+                          category.slug
+                        )}`}
                         className="tf-category-link mb-menu-link"
                       >
                         <div className="image">

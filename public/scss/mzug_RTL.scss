@@ -1,0 +1,90 @@
+html[dir="rtl"] {
+  #header.storefront-global-header {
+    .header-bottom,
+    .box-left,
+    .tf-list-categories {
+      direction: rtl;
+    }
+
+    .tf-list-categories {
+      .categories-title {
+        direction: rtl;
+        justify-content: flex-start;
+        text-align: right;
+      }
+
+      .list-categories-inner {
+        right: 0;
+        left: auto;
+        direction: rtl;
+        text-align: right;
+      }
+
+      .nav-ul-mb,
+      .nav-mb-item {
+        direction: rtl;
+        text-align: right;
+      }
+
+      .tf-category-link {
+        direction: rtl;
+        justify-content: flex-start;
+        text-align: right;
+
+        &::after {
+          right: 53px;
+          left: 0;
+        }
+      }
+
+      .categories-bottom {
+        direction: rtl;
+        text-align: right;
+      }
+    }
+
+    .box-navigation {
+      direction: rtl;
+    }
+  }
+
+  #toolbarShopmb,
+  #mobileMenu {
+    direction: rtl;
+
+    .mb-body,
+    .nav-ul-mb,
+    .sub-nav-menu {
+      direction: rtl;
+    }
+
+    .nav-mb-item,
+    .mb-menu-link,
+    .sub-nav-link {
+      text-align: right;
+    }
+
+    .mb-menu-link,
+    .sub-nav-link {
+      direction: rtl;
+    }
+  }
+
+  #toolbarShopmb {
+    .tf-category-link {
+      direction: rtl;
+      justify-content: flex-start;
+      text-align: right;
+
+      &::after {
+        right: 53px;
+        left: 0;
+      }
+    }
+
+    .mb-bottom {
+      direction: rtl;
+      text-align: right;
+    }
+  }
+}

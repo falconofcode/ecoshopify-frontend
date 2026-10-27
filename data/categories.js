@@ -180,6 +180,7 @@ export const collectionData3 = [
     itemCount: 31,
   },
 ];
+
 export const recentCollectionData = [
   {
     imgSrc: "/images/collections/collection-39.jpg",

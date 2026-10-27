@@ -7,5 +7,6 @@
 @include meta.load-css("app.scss");
 @include meta.load-css("rtl.scss");
 @include meta.load-css("custom.scss");
+@include meta.load-css("mzug_RTL.scss");
 // @import "photoswipe/dist/photoswipe.css";
 // @import "rc-slider/assets/index.css";
