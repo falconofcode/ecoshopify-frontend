@@ -1,25 +1,16 @@
 "use client";
 
-import sellzyProducts from "@/data/substitute-products.json";
-
 import { layouts } from "@/data/shop";
 import ProductGrid from "./ProductGrid";
 import { useState } from "react";
 import Pagination from "../common/Pagination";
 import ShopFilter from "./ShopFilter";
 import Sorting from "./Sorting";
+import { getStorefrontProducts } from "@/data/storefront-products";
 
-const shopProducts = sellzyProducts.map((product) => ({
-  id: product._id,
-  title: product.name,
-  price: product.price,
-  imgSrc: product.image,
-  imgHoverSrc: product.images?.[1] ?? product.image,
-  isAvailable: product.stock > 0,
-  soldOut: product.stock <= 0,
-}));
-
-export default function ShopDefault() {
+export default function ShopDefault({
+  products: shopProducts = getStorefrontProducts(),
+}) {
   const [products, setProducts] = useState(shopProducts);
   const [finalSorted, setFinalSorted] = useState(shopProducts);
   const [gridItems, setGridItems] = useState(4);

@@ -1,6 +1,6 @@
 # Learning exercise: show Sellzy products on the shop page
 
-This guide explains how to make `/shop-default` display a small sample of products copied from the Sellzy JSON export. It is a learning exercise; the shop page is **not wired to the new sample yet**.
+This guide explains how `/shop-default` displays a small sample of products copied from the Sellzy JSON export.
 
 ## Files involved
 
@@ -13,7 +13,7 @@ This guide explains how to make `/shop-default` display a small sample of produc
 - `components/shop/ProductGrid.jsx` maps product records into cards.
 - `components/shopCards/ProductCard.jsx` displays each card.
 
-The page does not currently read directly from `data/products.js`. The flow is:
+The page does not currently read directly from `data/products.js`. Its flow is:
 
 ```text
 shop-default/page.jsx
@@ -24,7 +24,17 @@ shop-default/page.jsx
             -> ProductCard.jsx
 ```
 
-Currently several of those components import the demo `products1` array from `data/products.js` as their default source.
+`ShopDefault` gets its product list from the route. Some child components still import the demo `products1` array as a fallback when a product prop is omitted, but this page passes its Sellzy list explicitly.
+
+## Category query parameter
+
+The default shop supports category links such as:
+
+```text
+/shop-default?category=home-living
+```
+
+The route matches the query value against either a category's `slug` or `_id` in `data/storefront-menu.json`. It filters the Sellzy sample using each product's `category` ID, uses the matching English category name as the heading, and displays the category's `description` only when it is non-empty. For example, the current Home & Living description is an empty string, so the category title appears without the default fashion description. With no `category` parameter, the page keeps the "New Arrival" title and default description. An unknown category produces an empty product list rather than showing products from every category.
 
 ## Step 1: Look at the JSON shape
 
@@ -82,31 +92,20 @@ This conversion is called an **adapter** or **mapping**. Keep the original JSON 
 
 Do not pass Sellzy's `colors` or `sizes` arrays to the current card/filter unchanged. In this export they contain database IDs, but the demo UI expects color objects such as `{ name, colorClass, imgSrc }` and size labels such as `"M"`. The export also contains a brand ID, while the demo filter expects display names such as `"Ecoshopify"`.
 
-## Step 3: Import and adapt the sample in `ShopDefault.jsx`
+## Step 3: Adapt the sample once and filter by URL category
 
-Add this import to `components/shop/ShopDefault.jsx`:
+`data/storefront-products.js` imports `data/substitute-products.json` and maps each Sellzy record into the card fields used by Ecomus. It also retains the category ID as `categoryId` and exports `getStorefrontProducts(categoryId)` so callers can reuse the same adapted products.
 
-```jsx
-import sellzyProducts from "@/data/substitute-products.json";
+The `/shop-default` Server Component reads its `category` query parameter and matches it against either the category `slug` or `_id` in `data/storefront-menu.json`. It passes the matching products and category heading into the client component. For example:
+
+```text
+/shop-default?category=home-living
+/shop-default?category=category_home_living
 ```
 
-Outside the component, create the UI-shaped array once:
+The product's `category` is an ID, so the category slug must first be looked up in the menu to get the matching ID. If the category is not recognized, the page displays no products instead of silently showing the whole catalog.
 
-```jsx
-const shopProducts = sellzyProducts.map((product) => ({
-  id: product._id,
-  title: product.name,
-  price: product.price,
-  imgSrc: product.image,
-  imgHoverSrc: product.images?.[1] ?? product.image,
-  isAvailable: product.stock > 0,
-  soldOut: product.stock <= 0,
-}));
-```
-
-Read this as: for every Sellzy record, make a new object with the field names the existing shop UI understands. `map` returns a new array; it does not change the imported JSON.
-
-The optional chaining in `product.images?.[1]` means “use the second image if `images` exists.” The nullish coalescing `??` means “otherwise use the main image.”
+The page uses `category.name.en` for the heading and `category.description` for the subtitle. Empty descriptions are omitted. The current menu descriptions are empty strings, so add the desired text to `data/storefront-menu.json` if you want a subtitle under a category heading. Without a category query, the default "New Arrival" heading and fashion subtitle remain.
 
 ## Step 4: Give the adapted products to the page state
 
@@ -121,7 +120,7 @@ The first array is the filter result. The second is the array that sorting prepa
 
 ## Step 5: Pass one product source to the filter
 
-`ShopFilter` accepts a `products` prop. Pass it the same adapted sample, and keep `shopProducts` outside the component so the array identity stays stable between renders:
+`ShopFilter` accepts a `products` prop. Pass it the same already-adapted, category-filtered sample:
 
 ```jsx
 <ShopFilter
@@ -131,7 +130,7 @@ The first array is the filter result. The second is the array that sorting prepa
 />
 ```
 
-Now the filter and product grid use the same product records. The price range is calculated from those products, and `showLegacyFacets={false}` hides the demo-only category, brand, color, and size controls. Availability and price filtering remain active.
+Now the filter and product grid use the same product records. The price range is calculated from those products, and `showLegacyFacets={false}` hides the demo-only category, brand, color, and size controls. Availability and price filtering remain active. Category filtering happens before this component receives the products, so it remains consistent with the URL and the category heading.
 
 ### Important: adapt or temporarily simplify the old filters
 
@@ -178,7 +177,7 @@ For production, a local change is not enough: build and deploy a new release usi
 
 ## What this loading method means
 
-Importing JSON like this:
+The storefront data helper imports local JSON:
 
 ```jsx
 import sellzyProducts from "@/data/substitute-products.json";
@@ -193,7 +192,9 @@ When the backend is ready, replace the local import with a request to the backen
 ```text
 Sellzy-shaped JSON
         ↓ import
-ShopDefault maps raw records into the UI shape
+data/storefront-products.js maps raw records into the UI shape
+        ↓ category lookup/filter in the shop route
+ShopDefault owns the filtered product state
         ↓ props
 Filter and Sorting work on that same UI-shaped array
         ↓ props
