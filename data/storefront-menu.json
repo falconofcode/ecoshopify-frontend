@@ -10,7 +10,10 @@
         "level": 0,
         "order": 0,
         "isActive": true,
-        "description": "",
+        "description": {
+            "en": "Skincare, natural makeup, hair care, natural fragrances, and plant-based cosmetics.",
+            "ar": "العناية بالبشرة، والمكياج الطبيعي، والعناية بالشعر، والعطور الطبيعية، ومستحضرات التجميل النباتية."
+        },
         "createdAt": "2026-10-27T00:00:00.000Z",
         "updatedAt": "2026-10-27T00:00:00.000Z",
         "slug": "beauty",
@@ -30,7 +33,10 @@
         "level": 0,
         "order": 1,
         "isActive": true,
-        "description": "",
+        "description": {
+            "en": "Plant-based cleaners, reusable cleaning tools, home fragrances, organic cotton textiles, and refillable household products.",
+            "ar": "منظفات نباتية، وأدوات تنظيف قابلة لإعادة الاستخدام، ومعطرات منزلية، ومفروشات من القطن العضوي، ومنتجات منزلية قابلة لإعادة التعبئة."
+        },
         "createdAt": "2026-10-27T00:00:00.000Z",
         "updatedAt": "2026-10-27T00:00:00.000Z",
         "slug": "home-living",
@@ -50,7 +56,10 @@
         "level": 0,
         "order": 2,
         "isActive": true,
-        "description": "",
+        "description": {
+            "en": "Vitamins, minerals, probiotics, amino acids, plant-based supplements, and proteins.",
+            "ar": "الفيتامينات، والمعادن، والبروبيوتيك، والأحماض الأمينية، والمكملات النباتية، والبروتينات."
+        },
         "createdAt": "2026-10-27T00:00:00.000Z",
         "updatedAt": "2026-10-27T00:00:00.000Z",
         "slug": "supplements",
@@ -70,7 +79,10 @@
         "level": 0,
         "order": 3,
         "isActive": true,
-        "description": "",
+        "description": {
+            "en": "Organic foods, honey, oils, herbs, spices, gluten-free foods, and dairy alternatives.",
+            "ar": "الأطعمة العضوية، والعسل، والزيوت، والأعشاب، والتوابل، والأطعمة الخالية من الغلوتين، وبدائل الألبان."
+        },
         "createdAt": "2026-10-27T00:00:00.000Z",
         "updatedAt": "2026-10-27T00:00:00.000Z",
         "slug": "grocery",
@@ -90,7 +102,10 @@
         "level": 0,
         "order": 4,
         "isActive": true,
-        "description": "",
+        "description": {
+            "en": "Natural soaps, deodorants, toothpaste, oral care, and everyday hygiene essentials.",
+            "ar": "الصابون الطبيعي، ومزيلات العرق، ومعجون الأسنان، ومنتجات العناية بالفم، ومستلزمات النظافة اليومية."
+        },
         "createdAt": "2026-10-27T00:00:00.000Z",
         "updatedAt": "2026-10-27T00:00:00.000Z",
         "slug": "personal-care",
@@ -110,7 +125,10 @@
         "level": 0,
         "order": 5,
         "isActive": true,
-        "description": "",
+        "description": {
+            "en": "Baby food, gentle care products, eco-friendly diapers, organic cotton clothing, and wooden toys.",
+            "ar": "أغذية الأطفال، ومستحضرات العناية اللطيفة، وحفاضات صديقة للبيئة، وملابس من القطن العضوي، وألعاب خشبية."
+        },
         "createdAt": "2026-10-27T00:00:00.000Z",
         "updatedAt": "2026-10-27T00:00:00.000Z",
         "slug": "baby-kids",
@@ -130,7 +148,10 @@
         "level": 0,
         "order": 6,
         "isActive": true,
-        "description": "",
+        "description": {
+            "en": "Natural pet food, gentle shampoos, sustainable toys, and accessories and brushes made from eco-friendly materials.",
+            "ar": "أغذية طبيعية للحيوانات الأليفة، وشامبو لطيف، وألعاب مستدامة، وإكسسوارات وفُرَش مصنوعة من خامات صديقة للبيئة."
+        },
         "createdAt": "2026-10-27T00:00:00.000Z",
         "updatedAt": "2026-10-27T00:00:00.000Z",
         "slug": "pets",
@@ -150,7 +171,10 @@
         "level": 0,
         "order": 7,
         "isActive": true,
-        "description": "",
+        "description": {
+            "en": "Organic cotton and linen clothing, recycled fibers, sustainable activewear, and eco-friendly bags and accessories.",
+            "ar": "ملابس من القطن العضوي والكتان، وألياف معاد تدويرها، وملابس رياضية مستدامة، وحقائب وإكسسوارات صديقة للبيئة."
+        },
         "createdAt": "2026-10-27T00:00:00.000Z",
         "updatedAt": "2026-10-27T00:00:00.000Z",
         "slug": "sustainable-fashion",
@@ -170,7 +194,10 @@
         "level": 0,
         "order": 8,
         "isActive": true,
-        "description": "",
+        "description": {
+            "en": "Natural gift boxes, personal care sets, organic food baskets, sustainable corporate gifts, and occasion bundles.",
+            "ar": "صناديق هدايا طبيعية، ومجموعات للعناية الشخصية، وسلال أغذية عضوية، وهدايا شركات مستدامة، وباقات للمناسبات."
+        },
         "createdAt": "2026-10-27T00:00:00.000Z",
         "updatedAt": "2026-10-27T00:00:00.000Z",
         "slug": "gifts-bundles",
@@ -190,7 +217,10 @@
         "level": 0,
         "order": 9,
         "isActive": true,
-        "description": "",
+        "description": {
+            "en": "Glass food-storage containers, reusable water bottles, wooden and bamboo kitchen tools, plastic-free packaging alternatives, and healthy food-preparation tools.",
+            "ar": "عبوات زجاجية لحفظ الطعام، وزجاجات مياه قابلة لإعادة الاستخدام، وأدوات مطبخ من الخشب والخيزران، وبدائل للتغليف البلاستيكي، وأدوات لإعداد الطعام الصحي."
+        },
         "createdAt": "2026-10-27T00:00:00.000Z",
         "updatedAt": "2026-10-27T00:00:00.000Z",
         "slug": "kitchen-dining",
@@ -210,7 +240,10 @@
         "level": 0,
         "order": 10,
         "isActive": true,
-        "description": "",
+        "description": {
+            "en": "Certified organic seeds, home-growing tools, biodegradable pots, gardening supplies, and herb-growing kits.",
+            "ar": "بذور عضوية معتمدة، وأدوات للزراعة المنزلية، وأصص قابلة للتحلل، ومستلزمات للزراعة المنزلية، ومجموعات لزراعة الأعشاب."
+        },
         "createdAt": "2026-10-27T00:00:00.000Z",
         "updatedAt": "2026-10-27T00:00:00.000Z",
         "slug": "garden-plants",
@@ -230,7 +263,10 @@
         "level": 0,
         "order": 11,
         "isActive": true,
-        "description": "",
+        "description": {
+            "en": "Yoga accessories, aroma diffusers, essential oils, relaxation essentials, and non-medical massage tools.",
+            "ar": "أدوات اليوغا، وأجهزة نشر الروائح، والزيوت العطرية، ومستلزمات الاسترخاء، وأدوات التدليك غير الطبية."
+        },
         "createdAt": "2026-10-27T00:00:00.000Z",
         "updatedAt": "2026-10-27T00:00:00.000Z",
         "slug": "wellness-relaxation",
@@ -250,13 +286,39 @@
         "level": 0,
         "order": 12,
         "isActive": true,
-        "description": "",
+        "description": {
+            "en": "Notebooks made from recycled paper, refillable pens, sustainable office supplies, and workspace organization products.",
+            "ar": "دفاتر من ورق معاد تدويره، وأقلام قابلة لإعادة التعبئة، وأدوات مكتبية مستدامة، ومنتجات لتنظيم مساحة العمل."
+        },
         "createdAt": "2026-10-27T00:00:00.000Z",
         "updatedAt": "2026-10-27T00:00:00.000Z",
         "slug": "eco-office-stationery",
         "__v": 0,
         "icon": "",
         "image": "https://ik.imagekit.io/bf62vomqy/sellzy/categories/temperature-gun/category_temperature_gun_UwxM-QgOr.jpg",
+        "productBases": []
+    },
+    {
+        "_id": "category_outdoor_travel",
+        "name": {
+            "en": "Outdoor & Travel",
+            "ar": "الأنشطة الخارجية والسفر"
+        },
+        "parent": null,
+        "path": "",
+        "level": 0,
+        "order": 13,
+        "isActive": true,
+        "description": {
+            "en": "Reusable travel essentials, sustainable outdoor gear, camping accessories, hiking equipment, and low-waste travel products.",
+            "ar": "مستلزمات سفر قابلة لإعادة الاستخدام، ومعدات خارجية مستدامة، وإكسسوارات للتخييم، ومعدات للمشي لمسافات طويلة، ومنتجات سفر قليلة النفايات."
+        },
+        "createdAt": "2026-10-27T00:00:00.000Z",
+        "updatedAt": "2026-10-27T00:00:00.000Z",
+        "slug": "outdoor-travel",
+        "__v": 0,
+        "icon": "",
+        "image": "",
         "productBases": []
     }
 ]

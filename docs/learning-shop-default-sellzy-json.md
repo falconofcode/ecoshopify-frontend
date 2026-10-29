@@ -105,7 +105,7 @@ The `/shop-default` Server Component reads its `category` query parameter and ma
 
 The product's `category` is an ID, so the category slug must first be looked up in the menu to get the matching ID. If the category is not recognized, the page displays no products instead of silently showing the whole catalog.
 
-The page uses `category.name.en` for the heading and `category.description` for the subtitle. Empty descriptions are omitted. The current menu descriptions are empty strings, so add the desired text to `data/storefront-menu.json` if you want a subtitle under a category heading. Without a category query, the default "New Arrival" heading and fashion subtitle remain.
+The category's `name` and `description` are localized objects with `en` and `ar` values. The page uses the existing storefront language preference to display the matching title and description, falling back to English if a translation is missing. Empty descriptions are omitted. Without a category query, the default "New Arrival" heading and fashion subtitle remain. `Outdoor & Travel` is also present in the menu; it has no matching sample products yet.
 
 ## Step 4: Give the adapted products to the page state
 

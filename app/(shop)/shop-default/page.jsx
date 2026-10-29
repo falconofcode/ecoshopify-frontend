@@ -1,6 +1,7 @@
 import Footer1 from "@/components/footers/Footer1";
 import Header2 from "@/components/headers/Header2";
 import ShopDefault from "@/components/shop/ShopDefault";
+import ShopCategoryHeading from "@/components/shop/ShopCategoryHeading";
 import React from "react";
 import storefrontCategories from "@/data/storefront-menu.json";
 import { getStorefrontProducts } from "@/data/storefront-products";
@@ -11,7 +12,6 @@ export const metadata = {
 };
 
 const defaultHeading = "New Arrival";
-const defaultDescription = "Shop through our latest selection of Fashion";
 
 export default async function page({ searchParams }) {
   const params = await searchParams;
@@ -32,25 +32,14 @@ export default async function page({ searchParams }) {
   if (hasCategoryFilter) {
     products = category ? getStorefrontProducts(category._id) : [];
   }
-  const heading =
-    category?.name.en ?? (hasCategoryFilter ? "Category not found" : defaultHeading);
-  const description = hasCategoryFilter
-    ? category?.description?.trim()
-    : defaultDescription;
-
   return (
     <>
       <Header2 />
-      <div className="tf-page-title">
-        <div className="container-full">
-          <div className="heading text-center">{heading}</div>
-          {description && (
-            <p className="text-center text-2 text_black-2 mt_5">
-              {description}
-            </p>
-          )}
-        </div>
-      </div>
+      <ShopCategoryHeading
+        category={category}
+        fallbackHeading={hasCategoryFilter ? "Category not found" : defaultHeading}
+        fallbackDescription={hasCategoryFilter ? "" : "Shop through our latest selection of Fashion"}
+      />
       <ShopDefault
         key={normalizedCategory ?? "all"}
         products={products}

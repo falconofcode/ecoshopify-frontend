@@ -34,7 +34,7 @@ ShopFilter → Sorting → ProductGrid → ProductCard
 
 The shop mapping includes the product ID, title, price, main/hover images, and stock-derived availability. The detail route looks for that ID in the same 10-product sample, maps its gallery and stock, and resolves a category label from `data/storefront-menu.json`. Unknown IDs show a 404. Non-sample IDs continue to use Ecomus demo products.
 
-The `/shop-default` route also accepts `?category=<slug-or-id>` (for example, `?category=home-living`). It looks up the category in `data/storefront-menu.json`, filters products by the category ID, and uses the category's English name and non-empty description for the page heading. An empty category description is omitted; an unknown category produces no matching products.
+The `/shop-default` route also accepts `?category=<slug-or-id>` (for example, `?category=home-living`). It looks up the category in `data/storefront-menu.json`, filters products by the category ID, and uses its localized name and description in English or Arabic according to the storefront language setting. An empty description is omitted; an unknown category produces no matching products.
 
 The sample currently intentionally omits most full-record data. The Sellzy detail view displays a basic gallery, name, price, stock, and category. It hides Ecomus-only sample content and does not yet show the full description, brand, review list, or real purchasable variants.
 
