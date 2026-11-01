@@ -1,0 +1,89 @@
+[
+  {
+    "_id": "homepage-hero-organic-produce",
+    "order": 1,
+    "isActive": true,
+    "image": {
+      "src": "/images/slider/Slider1.jpg",
+      "alt": {
+        "en": "Fresh organic fruits and vegetables",
+        "ar": "فواكه وخضروات عضوية طازجة"
+      },
+      "width": 2000,
+      "height": 837
+    },
+    "eyebrow": {
+      "en": "The Swag Keeps Fruit & Veggies Fresh for Two Weeks!",
+      "ar": "حافظ على نضارة الفواكه والخضروات لمدة أسبوعين!"
+    },
+    "heading": {
+      "en": "Organic Fruits\nand vegetables.",
+      "ar": "فواكه وخضروات\nعضوية."
+    },
+    "button": {
+      "label": {
+        "en": "Shop collection",
+        "ar": "تسوق المجموعة"
+      },
+      "href": "/shop-default"
+    }
+  },
+  {
+    "_id": "homepage-hero-natural-living",
+    "order": 2,
+    "isActive": true,
+    "image": {
+      "src": "/images/slider/Slider2.jpg",
+      "alt": {
+        "en": "Fresh organic produce for everyday living",
+        "ar": "منتجات عضوية طازجة لحياتك اليومية"
+      },
+      "width": 1800,
+      "height": 753
+    },
+    "eyebrow": {
+      "en": "The Swag Keeps Fruit & Veggies Fresh for Two Weeks!",
+      "ar": "حافظ على نضارة الفواكه والخضروات لمدة أسبوعين!"
+    },
+    "heading": {
+      "en": "Organic Fruits\nand vegetables.",
+      "ar": "فواكه وخضروات\nعضوية."
+    },
+    "button": {
+      "label": {
+        "en": "Shop collection",
+        "ar": "تسوق المجموعة"
+      },
+      "href": "/shop-default"
+    }
+  },
+  {
+    "_id": "homepage-hero-fresh-choices",
+    "order": 3,
+    "isActive": true,
+    "image": {
+      "src": "/images/slider/Slider3.jpg",
+      "alt": {
+        "en": "A selection of fresh organic fruits and vegetables",
+        "ar": "تشكيلة من الفواكه والخضروات العضوية الطازجة"
+      },
+      "width": 2000,
+      "height": 836
+    },
+    "eyebrow": {
+      "en": "The Swag Keeps Fruit & Veggies Fresh for Two Weeks!",
+      "ar": "حافظ على نضارة الفواكه والخضروات لمدة أسبوعين!"
+    },
+    "heading": {
+      "en": "Organic Fruits\nand vegetables.",
+      "ar": "فواكه وخضروات\nعضوية."
+    },
+    "button": {
+      "label": {
+        "en": "Shop collection",
+        "ar": "تسوق المجموعة"
+      },
+      "href": "/shop-default"
+    }
+  }
+]

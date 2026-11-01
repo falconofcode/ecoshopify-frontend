@@ -1,12 +1,14 @@
 "use client";
 import Image from "next/image";
-import { slidesRagada } from "@/data/heroslides";
 import React from "react";
 import Link from "next/link";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useStorefrontLanguage } from "@/components/homes/ecoshop/useStorefrontLanguage";
 
-export default function Hero() {
+export default function Hero({ slides }) {
+  const language = useStorefrontLanguage();
+
   return (
     <div className="tf-slideshow slider-home-2 slider-effect-fade position-relative">
       <Swiper
@@ -24,23 +26,28 @@ export default function Hero() {
         pagination={{ clickable: true, el: ".spd160" }}
         className="tf-sw-slideshow"
       >
-        {slidesRagada.map((slide, index) => (
-          <SwiperSlide key={index}>
+        {slides.map((slide) => (
+          <SwiperSlide key={slide._id}>
             <div className="wrap-slider">
               <Image
                 className="lazyload"
-                data-src={slide.imgSrc}
-                alt={slide.imgAlt}
-                src={slide.imgSrc}
-                width={slide.imgWidth}
-                height={slide.imgHeight}
+                data-src={slide.image.src}
+                alt={slide.image.alt[language]}
+                src={slide.image.src}
+                width={slide.image.width}
+                height={slide.image.height}
                 priority
               />
-              <div className="box-content">
+              <div
+                className="box-content"
+                dir={language === "ar" ? "rtl" : "ltr"}
+              >
                 <div className="container">
-                  <p className="fade-item fade-item-1">{slide.text}</p>
+                  <p className="fade-item fade-item-1">
+                    {slide.eyebrow[language]}
+                  </p>
                   <h1 className="fade-item fade-item-2">
-                    {slide.heading.split("\n").map((line, i) => (
+                    {slide.heading[language].split("\n").map((line, i) => (
                       <React.Fragment key={i}>
                         {line}
                         <br />
@@ -48,10 +55,10 @@ export default function Hero() {
                     ))}
                   </h1>
                   <Link
-                    href={`/shop-default`}
+                    href={slide.button.href}
                     className="fade-item fade-item-3 rounded-full tf-btn btn-fill animate-hover-btn btn-xl radius-3"
                   >
-                    <span>Shop collection</span>
+                    <span>{slide.button.label[language]}</span>
                     <i className="icon icon-arrow-right" />
                   </Link>
                 </div>

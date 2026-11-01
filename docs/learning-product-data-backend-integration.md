@@ -59,6 +59,32 @@ The product records refer to categories, brands, types, bases, colors, sizes, an
 
 The seed directory is already under `data/seed`; there is usually no need to copy every file into the top level of `data/`. Prefer focused imports and a small, deliberately sanitized storefront fixture. At the time this guide was written, `git status` showed `data/seed/` as untracked. Check whether these files should be shared or remain local before relying on them in a team workflow; an untracked local file is not available to teammates or a deployment build from a clean checkout.
 
+## Homepage hero data boundary
+
+The homepage's first hero carousel is currently populated from
+`data/homepage-hero.json`. The server page calls the asynchronous
+`getHomepageHeroSlides()` function in `data/homepageHero.js` and passes those
+slides to the client-side Swiper component. The component uses the same
+localized EN/AR fields that a future public banner API should return:
+
+```text
+/ (server page)
+  → getHomepageHeroSlides()
+  → data/homepage-hero.json (current fixture)
+  → HeroHomeElec (client-side carousel)
+```
+
+Keep the response fields stable (`_id`, `order`, `isActive`, `image`,
+`eyebrow`, `heading`, and `button`). When the backend is ready, replace the
+JSON import inside `getHomepageHeroSlides()` with a server-side request to the
+banner endpoint; the page and carousel can keep their existing contract.
+Loading the data on the server keeps slide content in the initial HTML instead
+of delaying it until a browser request. This is an API-shaped fixture and data
+access boundary, not a separate public `/api` route.
+
+The lower grocery demo hero on the homepage is a separate Ecomus section and
+still uses its theme demo data.
+
 ## 4. Detail-page gaps: raw fields versus what the UI needs
 
 The full seed record has more data than the current sample, but merely copying those fields does not make the details page display them. The detail page uses an adapter before passing its product to `DetailsOuterZoom`, and the component currently reads only a limited set of product fields for Sellzy items.

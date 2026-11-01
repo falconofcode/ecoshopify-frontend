@@ -16,6 +16,7 @@ import {
   ProductQualities,
   SupplierInvitation,
 } from "@/components/homes/ecoshop/MarketplaceHomeSections";
+import { getHomepageHeroSlides } from "@/data/homepageHero";
 
 import React from "react";
 
@@ -24,10 +25,12 @@ export const metadata = {
   description:
     "Discover organic, natural, and eco-friendly products from participating brands and suppliers.",
 };
-export default function page() {
+export default async function page() {
+  const heroSlides = await getHomepageHeroSlides();
+
   return (
     <>
-      <HeroHomeElec />
+      <HeroHomeElec slides={heroSlides} />
       <PlatformOverviewAndSearch />
       <div className="color-primary-8 color-main-text-2">
         <Hero />

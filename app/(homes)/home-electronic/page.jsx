@@ -12,19 +12,22 @@ import Marquee from "@/components/homes/home-electronic/Marquee";
 import Products from "@/components/homes/home-electronic/Products";
 import Testimonials from "@/components/homes/home-electronic/Testimonials";
 import Topbar from "@/components/homes/home-headphone/Topbar";
+import { getHomepageHeroSlides } from "@/data/homepageHero";
 import React from "react";
 
 export const metadata = {
   title: "Home Electronics  || Ecoshopify - Ultimate Nextjs Ecommerce Template",
   description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
-export default function page() {
+export default async function page() {
+  const heroSlides = await getHomepageHeroSlides();
+
   return (
     <>
       <div className="color-primary-3">
         <Topbar />
         <Header2 textClass={"text-black"} />
-        <Hero />
+        <Hero slides={heroSlides} />
         <Marquee />
         <Categories />
         <CollectionBanner />
