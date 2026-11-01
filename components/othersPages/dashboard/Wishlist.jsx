@@ -2,7 +2,7 @@
 
 import { ProductCardWishlist } from "@/components/shopCards/ProductCardWishlist";
 import { useContextElement } from "@/context/Context";
-import { allProducts } from "@/data/products";
+import { catalog } from "@/data/catalog";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -12,7 +12,7 @@ export default function Wishlist() {
   useEffect(() => {
     if (wishList) {
       setWishListItems(
-        [...allProducts].filter((el) => wishList.includes(el.id))
+        [...catalog].filter((el) => wishList.includes(el.id))
       );
     }
   }, [wishList]);

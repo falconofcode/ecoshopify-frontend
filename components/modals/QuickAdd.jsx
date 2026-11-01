@@ -5,7 +5,7 @@ import Link from "next/link";
 import Quantity from "../shopDetails/Quantity";
 import { useContextElement } from "@/context/Context";
 
-import { allProducts } from "@/data/products";
+import { catalog } from "@/data/catalog";
 import { colors, sizeOptions } from "@/data/singleProductOptions";
 export default function QuickAdd() {
   const {
@@ -15,9 +15,9 @@ export default function QuickAdd() {
     addToCompareItem,
     isAddedtoCompareItem,
   } = useContextElement();
-  const [item, setItem] = useState(allProducts[0]);
+  const [item, setItem] = useState(catalog[0]);
   useEffect(() => {
-    const filtered = allProducts.filter((el) => el.id == quickAddItem);
+    const filtered = catalog.filter((el) => el.id == quickAddItem);
     if (filtered) {
       setItem(filtered[0]);
     }

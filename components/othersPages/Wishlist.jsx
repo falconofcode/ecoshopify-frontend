@@ -1,5 +1,5 @@
 "use client";
-import { allProducts } from "@/data/products";
+import { catalog } from "@/data/catalog";
 import { useContextElement } from "@/context/Context";
 import { useEffect, useState } from "react";
 import { ProductCardWishlist } from "../shopCards/ProductCardWishlist";
@@ -12,7 +12,7 @@ export default function Wishlist() {
     if (wishList) {
       console.log(wishList);
       setWishListItems(
-        [...allProducts].filter((el) => wishList.includes(el.id))
+        [...catalog].filter((el) => wishList.includes(el.id))
       );
     }
   }, [wishList]);

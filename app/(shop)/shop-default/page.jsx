@@ -4,7 +4,7 @@ import ShopDefault from "@/components/shop/ShopDefault";
 import ShopCategoryHeading from "@/components/shop/ShopCategoryHeading";
 import React from "react";
 import storefrontCategories from "@/data/storefront-menu.json";
-import { getStorefrontProducts } from "@/data/storefront-products";
+import { getStorefrontProducts } from "@/data/storefrontProducts";
 
 export const metadata = {
   title: "Product Default || Ecoshopify - Ultimate Nextjs Ecommerce Template",

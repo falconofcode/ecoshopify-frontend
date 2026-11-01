@@ -6,7 +6,7 @@ import { useState } from "react";
 import Pagination from "../common/Pagination";
 import ShopFilter from "./ShopFilter";
 import Sorting from "./Sorting";
-import { getStorefrontProducts } from "@/data/storefront-products";
+import { getStorefrontProducts } from "@/data/storefrontProducts";
 
 export default function ShopDefault({
   products: shopProducts = getStorefrontProducts(),

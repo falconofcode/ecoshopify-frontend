@@ -15,6 +15,7 @@ import Slider1ZoomOuter from "./sliders/Slider1ZoomOuter";
 import { allProducts } from "@/data/products";
 import { useContextElement } from "@/context/Context";
 import { openCartModal } from "@/utlis/openCartModal";
+import { useStorefrontLanguage } from "@/components/homes/ecoshop/useStorefrontLanguage";
 
 export default function DetailsOuterZoom({
   product = allProducts[0],
@@ -23,6 +24,43 @@ export default function DetailsOuterZoom({
   const [currentColor, setCurrentColor] = useState(colors[0]);
   const [currentSize, setCurrentSize] = useState(sizeOptions[1]);
   const [quantity, setQuantity] = useState(1);
+  const lang = useStorefrontLanguage();
+  const isArabic = lang === "ar";
+  const [sellzyColorIndex, setSellzyColorIndex] = useState(0);
+  const [sellzySizeIndex, setSellzySizeIndex] = useState(0);
+  const sellzyColors = isSellzyProduct ? product.colors ?? [] : [];
+  const sellzySizes = isSellzyProduct ? product.sizesI18n ?? [] : [];
+  const ui = isArabic
+    ? {
+        color: "اللون:",
+        size: "الحجم:",
+        quantity: "الكمية",
+        inStock: "متوفر",
+        outOfStock: "غير متوفر",
+        category: "القسم:",
+        delivery: "مدة التوصيل المتوقعة:",
+        localLabel: "داخل البلد",
+        intlLabel: "دولي",
+        days: "أيام",
+        returnText: "الإرجاع خلال",
+        returnDays: "يوماً من الشراء.",
+        safe: "دفع آمن مضمون",
+      }
+    : {
+        color: "Color:",
+        size: "Size:",
+        quantity: "Quantity",
+        inStock: "in stock",
+        outOfStock: "Out of stock",
+        category: "Category:",
+        delivery: "Estimate delivery times:",
+        localLabel: "Local",
+        intlLabel: "International",
+        days: "days",
+        returnText: "Return within",
+        returnDays: "days of purchase.",
+        safe: "Guarantee Safe Checkout",
+      };
 
   const handleColor = (color) => {
     const updatedColor = colors.filter(
@@ -73,6 +111,11 @@ export default function DetailsOuterZoom({
                       {product.title ? product.title : "Cotton jersey top"}
                     </h5>
                   </div>
+                  {isSellzyProduct && product.badge && (
+                    <div className="tf-product-info-badges">
+                      <div className="badges">{product.badge[lang]}</div>
+                    </div>
+                  )}
                   {!isSellzyProduct && (
                     <div className="tf-product-info-badges">
                       <div className="badges">Best seller</div>
@@ -89,6 +132,16 @@ export default function DetailsOuterZoom({
                       ${product.price.toFixed(2)}
                     </div>
 
+                    {isSellzyProduct && product.oldPrice && (
+                      <>
+                        <div className="compare-at-price">
+                          ${product.oldPrice.toFixed(2)}
+                        </div>
+                        <div className="badges-on-sale">
+                          <span>{product.discountPercentage}</span>% {isArabic ? "خصم" : "OFF"}
+                        </div>
+                      </>
+                    )}
                     {!isSellzyProduct && (
                       <>
                         <div className="compare-at-price">
@@ -102,13 +155,18 @@ export default function DetailsOuterZoom({
                   </div>
                   {isSellzyProduct ? (
                     <div className="product-status-content">
+                      {product.shortDescription && (
+                        <p className="mb_10">{product.shortDescription[lang]}</p>
+                      )}
                       <p className="fw-6">
                         {product.stock > 0
-                          ? `${product.stock} in stock`
-                          : "Out of stock"}
+                          ? `${product.stock} ${ui.inStock}`
+                          : ui.outOfStock}
                       </p>
                       {product.categoryName && (
-                        <p className="mt_10">Category: {product.categoryName}</p>
+                        <p className="mt_10">
+                          {ui.category} {product.categoryName[lang]}
+                        </p>
                       )}
                     </div>
                   ) : (
@@ -131,6 +189,81 @@ export default function DetailsOuterZoom({
                             </div>
                           </div>
                         </div>
+                      </div>
+                    </>
+                  )}
+                  {isSellzyProduct && (
+                    <>
+                      <div className="tf-product-info-variant-picker">
+                        {sellzyColors.length > 0 && (
+                          <div className="variant-picker-item">
+                            <div className="variant-picker-label">
+                              {ui.color}
+                              <span className="fw-6 variant-picker-label-value">
+                                {sellzyColors[sellzyColorIndex].nameI18n[lang]}
+                              </span>
+                            </div>
+                            <form className="variant-picker-values">
+                              {sellzyColors.map((color, i) => (
+                                <React.Fragment key={color.name}>
+                                  <input
+                                    id={`sellzy-color-${i}`}
+                                    type="radio"
+                                    name="sellzyColor"
+                                    readOnly
+                                    checked={sellzyColorIndex === i}
+                                  />
+                                  <label
+                                    onClick={() => setSellzyColorIndex(i)}
+                                    className="hover-tooltip radius-60"
+                                    htmlFor={`sellzy-color-${i}`}
+                                  >
+                                    <span
+                                      className={`btn-checkbox ${color.colorClass}`}
+                                    />
+                                    <span className="tooltip">
+                                      {color.nameI18n[lang]}
+                                    </span>
+                                  </label>
+                                </React.Fragment>
+                              ))}
+                            </form>
+                          </div>
+                        )}
+                        {sellzySizes.length > 0 && (
+                          <div className="variant-picker-item">
+                            <div className="variant-picker-label">
+                              {ui.size}
+                              <span className="fw-6 variant-picker-label-value">
+                                {sellzySizes[sellzySizeIndex][lang]}
+                              </span>
+                            </div>
+                            <form className="variant-picker-values">
+                              {sellzySizes.map((size, i) => (
+                                <React.Fragment key={size.en}>
+                                  <input
+                                    type="radio"
+                                    name="sellzySize"
+                                    id={`sellzy-size-${i}`}
+                                    readOnly
+                                    checked={sellzySizeIndex === i}
+                                  />
+                                  <label
+                                    onClick={() => setSellzySizeIndex(i)}
+                                    className="style-text"
+                                    htmlFor={`sellzy-size-${i}`}
+                                  >
+                                    <p>{size[lang]}</p>
+                                  </label>
+                                </React.Fragment>
+                              ))}
+                            </form>
+                          </div>
+                        )}
+                      </div>
+                      <div className="tf-product-info-quantity">
+                        <div className="quantity-title fw-6">{ui.quantity}</div>
+                        <Quantity setQuantity={setQuantity} />
                       </div>
                     </>
                   )}
@@ -214,8 +347,7 @@ export default function DetailsOuterZoom({
                       </div>
                     </>
                   )}
-                  {!isSellzyProduct && (
-                    <div className="tf-product-info-buy-button">
+                  <div className="tf-product-info-buy-button">
                     <form onSubmit={(e) => e.preventDefault()} className="">
                       <a
                         onClick={() => {
@@ -286,7 +418,6 @@ export default function DetailsOuterZoom({
                       </div>
                     </form>
                     </div>
-                  )}
                   {!isSellzyProduct && (
                     <>
                   <div className="tf-product-info-extra-link">
@@ -394,6 +525,63 @@ export default function DetailsOuterZoom({
                       ))}
                     </div>
                   </div>
+                    </>
+                  )}
+                  {isSellzyProduct && product.shipping && (
+                    <>
+                      <div className="tf-product-info-delivery-return">
+                        <div className="row">
+                          <div className="col-xl-6 col-12">
+                            <div className="tf-product-delivery">
+                              <div className="icon">
+                                <i className="icon-delivery-time" />
+                              </div>
+                              <p>
+                                {ui.delivery}{" "}
+                                <span className="fw-7">
+                                  {product.shipping.localDays} {ui.days}
+                                </span>{" "}
+                                ({ui.localLabel}),{" "}
+                                <span className="fw-7">
+                                  {product.shipping.internationalDays} {ui.days}
+                                </span>{" "}
+                                ({ui.intlLabel}).
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-xl-6 col-12">
+                            <div className="tf-product-delivery mb-0">
+                              <div className="icon">
+                                <i className="icon-return-order" />
+                              </div>
+                              <p>
+                                {ui.returnText}{" "}
+                                <span className="fw-7">
+                                  {product.shipping.returnDays}
+                                </span>{" "}
+                                {ui.returnDays}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="tf-product-info-trust-seal">
+                        <div className="tf-product-trust-mess">
+                          <i className="icon-safe" />
+                          <p className="fw-6">{ui.safe}</p>
+                        </div>
+                        <div className="tf-payment">
+                          {paymentImages.map((image, index) => (
+                            <Image
+                              key={index}
+                              alt={image.alt}
+                              src={image.src}
+                              width={image.width}
+                              height={image.height}
+                            />
+                          ))}
+                        </div>
+                      </div>
                     </>
                   )}
                 </div>

@@ -20,7 +20,81 @@
     "brand": "698ccd38550319ac6ad9cec0",
     "productType": "698ccc9f798706956d6d04ce",
     "approvalStatus": "approved",
-    "isNewItem": false
+    "isNewItem": false,
+    "badge": {
+      "en": "Best seller",
+      "ar": "الأكثر مبيعاً"
+    },
+    "shortDescription": {
+      "en": "Max-strength omega-3 for heart health.",
+      "ar": "أوميغا 3 بتركيز عالٍ لصحة القلب."
+    },
+    "description": {
+      "en": "High-strength omega-3 fish oil softgels that support heart, brain and joint health. Easy to swallow and free from artificial colours.",
+      "ar": "كبسولات زيت السمك أوميغا 3 عالية التركيز لدعم صحة القلب والدماغ والمفاصل. سهلة البلع وخالية من الألوان الصناعية."
+    },
+    "features": [
+      {
+        "en": "Supports heart and circulation",
+        "ar": "يدعم صحة القلب والدورة الدموية"
+      },
+      {
+        "en": "Rich in EPA and DHA",
+        "ar": "غني بحمضي EPA و DHA"
+      },
+      {
+        "en": "Easy-to-swallow softgels",
+        "ar": "كبسولات جيلاتينية سهلة البلع"
+      }
+    ],
+    "specifications": [
+      {
+        "label": {
+          "en": "Form",
+          "ar": "الشكل"
+        },
+        "value": {
+          "en": "Softgel",
+          "ar": "كبسولات جيلاتينية"
+        }
+      },
+      {
+        "label": {
+          "en": "Servings",
+          "ar": "عدد الجرعات"
+        },
+        "value": {
+          "en": "60 per bottle",
+          "ar": "60 في العبوة"
+        }
+      },
+      {
+        "label": {
+          "en": "Usage",
+          "ar": "الاستخدام"
+        },
+        "value": {
+          "en": "1-2 softgels daily with a meal",
+          "ar": "1-2 كبسولة يومياً مع الوجبة"
+        }
+      }
+    ],
+    "sizes": [
+      {
+        "en": "60 softgels",
+        "ar": "60 كبسولة"
+      },
+      {
+        "en": "120 softgels",
+        "ar": "120 كبسولة"
+      }
+    ],
+    "colors": [],
+    "shipping": {
+      "localDays": "2-4",
+      "internationalDays": "7-14",
+      "returnDays": 14
+    }
   },
   {
     "_id": "698d9c2a6ed4a3b4f79e31a3",
@@ -44,7 +118,78 @@
     "brand": "698ccd38550319ac6ad9cec0",
     "productType": "698ccc9f798706956d6d04ce",
     "approvalStatus": "approved",
-    "isNewItem": false
+    "isNewItem": false,
+    "badge": null,
+    "shortDescription": {
+      "en": "Daily omega-3 softgels for the whole family.",
+      "ar": "كبسولات أوميغا 3 اليومية لكل العائلة."
+    },
+    "description": {
+      "en": "High-strength omega-3 fish oil softgels that support heart, brain and joint health. Easy to swallow and free from artificial colours.",
+      "ar": "كبسولات زيت السمك أوميغا 3 عالية التركيز لدعم صحة القلب والدماغ والمفاصل. سهلة البلع وخالية من الألوان الصناعية."
+    },
+    "features": [
+      {
+        "en": "Supports heart and circulation",
+        "ar": "يدعم صحة القلب والدورة الدموية"
+      },
+      {
+        "en": "Rich in EPA and DHA",
+        "ar": "غني بحمضي EPA و DHA"
+      },
+      {
+        "en": "Easy-to-swallow softgels",
+        "ar": "كبسولات جيلاتينية سهلة البلع"
+      }
+    ],
+    "specifications": [
+      {
+        "label": {
+          "en": "Form",
+          "ar": "الشكل"
+        },
+        "value": {
+          "en": "Softgel",
+          "ar": "كبسولات جيلاتينية"
+        }
+      },
+      {
+        "label": {
+          "en": "Servings",
+          "ar": "عدد الجرعات"
+        },
+        "value": {
+          "en": "60 per bottle",
+          "ar": "60 في العبوة"
+        }
+      },
+      {
+        "label": {
+          "en": "Usage",
+          "ar": "الاستخدام"
+        },
+        "value": {
+          "en": "1-2 softgels daily with a meal",
+          "ar": "1-2 كبسولة يومياً مع الوجبة"
+        }
+      }
+    ],
+    "sizes": [
+      {
+        "en": "60 softgels",
+        "ar": "60 كبسولة"
+      },
+      {
+        "en": "120 softgels",
+        "ar": "120 كبسولة"
+      }
+    ],
+    "colors": [],
+    "shipping": {
+      "localDays": "2-4",
+      "internationalDays": "7-14",
+      "returnDays": 14
+    }
   },
   {
     "_id": "698d9cc06ed4a3b4f79e3429",
@@ -66,7 +211,78 @@
     "category": "category_supplements",
     "brand": "698ccd38550319ac6ad9cec0",
     "productType": "69a496b145fc2f5c37e9a201",
-    "approvalStatus": "approved"
+    "approvalStatus": "approved",
+    "badge": null,
+    "shortDescription": {
+      "en": "Vitamin B2 tablets for energy and healthy skin.",
+      "ar": "أقراص فيتامين B2 للطاقة وصحة البشرة."
+    },
+    "description": {
+      "en": "Riboflavin (vitamin B2) tablets that help convert food into energy and support healthy skin, eyes and nervous system.",
+      "ar": "أقراص الريبوفلافين (فيتامين B2) تساعد على تحويل الغذاء إلى طاقة وتدعم صحة البشرة والعينين والجهاز العصبي."
+    },
+    "features": [
+      {
+        "en": "Supports energy metabolism",
+        "ar": "يدعم عملية التمثيل الغذائي للطاقة"
+      },
+      {
+        "en": "Helps maintain healthy skin and eyes",
+        "ar": "يساعد على الحفاظ على صحة البشرة والعينين"
+      },
+      {
+        "en": "Suitable for daily use",
+        "ar": "مناسب للاستخدام اليومي"
+      }
+    ],
+    "specifications": [
+      {
+        "label": {
+          "en": "Form",
+          "ar": "الشكل"
+        },
+        "value": {
+          "en": "Tablet",
+          "ar": "أقراص"
+        }
+      },
+      {
+        "label": {
+          "en": "Servings",
+          "ar": "عدد الجرعات"
+        },
+        "value": {
+          "en": "90 per bottle",
+          "ar": "90 في العبوة"
+        }
+      },
+      {
+        "label": {
+          "en": "Usage",
+          "ar": "الاستخدام"
+        },
+        "value": {
+          "en": "1 tablet daily after a meal",
+          "ar": "قرص واحد يومياً بعد الوجبة"
+        }
+      }
+    ],
+    "sizes": [
+      {
+        "en": "60 tablets",
+        "ar": "60 قرصاً"
+      },
+      {
+        "en": "90 tablets",
+        "ar": "90 قرصاً"
+      }
+    ],
+    "colors": [],
+    "shipping": {
+      "localDays": "2-4",
+      "internationalDays": "7-14",
+      "returnDays": 14
+    }
   },
   {
     "_id": "69a493a245fc2f5c37e99f2a",
@@ -89,7 +305,89 @@
     "brand": "69a7373040d250514a154b5a",
     "productType": "698ccc9f798706956d6d04ce",
     "approvalStatus": "approved",
-    "isNewItem": false
+    "isNewItem": false,
+    "badge": {
+      "en": "Best seller",
+      "ar": "الأكثر مبيعاً"
+    },
+    "shortDescription": {
+      "en": "Automatic upper-arm blood pressure monitor.",
+      "ar": "جهاز قياس ضغط الدم الأوتوماتيكي للذراع."
+    },
+    "description": {
+      "en": "Clinically validated digital blood pressure monitor with a large display, irregular heartbeat detection and memory for multiple readings.",
+      "ar": "جهاز رقمي لقياس ضغط الدم بشاشة كبيرة وكشف عدم انتظام نبضات القلب وذاكرة لحفظ القراءات."
+    },
+    "features": [
+      {
+        "en": "One-touch automatic measurement",
+        "ar": "قياس أوتوماتيكي بلمسة واحدة"
+      },
+      {
+        "en": "Irregular heartbeat detection",
+        "ar": "كشف عدم انتظام نبضات القلب"
+      },
+      {
+        "en": "Stores up to 90 readings",
+        "ar": "يحفظ حتى 90 قراءة"
+      }
+    ],
+    "specifications": [
+      {
+        "label": {
+          "en": "Type",
+          "ar": "النوع"
+        },
+        "value": {
+          "en": "Upper arm",
+          "ar": "الذراع العلوي"
+        }
+      },
+      {
+        "label": {
+          "en": "Power",
+          "ar": "الطاقة"
+        },
+        "value": {
+          "en": "4 x AAA batteries",
+          "ar": "4 بطاريات AAA"
+        }
+      },
+      {
+        "label": {
+          "en": "Warranty",
+          "ar": "الضمان"
+        },
+        "value": {
+          "en": "2 years",
+          "ar": "سنتان"
+        }
+      }
+    ],
+    "sizes": [
+      {
+        "en": "Standard cuff",
+        "ar": "سوار قياسي"
+      },
+      {
+        "en": "Large cuff",
+        "ar": "سوار كبير"
+      }
+    ],
+    "colors": [
+      {
+        "name": {
+          "en": "White",
+          "ar": "أبيض"
+        },
+        "colorClass": "bg-color-white"
+      }
+    ],
+    "shipping": {
+      "localDays": "2-4",
+      "internationalDays": "7-14",
+      "returnDays": 14
+    }
   },
   {
     "_id": "69a4960845fc2f5c37e9a12e",
@@ -111,7 +409,84 @@
     "category": "category_wellness_relaxation",
     "brand": "698ccd38550319ac6ad9cec0",
     "productType": "698ccc9f798706956d6d04ce",
-    "approvalStatus": "approved"
+    "approvalStatus": "approved",
+    "badge": null,
+    "shortDescription": {
+      "en": "Non-contact infrared thermometer gun.",
+      "ar": "ميزان حرارة بالأشعة تحت الحمراء بدون لمس."
+    },
+    "description": {
+      "en": "Fast and hygienic forehead thermometer that gives an accurate reading in one second without touching the skin.",
+      "ar": "ميزان حرارة للجبهة سريع وصحي يعطي قراءة دقيقة خلال ثانية دون ملامسة الجلد."
+    },
+    "features": [
+      {
+        "en": "Reading in 1 second",
+        "ar": "قراءة خلال ثانية واحدة"
+      },
+      {
+        "en": "Backlit LCD display",
+        "ar": "شاشة LCD مضيئة"
+      },
+      {
+        "en": "Fever alarm and memory",
+        "ar": "تنبيه الحمى وذاكرة القراءات"
+      }
+    ],
+    "specifications": [
+      {
+        "label": {
+          "en": "Range",
+          "ar": "المدى"
+        },
+        "value": {
+          "en": "32-42.9 °C",
+          "ar": "32-42.9 °م"
+        }
+      },
+      {
+        "label": {
+          "en": "Distance",
+          "ar": "المسافة"
+        },
+        "value": {
+          "en": "3-5 cm",
+          "ar": "3-5 سم"
+        }
+      },
+      {
+        "label": {
+          "en": "Power",
+          "ar": "الطاقة"
+        },
+        "value": {
+          "en": "2 x AAA batteries",
+          "ar": "2 بطارية AAA"
+        }
+      }
+    ],
+    "sizes": [],
+    "colors": [
+      {
+        "name": {
+          "en": "White",
+          "ar": "أبيض"
+        },
+        "colorClass": "bg-color-white"
+      },
+      {
+        "name": {
+          "en": "Black",
+          "ar": "أسود"
+        },
+        "colorClass": "bg-color-black"
+      }
+    ],
+    "shipping": {
+      "localDays": "2-4",
+      "internationalDays": "7-14",
+      "returnDays": 14
+    }
   },
   {
     "_id": "69a4979545fc2f5c37e9a335",
@@ -133,7 +508,80 @@
     "category": "category_wellness_relaxation",
     "brand": "69a7373040d250514a154b5a",
     "productType": "698ccc9f798706956d6d04ce",
-    "approvalStatus": "approved"
+    "approvalStatus": "approved",
+    "badge": {
+      "en": "New arrival",
+      "ar": "وصل حديثاً"
+    },
+    "shortDescription": {
+      "en": "Compact infrared thermometer with night light.",
+      "ar": "ميزان حرارة صغير بالأشعة تحت الحمراء مع إضاءة ليلية."
+    },
+    "description": {
+      "en": "Compact non-contact thermometer with a soft backlight that makes night-time readings easy for the whole family.",
+      "ar": "ميزان حرارة صغير بدون لمس مع إضاءة هادئة تسهّل القراءة ليلاً لجميع أفراد العائلة."
+    },
+    "features": [
+      {
+        "en": "Soft night backlight",
+        "ar": "إضاءة ليلية هادئة"
+      },
+      {
+        "en": "Silent mode",
+        "ar": "وضع صامت"
+      },
+      {
+        "en": "Lightweight and portable",
+        "ar": "خفيف وسهل الحمل"
+      }
+    ],
+    "specifications": [
+      {
+        "label": {
+          "en": "Range",
+          "ar": "المدى"
+        },
+        "value": {
+          "en": "32-42.9 °C",
+          "ar": "32-42.9 °م"
+        }
+      },
+      {
+        "label": {
+          "en": "Distance",
+          "ar": "المسافة"
+        },
+        "value": {
+          "en": "3-5 cm",
+          "ar": "3-5 سم"
+        }
+      },
+      {
+        "label": {
+          "en": "Power",
+          "ar": "الطاقة"
+        },
+        "value": {
+          "en": "2 x AAA batteries",
+          "ar": "2 بطارية AAA"
+        }
+      }
+    ],
+    "sizes": [],
+    "colors": [
+      {
+        "name": {
+          "en": "White",
+          "ar": "أبيض"
+        },
+        "colorClass": "bg-color-white"
+      }
+    ],
+    "shipping": {
+      "localDays": "2-4",
+      "internationalDays": "7-14",
+      "returnDays": 14
+    }
   },
   {
     "_id": "69a497ec45fc2f5c37e9a409",
@@ -156,7 +604,78 @@
     "brand": "698ccd38550319ac6ad9cec0",
     "productType": "698ccc9f798706956d6d04ce",
     "approvalStatus": "approved",
-    "isNewItem": false
+    "isNewItem": false,
+    "badge": null,
+    "shortDescription": {
+      "en": "Daily nutrition support formula.",
+      "ar": "تركيبة يومية لدعم التغذية."
+    },
+    "description": {
+      "en": "A balanced daily formula of vitamins and minerals designed to fill nutritional gaps and support everyday wellbeing.",
+      "ar": "تركيبة يومية متوازنة من الفيتامينات والمعادن لسد النقص الغذائي ودعم الصحة العامة."
+    },
+    "features": [
+      {
+        "en": "Balanced vitamins and minerals",
+        "ar": "فيتامينات ومعادن متوازنة"
+      },
+      {
+        "en": "Supports immunity",
+        "ar": "يدعم المناعة"
+      },
+      {
+        "en": "One serving per day",
+        "ar": "جرعة واحدة يومياً"
+      }
+    ],
+    "specifications": [
+      {
+        "label": {
+          "en": "Form",
+          "ar": "الشكل"
+        },
+        "value": {
+          "en": "Capsule",
+          "ar": "كبسولات"
+        }
+      },
+      {
+        "label": {
+          "en": "Servings",
+          "ar": "عدد الجرعات"
+        },
+        "value": {
+          "en": "30 per bottle",
+          "ar": "30 في العبوة"
+        }
+      },
+      {
+        "label": {
+          "en": "Usage",
+          "ar": "الاستخدام"
+        },
+        "value": {
+          "en": "1 capsule daily",
+          "ar": "كبسولة واحدة يومياً"
+        }
+      }
+    ],
+    "sizes": [
+      {
+        "en": "30 capsules",
+        "ar": "30 كبسولة"
+      },
+      {
+        "en": "60 capsules",
+        "ar": "60 كبسولة"
+      }
+    ],
+    "colors": [],
+    "shipping": {
+      "localDays": "2-4",
+      "internationalDays": "7-14",
+      "returnDays": 14
+    }
   },
   {
     "_id": "69a733229809221a29a75989",
@@ -177,7 +696,81 @@
     ],
     "category": "category_personal_care",
     "brand": "698ccd38550319ac6ad9cec0",
-    "approvalStatus": "approved"
+    "approvalStatus": "approved",
+    "badge": {
+      "en": "Best seller",
+      "ar": "الأكثر مبيعاً"
+    },
+    "shortDescription": {
+      "en": "Lemon-scented hand sanitizer, kills 99.9% of germs.",
+      "ar": "معقم أيدي برائحة الليمون يقضي على 99.9% من الجراثيم."
+    },
+    "description": {
+      "en": "Fast-drying alcohol hand sanitizer with a fresh lemon scent and moisturising glycerin that keeps hands soft.",
+      "ar": "معقم أيدي سريع الجفاف بالكحول برائحة الليمون المنعشة والغليسيرين المرطب للحفاظ على نعومة اليدين."
+    },
+    "features": [
+      {
+        "en": "Kills 99.9% of germs",
+        "ar": "يقضي على 99.9% من الجراثيم"
+      },
+      {
+        "en": "Moisturising formula",
+        "ar": "تركيبة مرطبة"
+      },
+      {
+        "en": "Fresh lemon scent",
+        "ar": "رائحة ليمون منعشة"
+      }
+    ],
+    "specifications": [
+      {
+        "label": {
+          "en": "Volume",
+          "ar": "الحجم"
+        },
+        "value": {
+          "en": "250 ml",
+          "ar": "250 مل"
+        }
+      },
+      {
+        "label": {
+          "en": "Scent",
+          "ar": "الرائحة"
+        },
+        "value": {
+          "en": "Lemon",
+          "ar": "ليمون"
+        }
+      },
+      {
+        "label": {
+          "en": "Alcohol",
+          "ar": "الكحول"
+        },
+        "value": {
+          "en": "70%",
+          "ar": "70%"
+        }
+      }
+    ],
+    "sizes": [
+      {
+        "en": "100 ml",
+        "ar": "100 مل"
+      },
+      {
+        "en": "250 ml",
+        "ar": "250 مل"
+      }
+    ],
+    "colors": [],
+    "shipping": {
+      "localDays": "2-4",
+      "internationalDays": "7-14",
+      "returnDays": 14
+    }
   },
   {
     "_id": "69a737de40d250514a154bd0",
@@ -197,7 +790,78 @@
     ],
     "category": "category_wellness_relaxation",
     "brand": "698ccd38550319ac6ad9cec0",
-    "approvalStatus": "approved"
+    "approvalStatus": "approved",
+    "badge": null,
+    "shortDescription": {
+      "en": "Antibiotic 250 mg capsules.",
+      "ar": "كبسولات مضاد حيوي 250 ملغ."
+    },
+    "description": {
+      "en": "Broad-spectrum antibiotic capsules. Use only as directed by your doctor or pharmacist and complete the full course.",
+      "ar": "كبسولات مضاد حيوي واسع الطيف. تُستخدم فقط حسب إرشادات الطبيب أو الصيدلي مع إكمال الجرعة كاملة."
+    },
+    "features": [
+      {
+        "en": "Broad-spectrum action",
+        "ar": "فعالية واسعة الطيف"
+      },
+      {
+        "en": "250 mg per capsule",
+        "ar": "250 ملغ لكل كبسولة"
+      },
+      {
+        "en": "Sealed blister packaging",
+        "ar": "تغليف مغلق بشرائط"
+      }
+    ],
+    "specifications": [
+      {
+        "label": {
+          "en": "Strength",
+          "ar": "التركيز"
+        },
+        "value": {
+          "en": "250 mg",
+          "ar": "250 ملغ"
+        }
+      },
+      {
+        "label": {
+          "en": "Form",
+          "ar": "الشكل"
+        },
+        "value": {
+          "en": "Capsule",
+          "ar": "كبسولات"
+        }
+      },
+      {
+        "label": {
+          "en": "Note",
+          "ar": "ملاحظة"
+        },
+        "value": {
+          "en": "Use as prescribed",
+          "ar": "يُستخدم حسب الوصفة الطبية"
+        }
+      }
+    ],
+    "sizes": [
+      {
+        "en": "10 capsules",
+        "ar": "10 كبسولات"
+      },
+      {
+        "en": "20 capsules",
+        "ar": "20 كبسولة"
+      }
+    ],
+    "colors": [],
+    "shipping": {
+      "localDays": "2-4",
+      "internationalDays": "7-14",
+      "returnDays": 14
+    }
   },
   {
     "_id": "69a7390e40d250514a154c6f",
@@ -218,6 +882,547 @@
     ],
     "category": "category_home_living",
     "brand": "69a7373040d250514a154b5a",
-    "approvalStatus": "approved"
+    "approvalStatus": "approved",
+    "badge": null,
+    "shortDescription": {
+      "en": "Concentrated liquid laundry detergent.",
+      "ar": "منظف غسيل سائل مركز."
+    },
+    "description": {
+      "en": "Concentrated liquid detergent that removes tough stains in cold or warm water and leaves clothes fresh and soft.",
+      "ar": "منظف سائل مركز يزيل البقع العنيدة بالماء البارد أو الدافئ ويترك الملابس منعشة وناعمة."
+    },
+    "features": [
+      {
+        "en": "Removes tough stains",
+        "ar": "يزيل البقع العنيدة"
+      },
+      {
+        "en": "Works in cold water",
+        "ar": "فعّال في الماء البارد"
+      },
+      {
+        "en": "Long-lasting freshness",
+        "ar": "نضارة تدوم طويلاً"
+      }
+    ],
+    "specifications": [
+      {
+        "label": {
+          "en": "Volume",
+          "ar": "الحجم"
+        },
+        "value": {
+          "en": "1 L",
+          "ar": "1 لتر"
+        }
+      },
+      {
+        "label": {
+          "en": "Washes",
+          "ar": "عدد الغسلات"
+        },
+        "value": {
+          "en": "About 25",
+          "ar": "حوالي 25"
+        }
+      },
+      {
+        "label": {
+          "en": "Type",
+          "ar": "النوع"
+        },
+        "value": {
+          "en": "Liquid",
+          "ar": "سائل"
+        }
+      }
+    ],
+    "sizes": [
+      {
+        "en": "1 L",
+        "ar": "1 لتر"
+      },
+      {
+        "en": "2 L",
+        "ar": "2 لتر"
+      }
+    ],
+    "colors": [],
+    "shipping": {
+      "localDays": "2-4",
+      "internationalDays": "7-14",
+      "returnDays": 14
+    }
+  },
+  {
+    "_id": "69a74aad46561567178d4a2c",
+    "name": "Curology Cleanser",
+    "slug": "curology-cleanser-skincare",
+    "price": 80,
+    "discountPercentage": 10,
+    "stock": 29,
+    "averageRating": 0,
+    "numReviews": 0,
+    "image": "https://ik.imagekit.io/bf62vomqy/sellzy/products/curology-cleanser/product_curology_cleanser_1_8T5nvFPqi.jpg",
+    "images": [
+      "https://ik.imagekit.io/bf62vomqy/sellzy/products/curology-cleanser/product_curology_cleanser_1_8T5nvFPqi.jpg",
+      "https://res.cloudinary.com/dxkhdqifr/image/upload/v1772571915/sellzy/products/pez2zog3fetbq4mlm1wy.png",
+      "https://res.cloudinary.com/dxkhdqifr/image/upload/v1772571354/sellzy/products/u0tdmsibuomwvpbrky9v.jpg",
+      "https://res.cloudinary.com/dxkhdqifr/image/upload/v1772571305/sellzy/products/rqvqaqz1in8xygdaaqxh.png",
+      "https://res.cloudinary.com/dxkhdqifr/image/upload/v1772571306/sellzy/products/uefc1g1zgogil5xj9iki.png",
+      "https://res.cloudinary.com/dxkhdqifr/image/upload/v1772571308/sellzy/products/lds8sgpwi58vuxjeihjv.png"
+    ],
+    "category": "category_beauty",
+    "brand": "69a7373040d250514a154b5a",
+    "approvalStatus": "approved",
+    "isNewItem": false,
+    "badge": {
+      "en": "Best seller",
+      "ar": "الأكثر مبيعاً"
+    },
+    "shortDescription": {
+      "en": "Gentle daily facial cleanser.",
+      "ar": "غسول وجه يومي لطيف."
+    },
+    "description": {
+      "en": "A gentle gel cleanser that removes makeup and impurities without stripping the skin, leaving it clean, soft and balanced.",
+      "ar": "غسول جل لطيف يزيل المكياج والشوائب دون أن يجفف البشرة ويتركها نظيفة وناعمة ومتوازنة."
+    },
+    "features": [
+      {
+        "en": "Removes makeup and impurities",
+        "ar": "يزيل المكياج والشوائب"
+      },
+      {
+        "en": "Suitable for all skin types",
+        "ar": "مناسب لجميع أنواع البشرة"
+      },
+      {
+        "en": "Dermatologist tested",
+        "ar": "مختبر جلدياً"
+      }
+    ],
+    "specifications": [
+      {
+        "label": {
+          "en": "Volume",
+          "ar": "الحجم"
+        },
+        "value": {
+          "en": "150 ml",
+          "ar": "150 مل"
+        }
+      },
+      {
+        "label": {
+          "en": "Skin type",
+          "ar": "نوع البشرة"
+        },
+        "value": {
+          "en": "All skin types",
+          "ar": "جميع أنواع البشرة"
+        }
+      },
+      {
+        "label": {
+          "en": "Usage",
+          "ar": "الاستخدام"
+        },
+        "value": {
+          "en": "Morning and evening",
+          "ar": "صباحاً ومساءً"
+        }
+      }
+    ],
+    "sizes": [
+      {
+        "en": "150 ml",
+        "ar": "150 مل"
+      },
+      {
+        "en": "300 ml",
+        "ar": "300 مل"
+      }
+    ],
+    "colors": [],
+    "shipping": {
+      "localDays": "2-4",
+      "internationalDays": "7-14",
+      "returnDays": 14
+    }
+  },
+  {
+    "_id": "69c803ae25b50743e3c910e0",
+    "name": "Fresh Avacado",
+    "slug": "fresh-avacado-seasonal-harvest",
+    "price": 30,
+    "discountPercentage": 10,
+    "stock": 38,
+    "averageRating": 0,
+    "numReviews": 0,
+    "image": "https://ik.imagekit.io/bf62vomqy/sellzy/products/fresh-avacado/product_fresh_avacado_1_WOVVoSIhg.jpg",
+    "images": [
+      "https://ik.imagekit.io/bf62vomqy/sellzy/products/fresh-avacado/product_fresh_avacado_1_WOVVoSIhg.jpg",
+      "https://ik.imagekit.io/bf62vomqy/sellzy/products/fresh-avacado/product_fresh_avacado_2_F42y6eqqI.jpg",
+      "https://ik.imagekit.io/bf62vomqy/sellzy/products/fresh-avacado/product_fresh_avacado_3_A-ul-49qz.jpg",
+      "https://ik.imagekit.io/bf62vomqy/sellzy/products/fresh-avacado/product_fresh_avacado_4_eR7TRfFpd.jpg",
+      "https://ik.imagekit.io/bf62vomqy/sellzy/products/fresh-avacado/product_fresh_avacado_5_uJ0Fm7Dl9.jpg",
+      "https://ik.imagekit.io/bf62vomqy/sellzy/products/fresh-avacado/product_fresh_avacado_6_qyPE1NqF6.jpg"
+    ],
+    "category": "category_grocery",
+    "brand": "69c79ecf6071f00891f2cfd6",
+    "approvalStatus": "approved",
+    "isNewItem": false,
+    "badge": {
+      "en": "New arrival",
+      "ar": "وصل حديثاً"
+    },
+    "shortDescription": {
+      "en": "Fresh ripe avocados.",
+      "ar": "أفوكادو طازج ناضج."
+    },
+    "description": {
+      "en": "Creamy, nutrient-rich avocados picked at the right ripeness. Perfect for salads, toast, smoothies and dips.",
+      "ar": "حبات أفوكادو كريمية غنية بالعناصر الغذائية تُقطف في أوان نضجها. مثالية للسلطات والتوست والعصائر والغموس."
+    },
+    "features": [
+      {
+        "en": "Rich in healthy fats",
+        "ar": "غني بالدهون الصحية"
+      },
+      {
+        "en": "Fresh from the farm",
+        "ar": "طازج من المزرعة"
+      },
+      {
+        "en": "No preservatives",
+        "ar": "بدون مواد حافظة"
+      }
+    ],
+    "specifications": [
+      {
+        "label": {
+          "en": "Origin",
+          "ar": "المنشأ"
+        },
+        "value": {
+          "en": "Local farms",
+          "ar": "مزارع محلية"
+        }
+      },
+      {
+        "label": {
+          "en": "Storage",
+          "ar": "التخزين"
+        },
+        "value": {
+          "en": "Keep at room temperature, then refrigerate when ripe",
+          "ar": "يُحفظ في درجة حرارة الغرفة ثم يُبرّد عند النضج"
+        }
+      },
+      {
+        "label": {
+          "en": "Shelf life",
+          "ar": "مدة الصلاحية"
+        },
+        "value": {
+          "en": "5-7 days",
+          "ar": "5-7 أيام"
+        }
+      }
+    ],
+    "sizes": [
+      {
+        "en": "500 g",
+        "ar": "500 جم"
+      },
+      {
+        "en": "1 kg",
+        "ar": "1 كجم"
+      }
+    ],
+    "colors": [],
+    "shipping": {
+      "localDays": "2-4",
+      "internationalDays": "7-14",
+      "returnDays": 14
+    }
+  },
+  {
+    "_id": "69c804e825b50743e3c9113f",
+    "name": "Aptamil Infant Formula",
+    "slug": "aptamil-infant-formula-nutty-treasures",
+    "price": 120,
+    "discountPercentage": 10,
+    "stock": 30,
+    "averageRating": 0,
+    "numReviews": 0,
+    "image": "https://ik.imagekit.io/bf62vomqy/sellzy/products/aptamil-infant-formula/product_aptamil_infant_formula_1_FTyQktXvs.jpg",
+    "images": [
+      "https://ik.imagekit.io/bf62vomqy/sellzy/products/aptamil-infant-formula/product_aptamil_infant_formula_1_FTyQktXvs.jpg",
+      "https://ik.imagekit.io/bf62vomqy/sellzy/products/aptamil-infant-formula/product_aptamil_infant_formula_2_o0DdajuzB.jpg",
+      "https://ik.imagekit.io/bf62vomqy/sellzy/products/aptamil-infant-formula/product_aptamil_infant_formula_3_nBihjVCne.jpg",
+      "https://ik.imagekit.io/bf62vomqy/sellzy/products/aptamil-infant-formula/product_aptamil_infant_formula_4_qZIxE2c7s.jpg",
+      "https://ik.imagekit.io/bf62vomqy/sellzy/products/aptamil-infant-formula/product_aptamil_infant_formula_5_MN-0NyOT8.jpg",
+      "https://ik.imagekit.io/bf62vomqy/sellzy/products/aptamil-infant-formula/product_aptamil_infant_formula_6_kdrSKGNSu.jpg"
+    ],
+    "category": "category_baby_kids",
+    "brand": "69c79ecf6071f00891f2cfd6",
+    "approvalStatus": "approved",
+    "isNewItem": false,
+    "badge": null,
+    "shortDescription": {
+      "en": "Infant formula for healthy growth.",
+      "ar": "حليب أطفال لنمو صحي."
+    },
+    "description": {
+      "en": "Nutritionally complete infant formula enriched with vitamins and minerals to support healthy growth and development.",
+      "ar": "حليب أطفال متكامل التغذية مدعّم بالفيتامينات والمعادن لدعم النمو والتطور الصحي."
+    },
+    "features": [
+      {
+        "en": "Enriched with vitamins and minerals",
+        "ar": "مدعّم بالفيتامينات والمعادن"
+      },
+      {
+        "en": "Easy to digest",
+        "ar": "سهل الهضم"
+      },
+      {
+        "en": "For infants from birth",
+        "ar": "للرضع منذ الولادة"
+      }
+    ],
+    "specifications": [
+      {
+        "label": {
+          "en": "Age",
+          "ar": "العمر"
+        },
+        "value": {
+          "en": "0-6 months",
+          "ar": "من 0 إلى 6 أشهر"
+        }
+      },
+      {
+        "label": {
+          "en": "Weight",
+          "ar": "الوزن"
+        },
+        "value": {
+          "en": "800 g",
+          "ar": "800 جم"
+        }
+      },
+      {
+        "label": {
+          "en": "Storage",
+          "ar": "التخزين"
+        },
+        "value": {
+          "en": "Store in a cool dry place",
+          "ar": "يُحفظ في مكان بارد وجاف"
+        }
+      }
+    ],
+    "sizes": [
+      {
+        "en": "400 g",
+        "ar": "400 جم"
+      },
+      {
+        "en": "800 g",
+        "ar": "800 جم"
+      }
+    ],
+    "colors": [],
+    "shipping": {
+      "localDays": "2-4",
+      "internationalDays": "7-14",
+      "returnDays": 14
+    }
+  },
+  {
+    "_id": "69a7517f4336af6a7c83358e",
+    "name": "Gillette mach3 shaving kit Combo",
+    "slug": "gillette-mach3-shaving-kit-combo-wellness",
+    "price": 80,
+    "discountPercentage": 10,
+    "stock": 40,
+    "averageRating": 0,
+    "numReviews": 0,
+    "image": "https://ik.imagekit.io/bf62vomqy/sellzy/products/gillette-mach3-shaving-kit-combo/product_gillette_mach3_shaving_kit_combo_1_5tp6Umtbu.jpg",
+    "images": [
+      "https://ik.imagekit.io/bf62vomqy/sellzy/products/gillette-mach3-shaving-kit-combo/product_gillette_mach3_shaving_kit_combo_1_5tp6Umtbu.jpg",
+      "https://res.cloudinary.com/dxkhdqifr/image/upload/v1772573049/sellzy/products/pbz5v0ogaippjioyacjh.png",
+      "https://res.cloudinary.com/dxkhdqifr/image/upload/v1772573051/sellzy/products/y3rhry7jcgcebywqlzqy.jpg",
+      "https://res.cloudinary.com/dxkhdqifr/image/upload/v1772573052/sellzy/products/lgtvof21t8fore6lypqb.png",
+      "https://res.cloudinary.com/dxkhdqifr/image/upload/v1772573053/sellzy/products/qga49tji0ieq8jgis5dy.jpg",
+      "https://res.cloudinary.com/dxkhdqifr/image/upload/v1772573054/sellzy/products/wobb4ekk2yraveywharv.jpg"
+    ],
+    "category": "category_gifts_bundles",
+    "brand": "69a7373040d250514a154b5a",
+    "approvalStatus": "approved",
+    "isNewItem": false,
+    "badge": {
+      "en": "Best seller",
+      "ar": "الأكثر مبيعاً"
+    },
+    "shortDescription": {
+      "en": "Shaving kit combo, a gift for him.",
+      "ar": "طقم حلاقة متكامل، هدية مثالية."
+    },
+    "description": {
+      "en": "A complete shaving combo with a three-blade razor, spare cartridges and shaving gel. Packed in a gift-ready box.",
+      "ar": "طقم حلاقة متكامل يضم ماكينة بثلاث شفرات وشفرات احتياطية وجل حلاقة. يأتي في علبة جاهزة للإهداء."
+    },
+    "features": [
+      {
+        "en": "Three-blade precision razor",
+        "ar": "ماكينة دقيقة بثلاث شفرات"
+      },
+      {
+        "en": "Includes spare cartridges",
+        "ar": "يشمل شفرات احتياطية"
+      },
+      {
+        "en": "Gift-ready packaging",
+        "ar": "تغليف جاهز للإهداء"
+      }
+    ],
+    "specifications": [
+      {
+        "label": {
+          "en": "Contents",
+          "ar": "المحتويات"
+        },
+        "value": {
+          "en": "Razor, 4 cartridges, gel",
+          "ar": "ماكينة، 4 شفرات، جل"
+        }
+      },
+      {
+        "label": {
+          "en": "Packaging",
+          "ar": "التغليف"
+        },
+        "value": {
+          "en": "Gift box",
+          "ar": "علبة هدايا"
+        }
+      },
+      {
+        "label": {
+          "en": "Suitable for",
+          "ar": "مناسب لـ"
+        },
+        "value": {
+          "en": "Men",
+          "ar": "الرجال"
+        }
+      }
+    ],
+    "sizes": [],
+    "colors": [],
+    "shipping": {
+      "localDays": "2-4",
+      "internationalDays": "7-14",
+      "returnDays": 14
+    }
+  },
+  {
+    "_id": "69a7568e537673d210479f5e",
+    "name": "Ono Groundnuts oil premium pack",
+    "slug": "ono-groundnuts-oil-premium-pack-diet-nutrition",
+    "price": 39,
+    "discountPercentage": 10,
+    "stock": 40,
+    "averageRating": 0,
+    "numReviews": 0,
+    "image": "https://ik.imagekit.io/bf62vomqy/sellzy/products/ono-groundnuts-oil-premium-pack/product_ono_groundnuts_oil_premium_pack_1_D9EHF8-TT.jpg",
+    "images": [
+      "https://ik.imagekit.io/bf62vomqy/sellzy/products/ono-groundnuts-oil-premium-pack/product_ono_groundnuts_oil_premium_pack_1_D9EHF8-TT.jpg",
+      "https://res.cloudinary.com/dxkhdqifr/image/upload/v1772574344/sellzy/products/lfsthnprcdedwezyulv7.png",
+      "https://res.cloudinary.com/dxkhdqifr/image/upload/v1772574346/sellzy/products/mf9z1elyhg6jaomdjm33.jpg",
+      "https://res.cloudinary.com/dxkhdqifr/image/upload/v1772574347/sellzy/products/jgdw4eurgc2avbois6ex.png",
+      "https://res.cloudinary.com/dxkhdqifr/image/upload/v1772574348/sellzy/products/ub302tm79pv54zaewarv.jpg",
+      "https://res.cloudinary.com/dxkhdqifr/image/upload/v1772574349/sellzy/products/mouiqcftxjfhoqejijeb.jpg"
+    ],
+    "category": "category_kitchen_dining",
+    "brand": "69a7373040d250514a154b5a",
+    "approvalStatus": "approved",
+    "isNewItem": false,
+    "badge": null,
+    "shortDescription": {
+      "en": "Pure groundnut cooking oil.",
+      "ar": "زيت فول سوداني نقي للطبخ."
+    },
+    "description": {
+      "en": "Pure groundnut oil with a high smoke point and mild nutty taste. Ideal for frying, sauteing and everyday cooking.",
+      "ar": "زيت فول سوداني نقي بنقطة تدخين مرتفعة وطعم لطيف. مثالي للقلي والتحمير والطهي اليومي."
+    },
+    "features": [
+      {
+        "en": "High smoke point",
+        "ar": "نقطة تدخين مرتفعة"
+      },
+      {
+        "en": "Cholesterol free",
+        "ar": "خالٍ من الكوليسترول"
+      },
+      {
+        "en": "Mild, nutty flavour",
+        "ar": "نكهة لطيفة بطعم المكسرات"
+      }
+    ],
+    "specifications": [
+      {
+        "label": {
+          "en": "Volume",
+          "ar": "الحجم"
+        },
+        "value": {
+          "en": "1 L",
+          "ar": "1 لتر"
+        }
+      },
+      {
+        "label": {
+          "en": "Type",
+          "ar": "النوع"
+        },
+        "value": {
+          "en": "Refined groundnut oil",
+          "ar": "زيت فول سوداني مكرر"
+        }
+      },
+      {
+        "label": {
+          "en": "Shelf life",
+          "ar": "مدة الصلاحية"
+        },
+        "value": {
+          "en": "12 months",
+          "ar": "12 شهراً"
+        }
+      }
+    ],
+    "sizes": [
+      {
+        "en": "1 L",
+        "ar": "1 لتر"
+      },
+      {
+        "en": "2 L",
+        "ar": "2 لتر"
+      }
+    ],
+    "colors": [],
+    "shipping": {
+      "localDays": "2-4",
+      "internationalDays": "7-14",
+      "returnDays": 14
+    }
   }
 ]

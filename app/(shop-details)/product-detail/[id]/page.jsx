@@ -3,6 +3,7 @@ import Header2 from "@/components/headers/Header2";
 
 import Products from "@/components/shopDetails/Products";
 import RecentProducts from "@/components/shopDetails/RecentProducts";
+import SellzyDetailsTabs from "@/components/shopDetails/SellzyDetailsTabs";
 import ShopDetailsTab from "@/components/shopDetails/ShopDetailsTab";
 import React from "react";
 import Link from "next/link";
@@ -13,12 +14,11 @@ export const metadata = {
   description: "Ecoshopify - Ultimate Nextjs Ecommerce Template",
 };
 import { allProducts } from "@/data/products";
-import sellzyProducts from "@/data/substitute-products.json";
-import storefrontCategories from "@/data/storefront-menu.json";
+import { getStorefrontProductById } from "@/data/storefrontProducts";
 import ProductSinglePrevNext from "@/components/common/ProductSinglePrevNext";
 export default async function page({ params }) {
   const { id } = await params;
-  const sellzyProduct = sellzyProducts.find((product) => product._id === id);
+  const sellzyProduct = getStorefrontProductById(id);
   const isSellzyProduct = Boolean(sellzyProduct);
   const demoProduct = allProducts.find((product) => String(product.id) === id);
 
@@ -26,24 +26,8 @@ export default async function page({ params }) {
     notFound();
   }
 
-  const category = sellzyProduct
-    ? storefrontCategories.find(
-        (category) => category._id === sellzyProduct.category
-      )
-    : null;
   const product = sellzyProduct
-    ? {
-        id: sellzyProduct._id,
-        title: sellzyProduct.name,
-        price: sellzyProduct.price,
-        imgSrc: sellzyProduct.image,
-        imgHoverSrc: sellzyProduct.images?.[1] ?? sellzyProduct.image,
-        images: sellzyProduct.images?.length
-          ? sellzyProduct.images
-          : [sellzyProduct.image],
-        stock: sellzyProduct.stock,
-        categoryName: category?.name.en,
-      }
+    ? sellzyProduct
     : demoProduct;
 
   return (
@@ -69,6 +53,7 @@ export default async function page({ params }) {
         </div>
       </div>
       <DetailsOuterZoom product={product} isSellzyProduct={isSellzyProduct} />
+      {isSellzyProduct && <SellzyDetailsTabs product={product} />}
       {!isSellzyProduct && (
         <>
           <ShopDetailsTab />

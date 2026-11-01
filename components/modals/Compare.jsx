@@ -3,13 +3,13 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useContextElement } from "@/context/Context";
-import { allProducts } from "@/data/products";
+import { catalog } from "@/data/catalog";
 export default function Compare() {
   const { removeFromCompareItem, compareItem, setCompareItem } =
     useContextElement();
   const [items, setItems] = useState([]);
   useEffect(() => {
-    setItems([...allProducts.filter((elm) => compareItem.includes(elm.id))]);
+    setItems([...catalog.filter((elm) => compareItem.includes(elm.id))]);
   }, [compareItem]);
 
   return (

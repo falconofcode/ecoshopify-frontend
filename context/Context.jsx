@@ -1,5 +1,5 @@
 "use client";
-import { allProducts } from "@/data/products";
+import { catalog } from "@/data/catalog";
 import { openCartModal } from "@/utlis/openCartModal";
 // import { openCart } from "@/utlis/toggleCart";
 import React, { useEffect } from "react";
@@ -13,7 +13,7 @@ export default function Context({ children }) {
   const [cartProducts, setCartProducts] = useState([]);
   const [wishList, setWishList] = useState([1, 2, 3]);
   const [compareItem, setCompareItem] = useState([1, 2, 3]);
-  const [quickViewItem, setQuickViewItem] = useState(allProducts[0]);
+  const [quickViewItem, setQuickViewItem] = useState(catalog[0]);
   const [quickAddItem, setQuickAddItem] = useState(1);
   const [totalPrice, setTotalPrice] = useState(0);
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function Context({ children }) {
   const addProductToCart = (id, qty) => {
     if (!cartProducts.filter((elm) => elm.id == id)[0]) {
       const item = {
-        ...allProducts.filter((elm) => elm.id == id)[0],
+        ...catalog.filter((elm) => elm.id == id)[0],
         quantity: qty ? qty : 1,
       };
       setCartProducts((pre) => [...pre, item]);
