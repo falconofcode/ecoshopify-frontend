@@ -1,7 +1,51 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
+
 export default function Login() {
+  const router = useRouter();
+  const [form, setForm] = useState({ email: "", password: "" });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/auth/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Login failed");
+      }
+
+      localStorage.setItem("ecoshopify_token", data.token);
+      localStorage.setItem("ecoshopify_user", JSON.stringify(data.user));
+      router.push("/");
+    } catch (err) {
+      setError(err.message || "Unable to log in right now.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="flat-spacing-10">
       <div className="container">
@@ -20,13 +64,13 @@ export default function Login() {
                       placeholder=""
                       required
                       type="email"
-                      autoComplete="abc@xyz.com"
-                      id="property3"
+                      autoComplete="email"
+                      id="recover-email"
                       name="email"
                     />
                     <label
                       className="tf-field-label fw-4 text_black-2"
-                      htmlFor="property3"
+                      htmlFor="recover-email"
                     >
                       Email *
                     </label>
@@ -50,20 +94,22 @@ export default function Login() {
             <div id="login">
               <h5 className="mb_36">Log in</h5>
               <div>
-                <form onSubmit={(e) => e.preventDefault()}>
+                <form onSubmit={handleSubmit}>
                   <div className="tf-field style-1 mb_15">
                     <input
                       required
                       className="tf-field-input tf-input"
                       placeholder=""
                       type="email"
-                      autoComplete="abc@xyz.com"
-                      id="property3"
+                      autoComplete="email"
+                      id="login-email"
                       name="email"
+                      value={form.email}
+                      onChange={handleChange}
                     />
                     <label
                       className="tf-field-label fw-4 text_black-2"
-                      htmlFor="property3"
+                      htmlFor="login-email"
                     >
                       Email *
                     </label>
@@ -74,17 +120,20 @@ export default function Login() {
                       className="tf-field-input tf-input"
                       placeholder=""
                       type="password"
-                      id="property4"
+                      id="login-password"
                       name="password"
                       autoComplete="current-password"
+                      value={form.password}
+                      onChange={handleChange}
                     />
                     <label
                       className="tf-field-label fw-4 text_black-2"
-                      htmlFor="property4"
+                      htmlFor="login-password"
                     >
                       Password *
                     </label>
                   </div>
+                  {error && <p className="text-danger mb_20">{error}</p>}
                   <div className="mb_20">
                     <a href="#recover" className="tf-btn btn-line">
                       Forgot your password?
@@ -94,8 +143,9 @@ export default function Login() {
                     <button
                       type="submit"
                       className="tf-btn w-100 radius-3 btn-fill animate-hover-btn justify-content-center"
+                      disabled={loading}
                     >
-                      Log in
+                      {loading ? "Logging in..." : "Log in"}
                     </button>
                   </div>
                 </form>
