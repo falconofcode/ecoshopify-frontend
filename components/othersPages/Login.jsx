@@ -3,15 +3,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-const normalizeApiBase = () => {
-  const raw = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api").trim();
-  const base = raw.replace(/\/+$/, "");
-  return base.endsWith("/api") ? base : `${base}/api`;
-};
+import { API_BASE_URL, saveSession } from "@/utlis/auth";
 
-const API_BASE_URL = normalizeApiBase();
-
-export default function Login() {
+export default function Login({ admin = false }) {
   const router = useRouter();
   const [form, setForm] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
@@ -28,13 +22,16 @@ export default function Login() {
     setError("");
 
     try {
-      const response = await fetch(`${API_BASE_URL}/auth/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
+      const response = await fetch(
+        `${API_BASE_URL}/auth/${admin ? "admin/login" : "login"}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(form),
+        }
+      );
 
       const data = await response.json();
 
@@ -42,9 +39,8 @@ export default function Login() {
         throw new Error(data.message || "Login failed");
       }
 
-      localStorage.setItem("ecoshopify_token", data.token);
-      localStorage.setItem("ecoshopify_user", JSON.stringify(data.user));
-      router.push("/");
+      saveSession(data);
+      router.push(data.redirectTo || "/");
     } catch (err) {
       setError(err.message || "Unable to log in right now.");
     } finally {
@@ -164,10 +160,19 @@ export default function Login() {
               Sign up for early Sale access plus tailored new arrivals, trends
               and promotions. To opt out, click unsubscribe in our emails.
             </p>
-            <Link href={`/register`} className="tf-btn btn-line">
-              Register
-              <i className="icon icon-arrow1-top-left" />
-            </Link>
+            {!admin && (
+              <>
+                <Link href={`/register`} className="tf-btn btn-line">
+                  Register as customer
+                  <i className="icon icon-arrow1-top-left" />
+                </Link>
+                <br />
+                <Link href={`/vendor/register`} className="tf-btn btn-line mt-3">
+                  Become a seller
+                  <i className="icon icon-arrow1-top-left" />
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>

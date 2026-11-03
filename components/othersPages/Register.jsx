@@ -3,22 +3,16 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-const normalizeApiBase = () => {
-  const raw = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api").trim();
-  const base = raw.replace(/\/+$/, "");
-  return base.endsWith("/api") ? base : `${base}/api`;
-};
+import { API_BASE_URL, saveSession } from "@/utlis/auth";
 
-const API_BASE_URL = normalizeApiBase();
-
-export default function Register() {
+export default function Register({ variant = "customer" }) {
+  const isVendor = variant === "vendor";
   const router = useRouter();
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
-    role: "CUSTOMER",
     storeName: "",
     description: "",
   });
@@ -42,22 +36,21 @@ export default function Register() {
         name: `${form.firstName} ${form.lastName}`.trim(),
         email: form.email,
         password: form.password,
-        role: form.role,
-        ...(form.role === "VENDOR"
-          ? {
-              storeName: form.storeName || `${form.firstName || "Vendor"}'s Store`,
-              description: form.description,
-            }
+        ...(isVendor
+          ? { storeName: form.storeName, description: form.description }
           : {}),
       };
 
-      const response = await fetch(`${API_BASE_URL}/auth/register`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
+      const response = await fetch(
+        `${API_BASE_URL}/auth/${isVendor ? "vendor/register" : "register"}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
 
       const data = await response.json();
 
@@ -65,11 +58,10 @@ export default function Register() {
         throw new Error(data.message || "Registration failed");
       }
 
-      localStorage.setItem("ecoshopify_token", data.token);
-      localStorage.setItem("ecoshopify_user", JSON.stringify(data.user));
+      saveSession(data);
       setSuccess("Registration successful. Redirecting...");
 
-      setTimeout(() => router.push("/"), 800);
+      setTimeout(() => router.push(data.redirectTo || "/"), 800);
     } catch (err) {
       setError(err.message || "Unable to register right now.");
     } finally {
@@ -158,24 +150,7 @@ export default function Register() {
                 </label>
               </div>
 
-              <div className="tf-field style-1 mb_15">
-                <select
-                  className="tf-field-input tf-input"
-                  id="role"
-                  name="role"
-                  value={form.role}
-                  onChange={handleChange}
-                >
-                  <option value="CUSTOMER">Customer</option>
-                  <option value="VENDOR">Vendor</option>
-                  <option value="ADMIN">Admin</option>
-                </select>
-                <label className="tf-field-label fw-4 text_black-2" htmlFor="role">
-                  Account role
-                </label>
-              </div>
-
-              {form.role === "VENDOR" && (
+              {isVendor && (
                 <>
                   <div className="tf-field style-1 mb_15">
                     <input
@@ -186,9 +161,10 @@ export default function Register() {
                       name="storeName"
                       value={form.storeName}
                       onChange={handleChange}
+                      required
                     />
                     <label className="tf-field-label fw-4 text_black-2" htmlFor="storeName">
-                      Store name
+                      Store name *
                     </label>
                   </div>
                   <div className="tf-field style-1 mb_30">
@@ -217,7 +193,7 @@ export default function Register() {
                   className="tf-btn w-100 radius-3 btn-fill animate-hover-btn justify-content-center"
                   disabled={loading}
                 >
-                  {loading ? "Registering..." : "Register"}
+                  {loading ? "Registering..." : isVendor ? "Create seller account" : "Register"}
                 </button>
               </div>
               <div className="text-center">
