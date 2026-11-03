@@ -180,23 +180,23 @@ Keep the old `9d52dd0` release until you’ve confirmed the new site is working.
 
 *******************************************
 
-The vhost is already set up to proxy requests to a Next.js app on **port 5000**. The likely cause of the 503 is that Next.js is listening on a different port—or isn’t running—so LiteSpeed can’t reach its proxy target.
+The vhost is already set up to proxy requests to the Next.js frontend on **port 5001**. The backend API is still on **port 5000**, so the frontend and backend need to remain separate. The likely cause of the 503 is that the Next.js app is listening on a different port—or isn’t running—so LiteSpeed can’t reach its proxy target.
 
 ### 1. Check the app before changing the vhost
 
 Run these on the VPS:
 
 ```bash
-ss -ltnp | grep ':5000'
-curl -I http://127.0.0.1:5000
+ss -ltnp | grep ':5001'
+curl -I http://127.0.0.1:5001
 pm2 logs ecoshopify --lines 50
 ```
 
-- If `curl` returns a response, the app is reachable locally.
-- If it says connection refused, make the app listen on port `5000`:
+- If `curl` returns a response, the frontend app is reachable locally.
+- If it says connection refused, make the app listen on port `5001`:
 
 ```bash
-PORT=5000 pm2 restart ecoshopify --update-env
+PORT=5001 pm2 restart ecoshopify --update-env
 pm2 save
 ```
 
@@ -208,7 +208,7 @@ pm2 describe ecoshopify
 
 ### 2. Vhost configuration
 
-Your proxy setup is basically right. Keep the proxy address at `127.0.0.1:5000` so it matches the app’s port. This is a cleaned-up version of the relevant configuration:
+Your proxy setup is basically right. Keep the proxy address at `127.0.0.1:5001` for the frontend app, while the backend API stays on `127.0.0.1:5000`. This is a cleaned-up version of the relevant configuration:
 
 ```conf
 docRoot                   $VH_ROOT/public_html
@@ -240,7 +240,7 @@ accesslog $VH_ROOT/logs/$VH_NAME.access_log {
 
 extprocessor ecoshopify-app {
   type                    proxy
-  address                 http://127.0.0.1:5000
+  address                 http://127.0.0.1:5001
   maxConns                100
   initTimeout             60
   retryTimeout            0

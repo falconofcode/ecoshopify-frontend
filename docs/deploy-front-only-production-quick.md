@@ -16,10 +16,10 @@ After you are logged into the server, check the current deployment:
 cd /home/ecoshopify.com
 pwd
 pm2 describe ecoshopify
-curl -I http://127.0.0.1:5000
+curl -I http://127.0.0.1:5001
 ```
 
-PM2's `exec cwd` shows which release is currently live. The local `curl` checks that the Next.js app is responding on port `5000`, which is the port LiteSpeed proxies to.
+PM2's `exec cwd` shows which release is currently live. The local `curl` checks that the Next.js frontend is responding on port `5001`, which is the port LiteSpeed proxies to. The backend API remains on port `5000` and should be reached from the frontend via `NEXT_PUBLIC_API_URL=http://localhost:5000/api`.
 
 Check that the server can read the latest `main` branch:
 
@@ -78,7 +78,7 @@ Replace `release-20261025-1` here with the **same name** you used in step 3:
 ```bash
 pm2 delete ecoshopify
 
-PORT=5000 pm2 start /opt/nvm/versions/node/v20.20.2/bin/npm \
+PORT=5001 pm2 start /opt/nvm/versions/node/v20.20.2/bin/npm \
   --name ecoshopify \
   --cwd /home/ecoshopify.com/releases/release-20261025-1 \
   -- start
@@ -92,11 +92,11 @@ pm2 save
 pm2 list
 pm2 describe ecoshopify
 pm2 logs ecoshopify --lines 50
-curl -I http://127.0.0.1:5000
+curl -I http://127.0.0.1:5001
 curl -I https://ecoshopify.com
 ```
 
-Check that PM2 is `online`, its `exec cwd` points to your new release directory, the local app responds, and the public site returns a successful HTTP status. If the local `curl` fails, inspect the PM2 logs; LiteSpeed's proxy cannot serve the app unless it is listening on port `5000`.
+Check that PM2 is `online`, its `exec cwd` points to your new release directory, the local app responds, and the public site returns a successful HTTP status. If the local `curl` fails, inspect the PM2 logs; LiteSpeed's proxy cannot serve the app unless it is listening on port `5001`. The backend API still runs on port `5000` and is not the frontend port.
 
 ## Roll back
 
@@ -105,7 +105,7 @@ If the new release does not work, use the directory shown as the previous live `
 ```bash
 pm2 delete ecoshopify
 
-PORT=5000 pm2 start /opt/nvm/versions/node/v20.20.2/bin/npm \
+PORT=5001 pm2 start /opt/nvm/versions/node/v20.20.2/bin/npm \
   --name ecoshopify \
   --cwd /home/ecoshopify.com/releases/9d52dd0 \
   -- start
