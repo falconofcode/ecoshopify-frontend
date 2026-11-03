@@ -3,7 +3,13 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
+const normalizeApiBase = () => {
+  const raw = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api").trim();
+  const base = raw.replace(/\/+$/, "");
+  return base.endsWith("/api") ? base : `${base}/api`;
+};
+
+const API_BASE_URL = normalizeApiBase();
 
 export default function Register() {
   const router = useRouter();
