@@ -60,8 +60,8 @@ export const ecoshopHomeTranslations = {
     ],
     supplierTitle: "Join as a supplier",
     supplierDescription:
-      "Companies and suppliers can contact us to learn about joining the platform.",
-    supplierButton: "Contact us about joining",
+      "Register your store, get approved by our team, and start listing your products.",
+    supplierButton: "Register as a supplier",
     bestSellerTab: "Best seller",
     newArrivalsTab: "New arrivals",
     onSaleTab: "On Sale",
@@ -127,8 +127,8 @@ export const ecoshopHomeTranslations = {
     ],
     supplierTitle: "انضم كمورد",
     supplierDescription:
-      "يمكن للشركات والموردين التواصل معنا لمعرفة كيفية الانضمام إلى المنصة.",
-    supplierButton: "تواصل معنا للانضمام",
+      "سجّل متجرك، وبعد موافقة فريقنا يمكنك البدء بإضافة منتجاتك.",
+    supplierButton: "سجّل كمورد",
     bestSellerTab: "الأكثر مبيعًا",
     newArrivalsTab: "وصل حديثًا",
     onSaleTab: "العروض والخصومات",

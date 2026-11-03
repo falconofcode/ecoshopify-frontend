@@ -400,7 +400,7 @@ export const ecoshopNavigationLinks = [
   },
   { href: "/about-us", text: "من نحن", textEn: "About us" },
   {
-    href: "/contact-1",
+    href: "/vendor/register",
     text: "انضم كمورد",
     textEn: "Become a supplier",
   },

@@ -234,7 +234,7 @@ export function SupplierInvitation() {
           <p className="sub-title">{copy.supplierDescription}</p>
         </div>
         <Link
-          href="/contact-1"
+          href="/vendor/register"
           className="tf-btn btn-fill radius-60 animate-hover-btn bg_green-9"
         >
           {copy.supplierButton}
