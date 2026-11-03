@@ -3,6 +3,7 @@ import Nav from "./Nav";
 import Image from "next/image";
 import Link from "next/link";
 import CartLength from "../common/CartLength";
+import AccountLink from "../common/AccountLink";
 import WishlistLength from "../common/WishlistLength";
 export default function Header2({
   textClass,
@@ -77,13 +78,7 @@ export default function Header2({
                 </a>
               </li>
               <li className="nav-account">
-                <a
-                  href="#login"
-                  data-bs-toggle="modal"
-                  className="nav-icon-item"
-                >
-                  <i className="icon icon-account" />
-                </a>
+                <AccountLink />
               </li>
               <li className="nav-wishlist">
                 <Link href={`/wishlist`} className="nav-icon-item">

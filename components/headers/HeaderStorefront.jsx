@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CartLength from "../common/CartLength";
+import AccountLink from "../common/AccountLink";
 import WishlistLength from "../common/WishlistLength";
 import LanguageSelect from "../common/LanguageSelect";
 import Nav from "./Nav";
@@ -117,15 +118,7 @@ export default function HeaderStorefront({
                   </a>
                 </li>
                 <li className="nav-account">
-                  <a
-                    href="#login"
-                    data-bs-toggle="modal"
-                    className="nav-icon-item align-items-center gap-10"
-                    aria-label={isArabic ? "تسجيل الدخول" : "Login"}
-                  >
-                    <i className="icon icon-account" />
-                    <span className="text">{isArabic ? "دخول" : "Login"}</span>
-                  </a>
+                  <AccountLink isArabic={isArabic} showText />
                 </li>
                 <li className="nav-wishlist">
                   <Link

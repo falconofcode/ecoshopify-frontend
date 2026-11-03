@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { clearSession } from "@/utlis/auth";
 const accountLinks = [
   { href: "/my-account", label: "Dashboard" },
   { href: "/my-account-orders", label: "Orders" },
@@ -26,7 +27,7 @@ export default function DashboardNav() {
         </li>
       ))}
       <li>
-        <Link href={`/login`} className="my-account-nav-item">
+        <Link href={`/login`} className="my-account-nav-item" onClick={clearSession}>
           Logout
         </Link>
       </li>
