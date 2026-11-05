@@ -15,7 +15,7 @@
     "__v": 0,
     "discount": "25% OFF",
     "weight": 5,
-    "bgColor": "#05535c"
+    "bgColor": "#999aaa"
   },
   {
     "_id": "698c83a38675799faabd3ee4",
@@ -33,7 +33,7 @@
     "updatedAt": "2026-04-07T20:48:27.967Z",
     "__v": 0,
     "weight": 2,
-    "bgColor": "#05535c"
+    "bgColor": "#999aaa"
   },
   {
     "_id": "698c901afd6e998a84db18b7",
@@ -51,7 +51,7 @@
     "updatedAt": "2026-02-11T17:40:38.672Z",
     "__v": 0,
     "weight": 3,
-    "bgColor": "#05535c"
+    "bgColor": "#999aaa"
   },
   {
     "_id": "698c97e6fcdc519491aabdc8",
@@ -69,7 +69,7 @@
     "createdAt": "2026-02-11T14:53:26.813Z",
     "updatedAt": "2026-02-11T17:41:18.638Z",
     "__v": 0,
-    "bgColor": "#05535c"
+    "bgColor": "#999aaa"
   },
   {
     "_id": "698c9b5efcdc519491aabed6",
@@ -87,7 +87,7 @@
     "createdAt": "2026-02-11T15:08:14.660Z",
     "updatedAt": "2026-02-11T17:02:51.940Z",
     "__v": 0,
-    "bgColor": "#ffeb6a",
+    "bgColor": "#999aaa",
     "textColor": "#000000"
   },
   {
@@ -106,7 +106,7 @@
     "createdAt": "2026-02-11T15:23:23.141Z",
     "updatedAt": "2026-02-11T17:38:56.225Z",
     "__v": 0,
-    "bgColor": "#05535c"
+    "bgColor": "#999aaa"
   },
   {
     "_id": "698c9f3cfcdc519491aac158",
@@ -124,7 +124,7 @@
     "createdAt": "2026-02-11T15:24:44.559Z",
     "updatedAt": "2026-02-11T17:13:07.165Z",
     "__v": 0,
-    "bgColor": "#05535c"
+    "bgColor": "#999aaa"
   },
   {
     "_id": "698c9f75fcdc519491aac15e",
@@ -142,7 +142,7 @@
     "createdAt": "2026-02-11T15:25:41.924Z",
     "updatedAt": "2026-02-11T17:41:32.822Z",
     "__v": 0,
-    "bgColor": "#05535c"
+    "bgColor": "#999aaa"
   },
   {
     "_id": "698c9f91fcdc519491aac164",
